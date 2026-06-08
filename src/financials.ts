@@ -1,4 +1,4 @@
-import type { ReportTable, TemplateTable, Report, Template, IndicatorValue } from "./types.js";
+import type { ReportTable, TemplateTable, Report, Template, IndicatorValue, Statement, YearFinancials } from "./types.js";
 
 export interface IndexedRow {
   position: number;          // 0-based index within riadky
@@ -128,6 +128,11 @@ function classifyTable(name: string | undefined): TableKind | null {
   return null;
 }
 
+export interface ReportWithTemplate {
+  report: Report;
+  template: Template;
+}
+
 /**
  * Determine which report this template represents and extract the indicators
  * whose `table` kind matches. Súvaha templates have multiple tables (aktíva,
@@ -178,4 +183,61 @@ export function extractIndicators(report: Report, template: Template): Indicator
     });
   }
   return out;
+}
+
+// ---------------------------------------------------------------------------
+// Year assembly + derived indicators
+// ---------------------------------------------------------------------------
+
+function yearFromPeriod(s: Statement): number {
+  const p = s.obdobieDo ?? s.obdobieOd ?? "";
+  const y = Number(p.slice(0, 4));
+  return Number.isFinite(y) ? y : 0;
+}
+
+/** Merge indicators from all reports of a statement and derive leverage. */
+export function assembleYear(stmt: Statement, reports: ReportWithTemplate[]): YearFinancials {
+  const all: IndicatorValue[] = [];
+  let anyStructured = false;
+  let templateName: string | undefined;
+  for (const { report, template } of reports) {
+    if ((report.obsah?.tabulky?.length ?? 0) > 0) anyStructured = true;
+    templateName = templateName ?? template.nazov;
+    for (const ind of extractIndicators(report, template)) {
+      // Keep the first available value per key; otherwise keep the placeholder.
+      const existing = all.find((x) => x.key === ind.key);
+      if (!existing) all.push(ind);
+      else if (!existing.available && ind.available) {
+        Object.assign(existing, ind);
+      }
+    }
+  }
+
+  // Derived: leverage = liabilities / assets.
+  const liabilities = all.find((x) => x.key === "liabilities");
+  const assets = all.find((x) => x.key === "assets");
+  const leverageValue =
+    liabilities?.available && assets?.available && assets.value
+      ? Number((liabilities.value! / assets.value!).toFixed(4))
+      : null;
+  all.push({
+    key: "leverage",
+    label: "Zadlženosť (záväzky / aktíva)",
+    value: leverageValue,
+    cisloRiadku: null,
+    available: leverageValue !== null,
+  });
+
+  return {
+    year: yearFromPeriod(stmt),
+    periodOd: stmt.obdobieOd,
+    periodDo: stmt.obdobieDo,
+    consolidated: stmt.konsolidovana ?? false,
+    templateName,
+    structuredDataAvailable: anyStructured,
+    attachmentHint: anyStructured
+      ? undefined
+      : "Štruktúrované dáta nie sú dostupné (IFRS/banka/oznámenie). Použi ruz_download_attachment na PDF.",
+    indicators: all,
+  };
 }

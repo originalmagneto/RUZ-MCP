@@ -2,8 +2,9 @@ import { describe, it, expect } from "vitest";
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
-import { buildRowIndex, cellValue, currentColumn, extractIndicators } from "../src/financials.js";
+import { buildRowIndex, cellValue, currentColumn, extractIndicators, assembleYear } from "../src/financials.js";
 import type { Report, Template } from "../src/types.js";
+import type { Statement } from "../src/types.js";
 
 const dir = dirname(fileURLToPath(import.meta.url));
 const load = (f: string) => JSON.parse(readFileSync(join(dir, "fixtures", f), "utf8"));
@@ -64,5 +65,33 @@ describe("indicator extraction", () => {
     const empty: Report = { id: 1, obsah: {} };
     const inds = extractIndicators(empty, suvahaTemplate);
     expect(inds.every((i) => !i.available)).toBe(true);
+  });
+});
+
+describe("year assembly", () => {
+  const stmt: Statement = {
+    id: 99, obdobieOd: "2021-01", obdobieDo: "2021-12",
+    typ: "Riadna", konsolidovana: false,
+  };
+
+  it("assembles a year with leverage derived from súvaha", () => {
+    const year = assembleYear(stmt, [
+      { report: suvahaReport, template: suvahaTemplate },
+      { report: vzasReport, template: vzasTemplate },
+    ]);
+    expect(year.year).toBe(2021);
+    expect(year.structuredDataAvailable).toBe(true);
+    const lev = year.indicators.find((i) => i.key === "leverage")!;
+    expect(lev.available).toBe(true);
+    expect(lev.value).toBeGreaterThan(0);
+    expect(lev.value).toBeLessThanOrEqual(2); // liabilities/assets, sane range
+  });
+
+  it("flags structured data unavailable when all reports have empty obsah", () => {
+    const year = assembleYear(stmt, [
+      { report: { id: 1, obsah: {} }, template: suvahaTemplate },
+    ]);
+    expect(year.structuredDataAvailable).toBe(false);
+    expect(year.attachmentHint).toMatch(/ruz_download_attachment/);
   });
 });
