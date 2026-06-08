@@ -2,9 +2,8 @@ import { describe, it, expect } from "vitest";
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
-import { buildRowIndex, cellValue, currentColumn, extractIndicators, assembleYear } from "../src/financials.js";
-import type { Report, Template } from "../src/types.js";
-import type { Statement } from "../src/types.js";
+import { buildRowIndex, cellValue, currentColumn, priorColumn, extractIndicators, assembleYear } from "../src/financials.js";
+import type { Report, Template, Statement } from "../src/types.js";
 
 const dir = dirname(fileURLToPath(import.meta.url));
 const load = (f: string) => JSON.parse(readFileSync(join(dir, "fixtures", f), "utf8"));
@@ -41,6 +40,12 @@ describe("cell mapping", () => {
     const row = idx.matchByLabel(/^SPOLU MAJETOK/i);
     expect(row?.cisloRiadku).toBe(1);
   });
+
+  it("resolves prior-period column", () => {
+    expect(priorColumn(suvahaTemplate.tabulky![0])).toBe(3); // 4-col aktíva
+    expect(priorColumn(vzasTemplate.tabulky![0])).toBe(1);   // 2-col výsledovka
+    expect(priorColumn({ pocetDatovychStlpcov: 1 })).toBeNull();
+  });
 });
 
 describe("indicator extraction", () => {
@@ -57,9 +62,8 @@ describe("indicator extraction", () => {
   it("extracts výsledovka indicators (revenue, profit)", () => {
     const inds = extractIndicators(vzasReport, vzasTemplate);
     const byKey = Object.fromEntries(inds.map((i) => [i.key, i]));
-    expect(byKey.revenue.available).toBe(true);
-    expect(typeof byKey.revenue.value).toBe("number");
-    expect(byKey.profit.available).toBe(true);
+    expect(byKey.revenue.value).toBe(13500);
+    expect(byKey.profit.value).toBe(6756);
   });
 
   it("marks indicators unavailable for an empty obsah", () => {

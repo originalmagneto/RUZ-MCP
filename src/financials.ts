@@ -93,12 +93,10 @@ const INDICATORS: IndicatorDef[] = [
     table: "vzas",
     match: [/^Výsledok hospodárenia za účtovné obdobie po zdanení/i],
   },
-  {
-    key: "equity",
-    label: "Vlastné imanie",
-    table: "suvaha",
-    match: [/^Vlastné imanie\b/i],
-  },
+  // Assumes the "Vlastné imanie" total row precedes any sub-rows (true for Úč POD/Úč MÚJ);
+  // matchByLabel returns the first match in row order.
+  { key: "equity", label: "Vlastné imanie", table: "suvaha",
+    match: [/^Vlastné imanie\b/i] },
   {
     key: "assets",
     label: "Aktíva spolu",
@@ -192,6 +190,7 @@ export function extractIndicators(report: Report, template: Template): Indicator
 function yearFromPeriod(s: Statement): number {
   const p = s.obdobieDo ?? s.obdobieOd ?? "";
   const y = Number(p.slice(0, 4));
+  // 0 is a defensive fallback for the (practically non-occurring) case of a statement with no period fields; RÚZ statements always carry `obdobieDo`.
   return Number.isFinite(y) ? y : 0;
 }
 
