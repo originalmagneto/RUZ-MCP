@@ -38,3 +38,7 @@ RÚZ API hľadá len podľa IČO/DIČ. Pre profil podľa názvu najprv použi OR
 - IFRS / banky / oznámenia majú prázdny štruktúrovaný obsah → nástroje vrátia
   `structuredDataAvailable: false` a odkážu na PDF prílohu.
 - Neverejné jednotky vrátia len `stav`.
+
+## Remote (Dokploy)
+
+Deployed as a remote StreamableHTTP MCP. Set `MCP_AUTH_MODE=bearer` and `MCP_BEARER_TOKEN=<token>` in the environment; clients then send `Authorization: Bearer <token>`. Health check is public at `/healthz`. The MCP endpoint is `/mcp`.
