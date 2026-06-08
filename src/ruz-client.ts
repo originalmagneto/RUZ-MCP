@@ -3,21 +3,26 @@ import type {
 } from "./types.js";
 
 const DEFAULT_BASE = "https://www.registeruz.sk/cruz-public/api";
+const DEFAULT_WEB_BASE = "https://www.registeruz.sk/cruz-public";
 
 export interface RuzClientOptions {
   baseUrl?: string;
+  /** Base URL for the web app (attachment downloads live outside /api). Defaults to https://www.registeruz.sk/cruz-public */
+  webBaseUrl?: string;
   fetchImpl?: typeof fetch;
   timeoutMs?: number;
 }
 
 export class RuzClient {
   private base: string;
+  private webBase: string;
   private fetchImpl: typeof fetch;
   private timeoutMs: number;
   private templateCache = new Map<number, Template>();
 
   constructor(opts: RuzClientOptions = {}) {
     this.base = opts.baseUrl ?? DEFAULT_BASE;
+    this.webBase = opts.webBaseUrl ?? DEFAULT_WEB_BASE;
     this.fetchImpl = opts.fetchImpl ?? fetch;
     this.timeoutMs = opts.timeoutMs ?? 30000;
   }
@@ -74,12 +79,19 @@ export class RuzClient {
     return t;
   }
 
-  /** Download an attachment's bytes. Returns base64 and content-type. */
+  /**
+   * Download an attachment's bytes. Returns base64 and content-type.
+   *
+   * Attachments are served outside the /api prefix, via the web-app path:
+   *   GET /cruz-public/domain/financialreport/attachment/{id}
+   * (documented at https://www.registeruz.sk/cruz-public/home/api)
+   */
   async downloadAttachment(id: number): Promise<{ base64: string; contentType: string }> {
     const ctrl = new AbortController();
     const t = setTimeout(() => ctrl.abort(), this.timeoutMs);
     try {
-      const res = await this.fetchImpl(`${this.base}/priloha?id=${id}`, { signal: ctrl.signal });
+      const url = `${this.webBase}/domain/financialreport/attachment/${id}`;
+      const res = await this.fetchImpl(url, { signal: ctrl.signal });
       if (!res.ok) throw new Error(`RÚZ príloha ${id} failed: HTTP ${res.status}`);
       const buf = Buffer.from(await res.arrayBuffer());
       return {
