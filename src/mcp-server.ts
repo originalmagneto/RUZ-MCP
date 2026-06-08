@@ -67,12 +67,13 @@ export function createRuzMcpServer(client = new RuzClient()): McpServer {
       const profile: YearFinancials[] = [];
       for (const stmt of filtered) {
         const reportIds = stmt.idUctovnychVykazov ?? [];
-        const rwts: ReportWithTemplate[] = [];
-        for (const rid of reportIds) {
-          const report = await client.getReport(rid);
-          const template = report.idSablony ? await client.getTemplate(report.idSablony) : { id: 0 };
-          rwts.push({ report, template });
-        }
+        const rwts: ReportWithTemplate[] = await Promise.all(
+          reportIds.map(async (rid) => {
+            const report = await client.getReport(rid);
+            const template = report.idSablony ? await client.getTemplate(report.idSablony) : { id: 0 };
+            return { report, template };
+          }),
+        );
         profile.push(assembleYear(stmt, rwts));
       }
       return json({
@@ -184,10 +185,23 @@ export function createRuzMcpServer(client = new RuzClient()): McpServer {
     "ruz_list_attachments",
     {
       title: "Prílohy",
-      description: "Zoznam PDF príloh k výkazu alebo výročnej správe.",
-      inputSchema: { reportId: z.number().int().optional(), annualReportId: z.number().int().optional() },
+      description: "Zoznam PDF príloh k závierke, výkazu alebo výročnej správe.",
+      inputSchema: {
+        statementId: z.number().int().optional(),
+        reportId: z.number().int().optional(),
+        annualReportId: z.number().int().optional(),
+      },
     },
-    async ({ reportId, annualReportId }) => {
+    async ({ statementId, reportId, annualReportId }) => {
+      if (statementId != null) {
+        const stmt = await client.getStatement(statementId);
+        const reportIds = stmt.idUctovnychVykazov ?? [];
+        const reports = await Promise.all(reportIds.map((rid) => client.getReport(rid)));
+        const attachments = reports.flatMap((r) =>
+          (r.prilohy ?? []).map((p) => ({ ...p, reportId: r.id })),
+        );
+        return json({ attachments });
+      }
       if (reportId != null) {
         const r = await client.getReport(reportId);
         return json({ attachments: r.prilohy ?? [] });
@@ -209,11 +223,19 @@ export function createRuzMcpServer(client = new RuzClient()): McpServer {
     },
     async ({ attachmentId, savePath }) => {
       const { base64, contentType } = await client.downloadAttachment(attachmentId);
+      const sizeBytes = Buffer.from(base64, "base64").length;
       if (savePath) {
         writeFileSync(savePath, Buffer.from(base64, "base64"));
-        return json({ saved: true, path: savePath, contentType });
+        return json({ saved: true, path: savePath, contentType, sizeBytes });
       }
-      return json({ saved: false, contentType, base64 });
+      return json({
+        saved: false,
+        contentType,
+        sizeBytes,
+        sizeMb: Number((sizeBytes / 1_048_576).toFixed(2)),
+        note: sizeBytes > 2_000_000 ? "Veľký súbor — zváž použitie savePath namiesto inline base64." : undefined,
+        base64,
+      });
     },
   );
 
