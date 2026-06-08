@@ -2,7 +2,7 @@ import { describe, it, expect } from "vitest";
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
-import { buildRowIndex, cellValue, currentColumn } from "../src/financials.js";
+import { buildRowIndex, cellValue, currentColumn, extractIndicators } from "../src/financials.js";
 import type { Report, Template } from "../src/types.js";
 
 const dir = dirname(fileURLToPath(import.meta.url));
@@ -10,6 +10,9 @@ const load = (f: string) => JSON.parse(readFileSync(join(dir, "fixtures", f), "u
 
 const suvahaReport = load("vykaz-suvaha-pod.json") as Report;
 const suvahaTemplate = load("sablona-suvaha-pod.json") as Template;
+
+const vzasReport = load("vykaz-vzas-pod.json") as Report;
+const vzasTemplate = load("sablona-vzas-pod.json") as Template;
 
 describe("cell mapping", () => {
   it("resolves the current-period data column for a súvaha table", () => {
@@ -36,5 +39,30 @@ describe("cell mapping", () => {
     const idx = buildRowIndex(suvahaTemplate.tabulky![0]);
     const row = idx.matchByLabel(/^SPOLU MAJETOK/i);
     expect(row?.cisloRiadku).toBe(1);
+  });
+});
+
+describe("indicator extraction", () => {
+  it("extracts súvaha indicators (assets, equity, liabilities)", () => {
+    const inds = extractIndicators(suvahaReport, suvahaTemplate);
+    const byKey = Object.fromEntries(inds.map((i) => [i.key, i]));
+    expect(byKey.assets.available).toBe(true);
+    expect(byKey.assets.value).toBeGreaterThan(0);
+    expect(byKey.equity.available).toBe(true);
+    expect(byKey.liabilities.available).toBe(true);
+  });
+
+  it("extracts výsledovka indicators (revenue, profit)", () => {
+    const inds = extractIndicators(vzasReport, vzasTemplate);
+    const byKey = Object.fromEntries(inds.map((i) => [i.key, i]));
+    expect(byKey.revenue.available).toBe(true);
+    expect(typeof byKey.revenue.value).toBe("number");
+    expect(byKey.profit.available).toBe(true);
+  });
+
+  it("marks indicators unavailable for an empty obsah", () => {
+    const empty: Report = { id: 1, obsah: {} };
+    const inds = extractIndicators(empty, suvahaTemplate);
+    expect(inds.every((i) => !i.available)).toBe(true);
   });
 });
