@@ -103,7 +103,7 @@ const INDICATORS: IndicatorDef[] = [
     key: "assets",
     label: "Aktíva spolu",
     table: "suvaha",
-    match: [/^SPOLU MAJETOK/i, /^Spolu majetok/i],
+    match: [/^SPOLU MAJETOK/i],
   },
   {
     key: "liabilities",

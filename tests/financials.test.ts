@@ -47,10 +47,11 @@ describe("indicator extraction", () => {
   it("extracts súvaha indicators (assets, equity, liabilities)", () => {
     const inds = extractIndicators(suvahaReport, suvahaTemplate);
     const byKey = Object.fromEntries(inds.map((i) => [i.key, i]));
-    expect(byKey.assets.available).toBe(true);
-    expect(byKey.assets.value).toBeGreaterThan(0);
-    expect(byKey.equity.available).toBe(true);
-    expect(byKey.liabilities.available).toBe(true);
+    expect(byKey.assets.value).toBe(500466);
+    expect(byKey.equity.value).toBe(289336);
+    expect(byKey.liabilities.value).toBe(211130);
+    // Balance-sheet identity: equity + liabilities = assets
+    expect(byKey.equity.value! + byKey.liabilities.value!).toBe(byKey.assets.value);
   });
 
   it("extracts výsledovka indicators (revenue, profit)", () => {
@@ -83,8 +84,7 @@ describe("year assembly", () => {
     expect(year.structuredDataAvailable).toBe(true);
     const lev = year.indicators.find((i) => i.key === "leverage")!;
     expect(lev.available).toBe(true);
-    expect(lev.value).toBeGreaterThan(0);
-    expect(lev.value).toBeLessThanOrEqual(2); // liabilities/assets, sane range
+    expect(lev.value).toBeCloseTo(0.4219, 4); // 211130 / 500466
   });
 
   it("flags structured data unavailable when all reports have empty obsah", () => {
