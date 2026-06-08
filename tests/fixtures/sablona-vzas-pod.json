@@ -1,0 +1,545 @@
+{
+  "id": 22,
+  "nariadenieMF": "MF/24219/3/2008",
+  "platneOd": "2009-01-01",
+  "tabulky": [
+    {
+      "hlavicka": [
+        {
+          "text": {
+            "sk": "Označenie"
+          },
+          "riadok": 1,
+          "stlpec": 1,
+          "sirkaStlpca": 1,
+          "vyskaRiadku": 2
+        },
+        {
+          "text": {
+            "sk": "Text"
+          },
+          "riadok": 1,
+          "stlpec": 2,
+          "sirkaStlpca": 1,
+          "vyskaRiadku": 2
+        },
+        {
+          "text": {
+            "sk": "Číslo riadku"
+          },
+          "riadok": 1,
+          "stlpec": 3,
+          "sirkaStlpca": 1,
+          "vyskaRiadku": 2
+        },
+        {
+          "text": {
+            "sk": "Skutočnosť"
+          },
+          "riadok": 1,
+          "stlpec": 4,
+          "sirkaStlpca": 2,
+          "vyskaRiadku": 1
+        },
+        {
+          "text": {
+            "sk": "bežné účtovné obdobie"
+          },
+          "riadok": 2,
+          "stlpec": 4,
+          "sirkaStlpca": 1,
+          "vyskaRiadku": 1
+        },
+        {
+          "text": {
+            "sk": "bezprostredne predchádzajúce účtovné obdobie"
+          },
+          "riadok": 2,
+          "stlpec": 5,
+          "sirkaStlpca": 1,
+          "vyskaRiadku": 1
+        },
+        {
+          "text": {
+            "sk": "a"
+          },
+          "riadok": 3,
+          "stlpec": 1,
+          "sirkaStlpca": 1,
+          "vyskaRiadku": 1
+        },
+        {
+          "text": {
+            "sk": "b"
+          },
+          "riadok": 3,
+          "stlpec": 2,
+          "sirkaStlpca": 1,
+          "vyskaRiadku": 1
+        },
+        {
+          "text": {
+            "sk": "c"
+          },
+          "riadok": 3,
+          "stlpec": 3,
+          "sirkaStlpca": 1,
+          "vyskaRiadku": 1
+        },
+        {
+          "text": {
+            "sk": "1"
+          },
+          "riadok": 3,
+          "stlpec": 4,
+          "sirkaStlpca": 1,
+          "vyskaRiadku": 1
+        },
+        {
+          "text": {
+            "sk": "2"
+          },
+          "riadok": 3,
+          "stlpec": 5,
+          "sirkaStlpca": 1,
+          "vyskaRiadku": 1
+        }
+      ],
+      "riadky": [
+        {
+          "text": {
+            "sk": "Tržby z predaja tovaru (604)"
+          },
+          "oznacenie": "I.",
+          "cisloRiadku": 1
+        },
+        {
+          "text": {
+            "sk": "Náklady vynaložené na obstaranie predaného tovaru (504, 505A)"
+          },
+          "oznacenie": "A.",
+          "cisloRiadku": 2
+        },
+        {
+          "text": {
+            "sk": "Obchodná marža r. 01 - r. 02"
+          },
+          "oznacenie": "+",
+          "cisloRiadku": 3
+        },
+        {
+          "text": {
+            "sk": "Výroba r. 05 + r. 06 + r. 07"
+          },
+          "oznacenie": "II.",
+          "cisloRiadku": 4
+        },
+        {
+          "text": {
+            "sk": "Tržby z predaja vlastných výrobkov a služieb (601, 602)"
+          },
+          "oznacenie": "II.1.",
+          "cisloRiadku": 5
+        },
+        {
+          "text": {
+            "sk": "Zmeny stavu vnútroorganizačných zásob (+/- účtová skupina 61)"
+          },
+          "oznacenie": "2.",
+          "cisloRiadku": 6
+        },
+        {
+          "text": {
+            "sk": "Aktivácia (účtová skupina 62)"
+          },
+          "oznacenie": "3.",
+          "cisloRiadku": 7
+        },
+        {
+          "text": {
+            "sk": "Výrobná spotreba r. 09 + r. 10"
+          },
+          "oznacenie": "B.",
+          "cisloRiadku": 8
+        },
+        {
+          "text": {
+            "sk": "Spotreba materiálu, energie a ostatných neskladovateľných dodávok (501, 502, 503, 505A)"
+          },
+          "oznacenie": "B.1.",
+          "cisloRiadku": 9
+        },
+        {
+          "text": {
+            "sk": "Služby (účtová skupina 51)"
+          },
+          "oznacenie": "2.",
+          "cisloRiadku": 10
+        },
+        {
+          "text": {
+            "sk": "Pridaná hodnota r. 03 + r. 04 - r. 08"
+          },
+          "oznacenie": "+",
+          "cisloRiadku": 11
+        },
+        {
+          "text": {
+            "sk": "Osobné náklady súčet (r. 13 až 16)"
+          },
+          "oznacenie": "C.",
+          "cisloRiadku": 12
+        },
+        {
+          "text": {
+            "sk": "Mzdové náklady (521, 522)"
+          },
+          "oznacenie": "C.1.",
+          "cisloRiadku": 13
+        },
+        {
+          "text": {
+            "sk": "Odmeny členom orgánov spoločnosti a družstva (523)"
+          },
+          "oznacenie": "2.",
+          "cisloRiadku": 14
+        },
+        {
+          "text": {
+            "sk": "Náklady na sociálne poistenie (524, 525, 526)"
+          },
+          "oznacenie": "3.",
+          "cisloRiadku": 15
+        },
+        {
+          "text": {
+            "sk": "Sociálne náklady (527, 528)"
+          },
+          "oznacenie": "4.",
+          "cisloRiadku": 16
+        },
+        {
+          "text": {
+            "sk": "Dane a poplatky (účtová skupina 53)"
+          },
+          "oznacenie": "D.",
+          "cisloRiadku": 17
+        },
+        {
+          "text": {
+            "sk": "Odpisy a opravné položky k dlhodobému nehmotnému majetku a dlhodobému hmotnému majetku (551, 553)"
+          },
+          "oznacenie": "E.",
+          "cisloRiadku": 18
+        },
+        {
+          "text": {
+            "sk": "Tržby z predaja dlhodobého majetku a materiálu (641, 642)"
+          },
+          "oznacenie": "III.",
+          "cisloRiadku": 19
+        },
+        {
+          "text": {
+            "sk": "Zostatková cena predaného dlhodobého majetku a predaného materiálu (541, 542)"
+          },
+          "oznacenie": "F.",
+          "cisloRiadku": 20
+        },
+        {
+          "text": {
+            "sk": "Tvorba a zúčtovanie opravných položiek k pohľadávkam (+/-547)"
+          },
+          "oznacenie": "G.",
+          "cisloRiadku": 21
+        },
+        {
+          "text": {
+            "sk": "Ostatné výnosy z hospodárskej činnosti (644, 645, 646, 648, 655, 657)"
+          },
+          "oznacenie": "IV.",
+          "cisloRiadku": 22
+        },
+        {
+          "text": {
+            "sk": "Ostatné náklady na hospodársku činnosť (543, 544, 545, 546, 548, 549, 555, 557)"
+          },
+          "oznacenie": "H.",
+          "cisloRiadku": 23
+        },
+        {
+          "text": {
+            "sk": "Prevod výnosov z hospodárskej činnosti (-)(697)"
+          },
+          "oznacenie": "V.",
+          "cisloRiadku": 24
+        },
+        {
+          "text": {
+            "sk": "Prevod nákladov na hospodársku činnosť (-)(597)"
+          },
+          "oznacenie": "I.",
+          "cisloRiadku": 25
+        },
+        {
+          "text": {
+            "sk": "Výsledok hospodárenia z hospodárskej činnosti r.11 - r. 12 - r. 17 - r. 18 + r. 19 - r. 20 - r. 21 + r. 22 -r. 23 + (-r. 24) - (-r.25)"
+          },
+          "oznacenie": "*",
+          "cisloRiadku": 26
+        },
+        {
+          "text": {
+            "sk": "Tržby z predaja cenných papierov a podielov (661)"
+          },
+          "oznacenie": "VI.",
+          "cisloRiadku": 27
+        },
+        {
+          "text": {
+            "sk": "Predané cenné papiere a podiely (561)"
+          },
+          "oznacenie": "J.",
+          "cisloRiadku": 28
+        },
+        {
+          "text": {
+            "sk": "Výnosy z dlhodobého finančného majetku r. 30 + r. 31 + r. 32"
+          },
+          "oznacenie": "VII.",
+          "cisloRiadku": 29
+        },
+        {
+          "text": {
+            "sk": "Výnosy z cenných papierov a podielov v dcérskej účtovnej jednotke a v spoločnosti s podstatným vplyvom (665A)"
+          },
+          "oznacenie": "VII.1.",
+          "cisloRiadku": 30
+        },
+        {
+          "text": {
+            "sk": "Výnosy z ostatných dlhodobých cenných papierov a podielov (665A)"
+          },
+          "oznacenie": "2.",
+          "cisloRiadku": 31
+        },
+        {
+          "text": {
+            "sk": "Výnosy z ostatného dlhodobého finančného majetku (665A)"
+          },
+          "oznacenie": "3.",
+          "cisloRiadku": 32
+        },
+        {
+          "text": {
+            "sk": "Výnosy z krátkodobého finančného majetku (666)"
+          },
+          "oznacenie": "VIII.",
+          "cisloRiadku": 33
+        },
+        {
+          "text": {
+            "sk": "Náklady na krátkodobý finančný majetok (566)"
+          },
+          "oznacenie": "K.",
+          "cisloRiadku": 34
+        },
+        {
+          "text": {
+            "sk": "Výnosy z precenenia cenných papierov a výnosy z derivátových operácií (664, 667)"
+          },
+          "oznacenie": "IX.",
+          "cisloRiadku": 35
+        },
+        {
+          "text": {
+            "sk": "Náklady na precenenie cenných papierov a náklady na derivátové operácie (564, 567)"
+          },
+          "oznacenie": "L.",
+          "cisloRiadku": 36
+        },
+        {
+          "text": {
+            "sk": "Tvorba a zúčtovanie opravných položiek k finančnému majetku +/- 565"
+          },
+          "oznacenie": "M.",
+          "cisloRiadku": 37
+        },
+        {
+          "text": {
+            "sk": "Výnosové úroky (662)"
+          },
+          "oznacenie": "X.",
+          "cisloRiadku": 38
+        },
+        {
+          "text": {
+            "sk": "Nákladové úroky (562)"
+          },
+          "oznacenie": "N.",
+          "cisloRiadku": 39
+        },
+        {
+          "text": {
+            "sk": "Kurzové zisky (663)"
+          },
+          "oznacenie": "XI.",
+          "cisloRiadku": 40
+        },
+        {
+          "text": {
+            "sk": "Kurzové straty (563)"
+          },
+          "oznacenie": "O.",
+          "cisloRiadku": 41
+        },
+        {
+          "text": {
+            "sk": "Ostatné výnosy z finančnej činnosti (668)"
+          },
+          "oznacenie": "XII.",
+          "cisloRiadku": 42
+        },
+        {
+          "text": {
+            "sk": "Ostatné náklady na finančnú činnosť (568, 569)"
+          },
+          "oznacenie": "P.",
+          "cisloRiadku": 43
+        },
+        {
+          "text": {
+            "sk": "Prevod finančných výnosov (-) (698)"
+          },
+          "oznacenie": "XIII.",
+          "cisloRiadku": 44
+        },
+        {
+          "text": {
+            "sk": "Prevod finančných nákladov (-) (598)"
+          },
+          "oznacenie": "R.",
+          "cisloRiadku": 45
+        },
+        {
+          "text": {
+            "sk": "Výsledok hospodárenia z finančnej činnosti r. 27 - r. 28 + r. 29 + r. 33 - r. 34 + r. 35 - r. 36 - r. 37 + r. 38 - r. 39 + r. 40 - r. 41 + r. 42 - r. 43 + (-r. 44) - (-r.45)"
+          },
+          "oznacenie": "*",
+          "cisloRiadku": 46
+        },
+        {
+          "text": {
+            "sk": "Výsledok hospodárenia z bežnej činnosti pred zdanením r. 26 + r. 46"
+          },
+          "oznacenie": "**",
+          "cisloRiadku": 47
+        },
+        {
+          "text": {
+            "sk": "Daň z príjmov z bežnej činnosti r. 49 + r. 50"
+          },
+          "oznacenie": "S.",
+          "cisloRiadku": 48
+        },
+        {
+          "text": {
+            "sk": "- splatná (591, 595)"
+          },
+          "oznacenie": "S.1.",
+          "cisloRiadku": 49
+        },
+        {
+          "text": {
+            "sk": "- odložená (+/- 592)"
+          },
+          "oznacenie": "2.",
+          "cisloRiadku": 50
+        },
+        {
+          "text": {
+            "sk": "Výsledok hospodárenia z bežnej činnosti po zdanení r. 47 - r. 48"
+          },
+          "oznacenie": "**",
+          "cisloRiadku": 51
+        },
+        {
+          "text": {
+            "sk": "Mimoriadne výnosy (účtová skupina 68)"
+          },
+          "oznacenie": "XIV.",
+          "cisloRiadku": 52
+        },
+        {
+          "text": {
+            "sk": "Mimoriadne náklady (účtová skupina 58)"
+          },
+          "oznacenie": "T.",
+          "cisloRiadku": 53
+        },
+        {
+          "text": {
+            "sk": "Výsledok hospodárenia z mimoriadnej činnosti pred zdanením r. 52 - r. 53"
+          },
+          "oznacenie": "*",
+          "cisloRiadku": 54
+        },
+        {
+          "text": {
+            "sk": "Daň z príjmov z mimoriadnej činnosti r. 56 + r. 57"
+          },
+          "oznacenie": "U.",
+          "cisloRiadku": 55
+        },
+        {
+          "text": {
+            "sk": "- splatná (593)"
+          },
+          "oznacenie": "U.1.",
+          "cisloRiadku": 56
+        },
+        {
+          "text": {
+            "sk": "- odložená (+/- 594)"
+          },
+          "oznacenie": "2.",
+          "cisloRiadku": 57
+        },
+        {
+          "text": {
+            "sk": "Výsledok hospodárenia z mimoriadnej činnosti po zdanení r. 54 - r. 55"
+          },
+          "oznacenie": "*",
+          "cisloRiadku": 58
+        },
+        {
+          "text": {
+            "sk": "Výsledok hospodárenia za účtovné obdobie pred zdanením (+/-) [r. 47 + r. 54]"
+          },
+          "oznacenie": "***",
+          "cisloRiadku": 59
+        },
+        {
+          "text": {
+            "sk": "Prevod podielov na výsledku hospodárenia spoločníkom (+/- 596)"
+          },
+          "oznacenie": "V.",
+          "cisloRiadku": 60
+        },
+        {
+          "text": {
+            "sk": "Výsledok hospodárenia za účtovné obdobie po zdanení (+/-) [r. 51 + r. 58 - r. 60]"
+          },
+          "oznacenie": "***",
+          "cisloRiadku": 61
+        }
+      ],
+      "pocetStlpcov": 5,
+      "pocetDatovychStlpcov": 2,
+      "nazov": {
+        "sk": "Výkaz ziskov a strát"
+      }
+    }
+  ],
+  "nazov": "Výkaz ziskov a strát Úč POD 2-01"
+}
