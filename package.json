@@ -14,7 +14,7 @@
     "test:mcp-live": "vitest run tests/mcp.live.test.ts --reporter=verbose"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.25.2",
+    "@modelcontextprotocol/sdk": "^1.30.0",
     "zod": "^4.3.6"
   },
   "devDependencies": {
@@ -22,5 +22,21 @@
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
     "vitest": "^4.0.18"
-  }
+  },
+  "description": "MCP server nad Registrom účtovných závierok SR (RÚZ) — finančné profily firiem podľa IČO",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/originalmagneto/RUZ-MCP.git"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "slovakia",
+    "ruz",
+    "financial-statements",
+    "kyc",
+    "aml",
+    "due-diligence"
+  ]
 }

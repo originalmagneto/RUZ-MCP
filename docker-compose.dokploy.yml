@@ -9,6 +9,10 @@ services:
       PORT: "${PORT:-3000}"
       MCP_AUTH_MODE: "${MCP_AUTH_MODE:-authless}"
       MCP_BEARER_TOKEN: "${MCP_BEARER_TOKEN:-}"
+      MCP_PUBLIC_URL: "${MCP_PUBLIC_URL:-}"
+      MCP_AUTHORIZATION_SERVER: "${MCP_AUTHORIZATION_SERVER:-}"
+      MCP_RATE_LIMIT: "${MCP_RATE_LIMIT:-120}"
+      MCP_RATE_WINDOW_MS: "${MCP_RATE_WINDOW_MS:-60000}"
     healthcheck:
       test:
         [
