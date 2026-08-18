@@ -1,6 +1,9 @@
 import { createServer, type IncomingMessage, type ServerResponse } from "node:http";
 import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
 import { createRuzMcpServer } from "./mcp-server.js";
+import { createOAuthHttp } from "./oauth-http.js";
+import { loadRuzOAuthConfig } from "./oauth-config.js";
+import { parseTrustedProxyCidrs, resolveClientAddress } from "./trusted-proxy.js";
 
 const PORT = Number(process.env.PORT ?? 8790);
 
@@ -11,7 +14,8 @@ const PORT = Number(process.env.PORT ?? 8790);
  * claude.ai custom connectors cannot send custom headers, so bearer mode limits you
  * to Claude Code / Codex.
  */
-const AUTH_MODE = process.env.MCP_AUTH_MODE === "bearer" ? "bearer" : "authless";
+const RAW_AUTH_MODE = process.env.MCP_AUTH_MODE?.trim().toLowerCase();
+const AUTH_MODE = RAW_AUTH_MODE === "oauth" ? "oauth" : RAW_AUTH_MODE === "bearer" ? "bearer" : "authless";
 const BEARER_TOKEN = process.env.MCP_BEARER_TOKEN;
 
 /** Public base URL, used to build the RFC 9728 resource identifier. */
@@ -60,6 +64,7 @@ setInterval(() => {
 
 // --- Helpers -----------------------------------------------------------------
 function isAuthorized(req: IncomingMessage): boolean {
+  if (AUTH_MODE === "oauth") return Boolean(oauth?.authenticate(req));
   if (AUTH_MODE !== "bearer") return true;
   return !!BEARER_TOKEN && req.headers.authorization === `Bearer ${BEARER_TOKEN}`;
 }
@@ -86,6 +91,40 @@ function sendJson(res: ServerResponse, status: number, body: unknown, headers: R
   res.end(JSON.stringify(body));
 }
 
+// --- OAuth -------------------------------------------------------------------
+/**
+ * V OAuth režime chráni server autorizačná brána v prehliadači: klient sa
+ * zaregistruje cez DCR, ale authorization code nedostane, kým nezadá heslo
+ * a nepotvrdí súhlas. Konfigurácia je fail-closed — pri chýbajúcom hesle
+ * alebo úložisku server nenabehne.
+ */
+const oauthConfig = AUTH_MODE === "oauth" ? loadRuzOAuthConfig() : undefined;
+const trustedProxyCidrs = parseTrustedProxyCidrs(oauthConfig?.trustedProxyCidrs ?? "");
+const oauth = oauthConfig
+  ? createOAuthHttp({
+      issuer: oauthConfig.issuerUrl,
+      storePath: oauthConfig.tokenStorePath,
+      password: oauthConfig.authorizationPassword,
+      scopes: oauthConfig.scopes,
+      requiredScopes: oauthConfig.scopes.slice(0, 1),
+      accessTtlSeconds: oauthConfig.accessTtlSeconds,
+      refreshTtlSeconds: oauthConfig.refreshTtlSeconds,
+      codeTtlSeconds: oauthConfig.codeTtlSeconds,
+      loginSessionTtlSeconds: oauthConfig.loginSessionTtlSeconds,
+      enableDcr: oauthConfig.enableDcr,
+      maxBodyBytes: oauthConfig.maxBodyBytes,
+      maxDynamicClients: oauthConfig.maxDynamicClients,
+      unusedClientTtlSeconds: oauthConfig.unusedClientTtlSeconds,
+      activeClientTtlSeconds: oauthConfig.activeClientTtlSeconds,
+      maxClientsPerIdentity: oauthConfig.maxClientsPerIdentity,
+      maxLiveGrants: oauthConfig.maxLiveGrants,
+      maxLiveGrantsPerClient: oauthConfig.maxLiveGrantsPerClient,
+      readinessCheckIntervalMs: oauthConfig.readinessCheckIntervalSeconds * 1_000,
+      requestKey: (request) =>
+        resolveClientAddress(request.socket.remoteAddress, request.headers["x-forwarded-for"], trustedProxyCidrs),
+    })
+  : undefined;
+
 // --- Server ------------------------------------------------------------------
 const httpServer = createServer(async (req, res) => {
   cors(res);
@@ -98,8 +137,13 @@ const httpServer = createServer(async (req, res) => {
 
   const path = (req.url ?? "/").split("?")[0];
 
+  if (oauth) {
+    const url = new URL(req.url ?? "/", `https://${req.headers.host ?? "localhost"}`);
+    if (await oauth.handle(req, res, url)) return;
+  }
+
   if (req.method === "GET" && path === "/healthz") {
-    sendJson(res, 200, { status: "ok", service: "ruz-mcp", auth: AUTH_MODE });
+    sendJson(res, 200, { status: "ok", service: "ruz-mcp", auth: AUTH_MODE, ...(oauth ? { oauthReady: oauth.ready() } : {}) });
     return;
   }
 
@@ -154,6 +198,8 @@ const httpServer = createServer(async (req, res) => {
 
   sendJson(res, 404, { error: "not_found" });
 });
+
+if (oauth) httpServer.once("close", oauth.close);
 
 httpServer.listen(PORT, () => {
   console.error(

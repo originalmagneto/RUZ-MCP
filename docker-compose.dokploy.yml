@@ -13,6 +13,18 @@ services:
       MCP_AUTHORIZATION_SERVER: "${MCP_AUTHORIZATION_SERVER:-}"
       MCP_RATE_LIMIT: "${MCP_RATE_LIMIT:-120}"
       MCP_RATE_WINDOW_MS: "${MCP_RATE_WINDOW_MS:-60000}"
+      # OAuth. Premenná sa do kontajnera dostane, iba ak je uvedená tu —
+      # samotné nastavenie v Dokploy slúži len na interpoláciu tohto súboru.
+      OAUTH_ISSUER_URL: "${OAUTH_ISSUER_URL:-}"
+      OAUTH_AUTHORIZATION_PASSWORD: "${OAUTH_AUTHORIZATION_PASSWORD:-}"
+      OAUTH_TOKEN_STORE_PATH: "${OAUTH_TOKEN_STORE_PATH:-/data/oauth.json}"
+      OAUTH_SCOPES: "${OAUTH_SCOPES:-mcp:tools}"
+      OAUTH_ENABLE_DYNAMIC_CLIENT_REGISTRATION: "${OAUTH_ENABLE_DYNAMIC_CLIENT_REGISTRATION:-true}"
+      OAUTH_ACCESS_TOKEN_TTL_SECONDS: "${OAUTH_ACCESS_TOKEN_TTL_SECONDS:-3600}"
+      OAUTH_REFRESH_TOKEN_TTL_SECONDS: "${OAUTH_REFRESH_TOKEN_TTL_SECONDS:-15552000}"
+      OAUTH_LOGIN_SESSION_TTL_SECONDS: "${OAUTH_LOGIN_SESSION_TTL_SECONDS:-86400}"
+      OAUTH_MAX_LIVE_GRANTS_PER_CLIENT: "${OAUTH_MAX_LIVE_GRANTS_PER_CLIENT:-64}"
+      TRUSTED_PROXY_CIDRS: "${TRUSTED_PROXY_CIDRS:-}"
     healthcheck:
       test:
         [
@@ -25,3 +37,8 @@ services:
       timeout: 10s
       retries: 3
       start_period: 15s
+    volumes:
+      - ruz-oauth-data:/data
+
+volumes:
+  ruz-oauth-data:
