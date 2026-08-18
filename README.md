@@ -411,32 +411,74 @@ url = "https://tvoja-domena.sk/mcp"
 
 ## Autentifikácia
 
-Server má dva režimy. Default je **`authless`**, lebo RÚZ sú verejné otvorené dáta —
-a je to jediný režim, ktorý funguje vo všetkých klientoch.
+Server má tri režimy. Ktorý beží, hlási `/healthz` v poli `auth`.
 
-| | `authless` *(default)* | `bearer` |
+| | `authless` *(default)* | `bearer` | `oauth` |
+|---|---|---|---|
+| Nastavenie | nič netreba | `MCP_AUTH_MODE=bearer` + `MCP_BEARER_TOKEN` | `MCP_AUTH_MODE=oauth` + `OAUTH_AUTHORIZATION_PASSWORD` |
+| Claude Code | ✅ | ✅ cez `--header` | ✅ |
+| Codex CLI | ✅ | ✅ cez `bearer_token_env_var` | ✅ |
+| **Cowork / claude.ai** | ✅ | ❌ nefunguje | ✅ |
+| Ochrana | rate limiting | token + rate limiting | vlastný grant na klienta |
+
+RÚZ sú verejné otvorené dáta, takže `authless` je legitímna voľba a zostáva
+predvolený. Dáva ale prístup k serveru komukoľvek, kto pozná URL — vrátane
+záťaže smerom na upstream RÚZ z tvojej adresy. Preto je pre remote nasadenie
+odporúčaný `oauth`.
+
+> [!NOTE]
+> Cowork a claude.ai konektory vedia poslať len URL a OAuth údaje, **vlastné
+> hlavičky neposielajú** — statický bearer token tam teda pripojiť nejde.
+> Režim `oauth` tento problém nemá, lebo prihlásenie prebieha v prehliadači.
+
+### Prečo OAuth namiesto tokenu
+
+Bearer token je **jeden zdieľaný reťazec** pre všetkých klientov. Nedá sa zrušiť
+pre jedného a nerotuje sa. V OAuth režime má každý klient vlastný grant, ktorý
+sa dá zrušiť samostatne.
+
+### Ako prebieha OAuth prihlásenie
+
+1. Klient sa zaregistruje cez **DCR** (`POST /register`).
+2. Otvorí `/authorize`. Server zobrazí **prihlásenie a vypýta heslo**.
+3. Po prihlásení príde **obrazovka súhlasu**.
+4. Až potom sa vydá authorization code, ktorý sa vymení za token.
+
+Samotná registrácia klienta teda nič neodomkne. Podporované je **iba PKCE
+`S256`**; `code_challenge` aj `code_verifier` musia mať 43–128 znakov z RFC 7636
+množiny a server overuje hash aj na svojej strane.
+
+Konfigurácia je **fail-closed** — bez autorizačného hesla (min. 16 znakov),
+bez durable úložiska tokenov, s non-https issuerom, zlým scope alebo nekladným
+TTL server zámerne nenabehne.
+
+### OAuth premenné
+
+| Premenná | Predvolené | Význam |
 |---|---|---|
-| Nastavenie | nič netreba | `MCP_AUTH_MODE=bearer` + `MCP_BEARER_TOKEN` |
-| Claude Code | ✅ | ✅ cez `--header` |
-| Codex CLI | ✅ | ✅ cez `bearer_token_env_var` |
-| **Cowork / claude.ai** | ✅ | ❌ **nefunguje** |
-| Ochrana pred zneužitím | rate limiting | token + rate limiting |
+| `MCP_AUTH_MODE` | `authless` | `oauth` zapne OAuth režim. |
+| `OAUTH_ISSUER_URL` | `MCP_PUBLIC_URL` | Kanonický HTTPS issuer. |
+| `OAUTH_AUTHORIZATION_PASSWORD` | — | **Povinné v OAuth režime**, min. 16 znakov. |
+| `OAUTH_TOKEN_STORE_PATH` | `/data/oauth.json` | Durable stav; potrebuje persistent volume. |
+| `OAUTH_SCOPES` | `mcp:tools` | Podporované scopes. |
+| `OAUTH_ENABLE_DYNAMIC_CLIENT_REGISTRATION` | `true` | Zapne DCR. |
+| `OAUTH_MAX_LIVE_GRANTS_PER_CLIENT` | `64` | Limit živých tokenov na klienta. |
+| `TRUSTED_PROXY_CIDRS` | — | CIDR reverznej proxy, napr. `172.20.1.1/32`. |
 
-> [!WARNING]
-> **Cowork a claude.ai custom connectors vedia poslať len URL a voliteľné OAuth
-> Client ID/Secret — vlastné hlavičky neposielajú.** Statický bearer token tam teda
-> pripojiť nejde. Ak potrebuješ chránený server pre Cowork, musíš pred neho postaviť
-> plnohodnotný OAuth 2.1 authorization server.
+Compose obsahuje premenné aj volume `ruz-oauth-data:/data`. Oboje je potrebné:
+premenná sa do kontajnera dostane, **iba ak je uvedená v `environment:`** bloku,
+a bez volume by tokeny zmizli pri každom reštarte. Použi **jednu repliku**.
 
-V režime `bearer` vráti neautorizovaná požiadavka `401` s hlavičkou podľa
-[RFC 9728](https://datatracker.ietf.org/doc/html/rfc9728):
+V režimoch `bearer` aj `oauth` vráti neautorizovaná požiadavka `401` s hlavičkou
+podľa [RFC 9728](https://datatracker.ietf.org/doc/html/rfc9728):
 
 ```http
 WWW-Authenticate: Bearer realm="mcp", resource_metadata="https://tvoja-domena.sk/.well-known/oauth-protected-resource"
 ```
 
-Otvorený endpoint chráni **rate limiting** (`MCP_RATE_LIMIT`, default 120 requestov
-za minútu na IP) — hlavne preto, aby cez server nikto nehamroval upstream RÚZ API.
+V režime `authless` chráni otvorený endpoint **rate limiting** (`MCP_RATE_LIMIT`,
+default 120 requestov za minútu na IP), hlavne preto, aby cez server nikto
+nehamroval upstream RÚZ API.
 
 ---
 
