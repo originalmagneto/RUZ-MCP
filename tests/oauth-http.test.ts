@@ -15,6 +15,7 @@ const RESOURCE = `${ISSUER}/mcp`;
 const REDIRECT_URI = "https://claude.ai/api/mcp/auth_callback";
 const VERIFIER = "0123456789012345678901234567890123456789012";
 const CHALLENGE = createHash("sha256").update(VERIFIER).digest("base64url");
+const PASSWORD = "a-long-enough-test-password";
 
 let dir: string;
 let oauth: ReturnType<typeof createOAuthHttp>;
@@ -26,7 +27,7 @@ beforeEach(async () => {
   oauth = createOAuthHttp({
     issuer: ISSUER,
     storePath: join(dir, "oauth.json"),
-    password: "a-long-enough-test-password",
+    password: PASSWORD,
     scopes: ["mcp:tools"],
     requiredScopes: ["mcp:tools"],
     accessTtlSeconds: 60,
@@ -116,6 +117,30 @@ describe("dynamic client registration", () => {
   it("still rejects a registration without a usable redirect URI", async () => {
     expect((await register({ redirect_uris: [] })).status).toBe(400);
     expect((await register({ redirect_uris: ["http://client.example/cb"] })).status).toBe(400);
+  });
+});
+
+describe("consent page", () => {
+  it("names the client origin in form-action so the approval redirect is not blocked", async () => {
+    const clientId = (await (await register({ redirect_uris: [REDIRECT_URI] })).json()).client_id;
+    const loginPage = await fetch(authorizeUrl(clientId));
+    // The login form only ever posts back to this origin.
+    expect(loginPage.headers.get("content-security-policy")).toContain("form-action 'self';");
+    const ticket = /name="ticket" value="([^"]+)"/.exec(await loginPage.text())?.[1] ?? "";
+    expect(ticket).not.toBe("");
+    const login = await fetch(`${base}/oauth/login`, {
+      method: "POST",
+      redirect: "manual",
+      headers: { "content-type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({ password: PASSWORD, ticket }),
+    });
+    expect(login.status).toBe(303);
+    const cookie = login.headers.get("set-cookie") ?? "";
+    const consentPage = await fetch(`${base}${login.headers.get("location")}`, { headers: { cookie } });
+    expect(consentPage.status).toBe(200);
+    // The consent form's 303 lands on the client's redirect URI, and browsers enforce form-action
+    // across that redirect — a bare 'self' silently swallows the approval.
+    expect(consentPage.headers.get("content-security-policy")).toContain("form-action 'self' https://claude.ai;");
   });
 });
 
