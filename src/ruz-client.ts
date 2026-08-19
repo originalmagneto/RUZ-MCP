@@ -2,6 +2,36 @@ import type {
   Entity, EntityIdsResponse, Statement, Report, Template, AnnualReport,
 } from "./types.js";
 
+/**
+ * RÚZ serves its outage page as HTML with **HTTP 200**, so res.ok says nothing.
+ * Feeding that to JSON.parse surfaced `Unexpected token '<', "<!DOCTYPE "...`,
+ * which reads like a bug in this server rather than a register that is down.
+ */
+export class RuzUnavailableError extends Error {
+  constructor(path: string) {
+    super(
+      `Register účtovných závierok je momentálne nedostupný (${path}). ` +
+        "Zdroj vrátil HTML stránku namiesto JSON. Skús to neskôr.",
+    );
+    this.name = "RuzUnavailableError";
+  }
+}
+
+/** Parse a RÚZ response body, telling an outage page apart from real JSON. */
+export function parseRuzJson<T>(body: string, path: string, contentType: string | null): T {
+  const trimmed = body.trimStart();
+  const looksHtml =
+    trimmed.startsWith("<") || (contentType ?? "").toLowerCase().includes("text/html");
+  if (looksHtml) {
+    throw new RuzUnavailableError(path);
+  }
+  try {
+    return JSON.parse(body) as T;
+  } catch {
+    throw new Error(`RÚZ API ${path} vrátilo odpoveď, ktorá nie je platný JSON.`);
+  }
+}
+
 const DEFAULT_BASE = "https://www.registeruz.sk/cruz-public/api";
 const DEFAULT_WEB_BASE = "https://www.registeruz.sk/cruz-public";
 
@@ -35,7 +65,8 @@ export class RuzClient {
       if (!res.ok) {
         throw new Error(`RÚZ API ${path} failed: HTTP ${res.status}`);
       }
-      return (await res.json()) as T;
+      const body = await res.text();
+      return parseRuzJson<T>(body, path, res.headers?.get?.("content-type") ?? null);
     } finally {
       clearTimeout(t);
     }

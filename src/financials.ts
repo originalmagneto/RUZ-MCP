@@ -112,6 +112,33 @@ const INDICATORS: IndicatorDef[] = [
   // "leverage" is derived after extraction (liabilities / assets); see assembleYear.
 ];
 
+/**
+ * Every key a YearFinancials must carry, in order, including the derived one.
+ *
+ * extractIndicators only emits an indicator when the report actually contains a
+ * table of the matching kind. An IFRS statement has neither súvaha nor
+ * výsledovka, so it emitted nothing and the year came back with `leverage`
+ * alone — one key where a small company returns six. A caller doing
+ * `indicators.find(i => i.key === "revenue")` then got `undefined` instead of
+ * `available: false`, which reads as "no such concept" rather than "not
+ * published in this filing".
+ */
+export const INDICATOR_KEYS: ReadonlyArray<{ key: string; label: string }> = [
+  ...INDICATORS.map((d) => ({ key: d.key, label: d.label })),
+  { key: "leverage", label: "Zadlženosť (záväzky / aktíva)" },
+];
+
+/** Placeholder set: all keys present, nothing available yet. */
+export function emptyIndicators(): IndicatorValue[] {
+  return INDICATOR_KEYS.map(({ key, label }) => ({
+    key,
+    label,
+    value: null,
+    cisloRiadku: null,
+    available: false,
+  }));
+}
+
 /** Classify a template table as súvaha or výsledovka by its name. */
 function classifyTable(name: string | undefined): TableKind | null {
   const n = (name ?? "").toLowerCase();
@@ -196,7 +223,8 @@ function yearFromPeriod(s: Statement): number {
 
 /** Merge indicators from all reports of a statement and derive leverage. */
 export function assembleYear(stmt: Statement, reports: ReportWithTemplate[]): YearFinancials {
-  const all: IndicatorValue[] = [];
+  // Seed every key so the response shape never depends on the template.
+  const all: IndicatorValue[] = emptyIndicators();
   let anyStructured = false;
   let templateName: string | undefined;
   for (const { report, template } of reports) {
@@ -219,13 +247,9 @@ export function assembleYear(stmt: Statement, reports: ReportWithTemplate[]): Ye
     liabilities?.available && assets?.available && assets.value
       ? Number((liabilities.value! / assets.value!).toFixed(4))
       : null;
-  all.push({
-    key: "leverage",
-    label: "Zadlženosť (záväzky / aktíva)",
-    value: leverageValue,
-    cisloRiadku: null,
-    available: leverageValue !== null,
-  });
+  const leverage = all.find((x) => x.key === "leverage")!;
+  leverage.value = leverageValue;
+  leverage.available = leverageValue !== null;
 
   return {
     year: yearFromPeriod(stmt),

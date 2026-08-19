@@ -628,7 +628,14 @@ npm run start:http   # Streamable HTTP na :8790
 ## Limity a hrany
 
 - **IFRS / banky / oznámenia** — prázdny štruktúrovaný obsah, nástroje vrátia
-  `structuredDataAvailable: false` a odkážu na PDF prílohu.
+  `structuredDataAvailable: false` a odkážu na PDF prílohu. **Pole `indicators`
+  má vždy všetkých šesť kľúčov** (`revenue`, `profit`, `equity`, `assets`,
+  `liabilities`, `leverage`); nedostupný ukazovateľ je `available: false`,
+  nikdy nechýba. Tvar odpovede teda nezávisí od šablóny závierky.
+- **Výpadok RÚZ** — `registeruz.sk` servíruje odstávkovú stránku ako HTML
+  s **HTTP 200**, takže sa nedá rozpoznať podľa stavového kódu. Klient ju
+  rozpozná podľa tela a vráti `RuzUnavailableError` („register je momentálne
+  nedostupný"), nie chybu parsera.
 - **Neverejné jednotky** vrátia len `stav`.
 - **Vyhľadávanie len podľa IČO/DIČ** — nie podľa názvu. RÚZ API to inak nevie.
 - **Rate limiting je in-memory** — pri viacerých replikách má každá vlastný počítadlo.
