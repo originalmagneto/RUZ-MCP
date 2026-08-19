@@ -1,4 +1,5 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+import { looseBoolean, looseNumber } from "./scalars.js";
 import { z } from "zod";
 import { writeFileSync } from "node:fs";
 import { RuzClient } from "./ruz-client.js";
@@ -46,8 +47,8 @@ export function createRuzMcpServer(client = new RuzClient()): McpServer {
         "Viacročný finančný profil subjektu podľa IČO: tržby, výsledok hospodárenia, vlastné imanie, aktíva, záväzky, zadlženosť.",
       inputSchema: {
         ico: z.string(),
-        years: z.number().int().min(1).max(15).optional(),
-        consolidated: z.boolean().optional(),
+        years: looseNumber(z.number().int().min(1).max(15)).optional(),
+        consolidated: looseBoolean().optional(),
       },
     },
     async ({ ico, years = 5, consolidated = false }) => {
@@ -91,7 +92,7 @@ export function createRuzMcpServer(client = new RuzClient()): McpServer {
     {
       title: "Zoznam účtovných závierok",
       description: "Zoznam účtovných závierok jednotky (podľa IČO alebo entityId).",
-      inputSchema: { ico: z.string().optional(), entityId: z.number().int().optional() },
+      inputSchema: { ico: z.string().optional(), entityId: looseNumber(z.number().int()).optional() },
     },
     async ({ ico, entityId }) => {
       const id = entityId ?? (await resolveEntityId(ico));
@@ -116,7 +117,7 @@ export function createRuzMcpServer(client = new RuzClient()): McpServer {
     {
       title: "Detail účtovnej závierky",
       description: "Detail jednej účtovnej závierky vrátane jej výkazov (metadáta).",
-      inputSchema: { statementId: z.number().int() },
+      inputSchema: { statementId: looseNumber(z.number().int()) },
     },
     async ({ statementId }) => json(await client.getStatement(statementId)),
   );
@@ -127,7 +128,7 @@ export function createRuzMcpServer(client = new RuzClient()): McpServer {
       title: "Plný účtovný výkaz",
       description:
         "Plný čitateľný výkaz (súvaha / výkaz ziskov a strát): riadky s názvami a hodnotami za bežné a predchádzajúce obdobie. Pri prázdnom obsahu vráti príznak a odkaz na prílohu.",
-      inputSchema: { reportId: z.number().int() },
+      inputSchema: { reportId: looseNumber(z.number().int()) },
     },
     async ({ reportId }) => {
       const report = await client.getReport(reportId);
@@ -168,7 +169,7 @@ export function createRuzMcpServer(client = new RuzClient()): McpServer {
     {
       title: "Zoznam výročných správ",
       description: "Zoznam výročných správ jednotky (podľa IČO alebo entityId).",
-      inputSchema: { ico: z.string().optional(), entityId: z.number().int().optional() },
+      inputSchema: { ico: z.string().optional(), entityId: looseNumber(z.number().int()).optional() },
     },
     async ({ ico, entityId }) => {
       const id = entityId ?? (await resolveEntityId(ico));
@@ -187,9 +188,9 @@ export function createRuzMcpServer(client = new RuzClient()): McpServer {
       title: "Prílohy",
       description: "Zoznam PDF príloh k závierke, výkazu alebo výročnej správe.",
       inputSchema: {
-        statementId: z.number().int().optional(),
-        reportId: z.number().int().optional(),
-        annualReportId: z.number().int().optional(),
+        statementId: looseNumber(z.number().int()).optional(),
+        reportId: looseNumber(z.number().int()).optional(),
+        annualReportId: looseNumber(z.number().int()).optional(),
       },
     },
     async ({ statementId, reportId, annualReportId }) => {
@@ -219,7 +220,7 @@ export function createRuzMcpServer(client = new RuzClient()): McpServer {
     {
       title: "Stiahni prílohu",
       description: "Stiahne PDF prílohu. Buď vráti base64, alebo ju uloží na disk (savePath).",
-      inputSchema: { attachmentId: z.number().int(), savePath: z.string().optional() },
+      inputSchema: { attachmentId: looseNumber(z.number().int()), savePath: z.string().optional() },
     },
     async ({ attachmentId, savePath }) => {
       const { base64, contentType } = await client.downloadAttachment(attachmentId);
