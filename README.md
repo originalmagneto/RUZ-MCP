@@ -585,9 +585,15 @@ pre vypnutie. Pri viacerých používateľoch za jednou NAT IP zdieľajú jeden 
 <details>
 <summary><b>Profil vracia <code>structuredDataAvailable: false</code></b></summary>
 
-Firma podáva **IFRS** závierku, je banka/poisťovňa, alebo ide o oznámenie —
-RÚZ pre ne nemá štruktúrovaný obsah. Použi `ruz_list_attachments` +
-`ruz_download_attachment` a čítaj PDF.
+RÚZ pre danú závierku nezverejňuje štruktúrovaný obsah. `attachmentHint` povie,
+o ktorý prípad ide — IFRS závierka, správa audítora, alebo **Výkaz vybraných
+údajov (VÚ POD)**. Použi `ruz_list_attachments` + `ruz_download_attachment`
+a čítaj PDF.
+
+Pri VÚ POD to nie je len chýbajúci obsah: šablóna síce deklaruje šesť tabuliek,
+ale sú pomenované genericky („I.: Tab. č. 1") a **riadky nemajú názvy vôbec**.
+Ukazovatele sa preto nedajú odvodiť ani vtedy, keby konkrétna závierka bunky
+niesla — vyžadovalo by to mapu čísel riadkov pre každú verziu šablóny.
 
 </details>
 
