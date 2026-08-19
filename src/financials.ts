@@ -214,6 +214,39 @@ export function extractIndicators(report: Report, template: Template): Indicator
 // Year assembly + derived indicators
 // ---------------------------------------------------------------------------
 
+/**
+ * Explain WHY the structured content is missing, using the template that was
+ * actually filed.
+ *
+ * The old wording always blamed "IFRS/banka/oznámenie", which contradicted a
+ * `templateName` of "Výkaz vybraných údajov VÚ POD 1-01" sitting two fields
+ * above it.
+ *
+ * Measured against the register for ESET (IČO 31333532), statement 6941236:
+ * all three reports carry `obsah.tabulky: []`, so the data genuinely is not
+ * published. And template 5183 (VÚ POD 1-01) declares six tables named
+ * "I.: Tab. č. 1" … with EVERY row label null — neither classifyTable nor the
+ * label regexes have anything to match, so even a VÚ POD filing that did carry
+ * cells could not be read without a per-template row-number map.
+ */
+export function attachmentHintFor(templateName: string | undefined): string {
+  const name = (templateName ?? "").toLowerCase();
+  const base = "Použi ruz_list_attachments + ruz_download_attachment a čítaj PDF.";
+  if (name.includes("vybraných údajov") || name.includes("vu pod") || name.includes("vú pod")) {
+    return (
+      "Výkaz vybraných údajov (VÚ POD) nemá v RÚZ zverejnený štruktúrovaný obsah " +
+      "a jeho riadky nie sú pomenované, takže ukazovatele z neho nemožno odvodiť. " + base
+    );
+  }
+  if (name.includes("ifrs")) {
+    return `IFRS závierka — RÚZ pre ňu nezverejňuje štruktúrovaný obsah. ${base}`;
+  }
+  if (name.includes("audítor") || name.includes("auditor") || name.includes("správa")) {
+    return `Ide o správu, nie o výkaz — štruktúrované dáta neobsahuje. ${base}`;
+  }
+  return `Štruktúrované dáta nie sú pre túto závierku v RÚZ dostupné. ${base}`;
+}
+
 function yearFromPeriod(s: Statement): number {
   const p = s.obdobieDo ?? s.obdobieOd ?? "";
   const y = Number(p.slice(0, 4));
@@ -258,9 +291,7 @@ export function assembleYear(stmt: Statement, reports: ReportWithTemplate[]): Ye
     consolidated: stmt.konsolidovana ?? false,
     templateName,
     structuredDataAvailable: anyStructured,
-    attachmentHint: anyStructured
-      ? undefined
-      : "Štruktúrované dáta nie sú dostupné (IFRS/banka/oznámenie). Použi ruz_download_attachment na PDF.",
+    attachmentHint: anyStructured ? undefined : attachmentHintFor(templateName),
     indicators: all,
   };
 }
