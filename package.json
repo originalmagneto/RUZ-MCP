@@ -9,7 +9,7 @@
     "build": "tsc --project tsconfig.build.json",
     "start:prod": "node dist/server-http.js",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run tests/financials.test.ts tests/ruz-client.test.ts tests/oauth-config.test.ts tests/oauth-http.test.ts",
+    "test": "vitest run tests/financials.test.ts tests/ruz-client.test.ts tests/oauth-config.test.ts tests/oauth-http.test.ts tests/shape-and-availability.test.ts",
     "test:live": "vitest run tests/ruz-client.live.test.ts --reporter=verbose",
     "test:mcp-live": "vitest run tests/mcp.live.test.ts --reporter=verbose"
   },
