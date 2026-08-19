@@ -28,7 +28,7 @@ je iba na čítanie.
 | Kto koná za firmu a ako podpisuje | ORSR |
 | Je platiteľ DPH, je daňový dlžník | FS |
 | Prebieha konkurz alebo reštrukturalizácia | RU |
-| Hľadáš IČO iba podľa názvu firmy | ORSR alebo RPO — RÚZ hľadá len podľa IČO/DIČ |
+| Hľadáš IČO iba podľa názvu firmy | ORSR alebo RPO — tento register hľadá len podľa IČO/DIČ |
 
 ## Osvedčené postupnosti
 
