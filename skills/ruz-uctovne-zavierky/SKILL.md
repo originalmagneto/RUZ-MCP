@@ -44,9 +44,15 @@ je iba na čítanie.
 ## Pasce
 
 - **`structuredDataAvailable: false`** pri IFRS závierkach, bankách,
-  poisťovniach a oznámeniach — vtedy siahni po prílohe cez
-  `ruz_list_attachments` a `ruz_download_attachment`, štruktúrované čísla
-  tam nie sú.
+  poisťovniach, oznámeniach a pri Výkaze vybraných údajov (VÚ POD) — vtedy
+  siahni po prílohe cez `ruz_list_attachments` a `ruz_download_attachment`,
+  štruktúrované čísla tam nie sú. `attachmentHint` pomenuje konkrétny dôvod
+  len pri IFRS, správe audítora a VÚ POD; pri banke, poisťovni alebo
+  oznámení vráti generickú vetu bez toho, aby dôvod uhádol.
+- **`indicators` má vždy všetkých šesť kľúčov** (`revenue`, `profit`,
+  `equity`, `assets`, `liabilities`, `leverage`) — nedostupný ukazovateľ má
+  `available: false`, nikdy z poľa nechýba. Nehľadaj teda podľa dĺžky poľa,
+  over `available` pri konkrétnom kľúči.
 - **Neverejné jednotky** vrátia iba stav, nič viac.
 - **Profil za N rokov znamená N sérií volaní** na RÚZ API — pri veľkých
   firmách to trvá sekundy; zníž `years`, ak potrebuješ rýchlu odpoveď.
