@@ -1,0 +1,15 @@
+{
+  "name": "ruz",
+  "description": "Register účtovných závierok ako MCP server so skillom, ktorý agentovi povie, kedy po ňom siahnuť",
+  "version": "0.1.0",
+  "author": {
+    "name": "originalmagneto"
+  },
+  "repository": "https://github.com/originalmagneto/RUZ-MCP",
+  "keywords": [
+    "mcp",
+    "slovakia",
+    "legal",
+    "accounting"
+  ]
+}

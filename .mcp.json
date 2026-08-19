@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "ruz": {
+      "type": "http",
+      "url": "https://ruz-mcp.aittorney.online/mcp"
+    }
+  }
+}
