@@ -42,8 +42,9 @@ export class OAuthProvider {
     this.options.store.initializeClientPolicy(this.currentTime(), this.maxDynamicClients, this.unusedClientTtlSeconds, this.activeClientTtlSeconds);
   }
 
-  registerClient(input: Omit<RegisteredClient, "client_id">, registrationKey = "anonymous"): RegisteredClient {
-    if (input.token_endpoint_auth_method !== "none" || !Array.isArray(input.redirect_uris) || !input.redirect_uris.length || input.redirect_uris.length > MAX_REDIRECT_URIS || new Set(input.redirect_uris).size !== input.redirect_uris.length || input.redirect_uris.some((uri) => typeof uri !== "string" || uri.length > MAX_REDIRECT_URI_LENGTH || !isValidOAuthRedirectUri(uri))) throw new Error("DCR accepts public clients with bounded, unique HTTPS redirect URIs only.");
+  /** DCR always issues a public client; a client-requested auth method is overridden rather than rejected (RFC 7591 §3.2.1). */
+  registerClient(input: Omit<RegisteredClient, "client_id"> & { token_endpoint_auth_method?: string }, registrationKey = "anonymous"): RegisteredClient {
+    if (!Array.isArray(input.redirect_uris) || !input.redirect_uris.length || input.redirect_uris.length > MAX_REDIRECT_URIS || new Set(input.redirect_uris).size !== input.redirect_uris.length || input.redirect_uris.some((uri) => typeof uri !== "string" || uri.length > MAX_REDIRECT_URI_LENGTH || !isValidOAuthRedirectUri(uri))) throw new Error("DCR accepts public clients with bounded, unique HTTPS redirect URIs only.");
     const client: RegisteredClient = { client_id: crypto.randomUUID(), redirect_uris: [...input.redirect_uris], token_endpoint_auth_method: "none" };
     this.options.store.registerClient(client, hashOAuthToken(registrationKey), this.currentTime(), this.maxDynamicClients, this.maxClientsPerIdentity, this.unusedClientTtlSeconds);
     return client;
