@@ -1,0 +1,20 @@
+{
+ "id": 3227223,
+ "idUJ": 10882,
+ "idUctovnychVykazov": [
+  5704167,
+  5704117,
+  5800536,
+  5704133,
+  5704073
+ ],
+ "datumZostaveniaK": "2016-12-31",
+ "datumPrilozeniaSpravyAuditora": "2017-06-14",
+ "typ": "Riadna",
+ "datumPodania": "2017-04-04",
+ "datumZostavenia": "2017-03-31",
+ "obdobieOd": "2016-01",
+ "obdobieDo": "2016-12",
+ "datumPoslednejUpravy": "2017-06-15",
+ "zdrojDat": "SAM"
+}

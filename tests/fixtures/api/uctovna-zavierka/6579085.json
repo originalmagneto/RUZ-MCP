@@ -1,0 +1,21 @@
+{
+ "id": 6579085,
+ "datumZostaveniaK": "2024-12-31",
+ "idUJ": 10882,
+ "idUctovnychVykazov": [
+  9856217,
+  9809772,
+  9809773,
+  9809775,
+  9809774
+ ],
+ "konsolidovana": true,
+ "datumPoslednejUpravy": "2025-12-22",
+ "zdrojDat": "SAM",
+ "datumPrilozeniaSpravyAuditora": "2025-12-22",
+ "typ": "Riadna",
+ "obdobieOd": "2024-01",
+ "obdobieDo": "2024-12",
+ "datumPodania": "2025-08-22",
+ "datumZostavenia": "2025-06-20"
+}

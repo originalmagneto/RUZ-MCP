@@ -1,0 +1,18 @@
+{
+ "id": 6806562,
+ "datumZostaveniaK": "2025-12-31",
+ "idUJ": 10882,
+ "idUctovnychVykazov": [
+  10080119,
+  10080120,
+  10080118,
+  10080121
+ ],
+ "datumPoslednejUpravy": "2026-03-30",
+ "zdrojDat": "SAM",
+ "typ": "Riadna",
+ "obdobieOd": "2025-01",
+ "obdobieDo": "2025-12",
+ "datumPodania": "2026-03-30",
+ "datumZostavenia": "2026-03-31"
+}

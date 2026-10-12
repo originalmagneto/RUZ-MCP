@@ -1,0 +1,21 @@
+{
+ "id": 3362177,
+ "datumZostaveniaK": "2016-12-31",
+ "idUJ": 10882,
+ "idUctovnychVykazov": [
+  5872578,
+  5872909,
+  5872568,
+  5872889,
+  6404356
+ ],
+ "konsolidovana": true,
+ "datumPoslednejUpravy": "2018-12-04",
+ "zdrojDat": "SAM",
+ "datumPrilozeniaSpravyAuditora": "2018-12-03",
+ "typ": "Riadna",
+ "obdobieOd": "2016-01",
+ "obdobieDo": "2016-12",
+ "datumPodania": "2017-06-30",
+ "datumZostavenia": "2017-06-20"
+}

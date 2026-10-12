@@ -51,8 +51,11 @@ export function fixtureFetch(calls: string[] = []): typeof fetch {
 }
 
 /** Connect an MCP client to the server backed by the captured fixtures. */
-export async function fixtureMcp(fetchImpl: typeof fetch = fixtureFetch()) {
-  const server = createRuzMcpServer(new RuzClient({ fetchImpl }));
+export async function fixtureMcp(
+  fetchImpl: typeof fetch = fixtureFetch(),
+  options?: Parameters<typeof createRuzMcpServer>[1],
+) {
+  const server = createRuzMcpServer(new RuzClient({ fetchImpl }), options);
   const client = new Client({ name: "fixture-test", version: "0.0.0" });
   const [a, b] = InMemoryTransport.createLinkedPair();
   await Promise.all([server.connect(a), client.connect(b)]);

@@ -1,0 +1,20 @@
+{
+ "id": 2454294,
+ "datumZostaveniaK": "2014-12-31",
+ "idUJ": 10882,
+ "idUctovnychVykazov": [
+  4825019,
+  4731661,
+  4732494,
+  4732488,
+  4731335
+ ],
+ "datumPoslednejUpravy": "2015-06-19",
+ "zdrojDat": "SAM",
+ "datumPrilozeniaSpravyAuditora": "2015-06-18",
+ "typ": "Riadna",
+ "obdobieOd": "2014-01",
+ "obdobieDo": "2014-12",
+ "datumPodania": "2015-04-30",
+ "datumZostavenia": "2015-04-23"
+}

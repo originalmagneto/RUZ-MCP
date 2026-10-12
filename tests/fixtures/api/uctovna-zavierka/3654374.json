@@ -1,0 +1,20 @@
+{
+ "id": 3654374,
+ "idUJ": 10882,
+ "idUctovnychVykazov": [
+  6234243,
+  6234245,
+  6234242,
+  6234244,
+  6404350
+ ],
+ "datumZostaveniaK": "2017-12-31",
+ "datumPrilozeniaSpravyAuditora": "2018-12-03",
+ "typ": "Riadna",
+ "datumPodania": "2018-05-10",
+ "datumZostavenia": "2018-03-29",
+ "obdobieOd": "2017-01",
+ "obdobieDo": "2017-12",
+ "datumPoslednejUpravy": "2018-12-04",
+ "zdrojDat": "SAM"
+}

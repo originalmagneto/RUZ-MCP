@@ -1,0 +1,21 @@
+{
+ "id": 2922682,
+ "idUJ": 10882,
+ "idUctovnychVykazov": [
+  5441028,
+  5325029,
+  5326018,
+  5325508,
+  5325960
+ ],
+ "datumZostaveniaK": "2015-12-31",
+ "konsolidovana": true,
+ "datumPrilozeniaSpravyAuditora": "2016-09-13",
+ "typ": "Riadna",
+ "datumPodania": "2016-06-20",
+ "datumZostavenia": "2016-06-20",
+ "obdobieOd": "2015-01",
+ "obdobieDo": "2015-12",
+ "datumPoslednejUpravy": "2016-09-14",
+ "zdrojDat": "SAM"
+}

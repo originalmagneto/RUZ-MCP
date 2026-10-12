@@ -1,0 +1,1751 @@
+{
+ "id": 684,
+ "tabulky": [
+  {
+   "nazov": {
+    "sk": "Strana aktív",
+    "en": "Assets"
+   },
+   "hlavicka": [
+    {
+     "text": {
+      "sk": "Označenie",
+      "en": "Designation"
+     },
+     "riadok": 1,
+     "stlpec": 1,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 2
+    },
+    {
+     "text": {
+      "sk": "STRANA AKTÍV",
+      "en": "ASSETS"
+     },
+     "riadok": 1,
+     "stlpec": 2,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 2
+    },
+    {
+     "text": {
+      "sk": "Číslo riadku",
+      "en": "Line No."
+     },
+     "riadok": 1,
+     "stlpec": 3,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 2
+    },
+    {
+     "text": {
+      "sk": "20xx",
+      "en": "20xx"
+     },
+     "riadok": 1,
+     "stlpec": 4,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "20xx-1",
+      "en": "20xx-1"
+     },
+     "riadok": 1,
+     "stlpec": 5,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "Netto",
+      "en": "Net"
+     },
+     "riadok": 2,
+     "stlpec": 4,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "Netto",
+      "en": "Net"
+     },
+     "riadok": 2,
+     "stlpec": 5,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "a",
+      "en": "a"
+     },
+     "riadok": 3,
+     "stlpec": 1,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "b",
+      "en": "b"
+     },
+     "riadok": 3,
+     "stlpec": 2,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "c",
+      "en": "c"
+     },
+     "riadok": 3,
+     "stlpec": 3,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "1",
+      "en": "1"
+     },
+     "riadok": 3,
+     "stlpec": 4,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "2",
+      "en": "2"
+     },
+     "riadok": 3,
+     "stlpec": 5,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    }
+   ],
+   "riadky": [
+    {
+     "text": {
+      "sk": "SPOLU MAJETOK r. 002 + r. 035 + r. 113 + r. 117",
+      "en": "TOTAL ASSETS line 002 + line 035 + line 113 + line 117"
+     },
+     "cisloRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "Neobežný majetok r. 003 + r. 012 + r. 025",
+      "en": "Non-current assets line 003 + line 012 + line 025"
+     },
+     "oznacenie": "A.",
+     "cisloRiadku": 2
+    },
+    {
+     "text": {
+      "sk": "Dlhodobý nehmotný majetok súčet (r. 004 až 011)",
+      "en": "Non-current intangible assets - total (lines 004 to 011)"
+     },
+     "oznacenie": "A.I.",
+     "cisloRiadku": 3
+    },
+    {
+     "text": {
+      "sk": "Aktivované náklady na vývoj (012) - (072+091AÚ)",
+      "en": "Capitalized development costs (012) - (072+091A)"
+     },
+     "oznacenie": "A.I.1.",
+     "cisloRiadku": 4
+    },
+    {
+     "text": {
+      "sk": "Softvér (013) - (073+091AÚ)",
+      "en": "Software (013) - (073+091A)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 5
+    },
+    {
+     "text": {
+      "sk": "Oceniteľné práva (014) - (074+091AÚ)",
+      "en": "Valuable rights (014) - (074+091A)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 6
+    },
+    {
+     "text": {
+      "sk": "Goodwill z konsolidácie kapitálu alebo negatívny goodwill z konsolidácie kapitálu (+/-)",
+      "en": "Goodwill (+/-)"
+     },
+     "oznacenie": "4.",
+     "cisloRiadku": 7
+    },
+    {
+     "text": {
+      "sk": "Drobný dlhodobý nehmotný majetok (018) - (078+091AÚ)",
+      "en": "Small non-current intangible assets (018) - (078+091A)"
+     },
+     "oznacenie": "5.",
+     "cisloRiadku": 8
+    },
+    {
+     "text": {
+      "sk": "Ostatný dlhodobý nehmotný majetok (019) - (079+091AÚ)",
+      "en": "Other non-current intangible assets (019) - (079+091A)"
+     },
+     "oznacenie": "6.",
+     "cisloRiadku": 9
+    },
+    {
+     "text": {
+      "sk": "Obstaranie dlhodobého nehmotného majetku (041) - (093)",
+      "en": "Acquisition of non-current intangible assets (041) - (093)"
+     },
+     "oznacenie": "7.",
+     "cisloRiadku": 10
+    },
+    {
+     "text": {
+      "sk": "Poskytnuté preddavky na dlhodobý nehmotný majetok (051) - (095AÚ)",
+      "en": "Advance payments made for non-current intangible assets (051) - (095A)"
+     },
+     "oznacenie": "8.",
+     "cisloRiadku": 11
+    },
+    {
+     "text": {
+      "sk": "Dlhodobý hmotný majetok súčet (r. 013 až 024)",
+      "en": "Property, plant and equipment - total (lines 013 to 024)"
+     },
+     "oznacenie": "A.II.",
+     "cisloRiadku": 12
+    },
+    {
+     "text": {
+      "sk": "Pozemky (031) - (092AÚ)",
+      "en": "Land (031) - (092AA)"
+     },
+     "oznacenie": "A.II.1.",
+     "cisloRiadku": 13
+    },
+    {
+     "text": {
+      "sk": "Umelecké diela a zbierky (032) - (092AÚ)",
+      "en": "Works of art and collections (032) - (092A)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 14
+    },
+    {
+     "text": {
+      "sk": "Predmety z drahých kovov (033) - (092AÚ)",
+      "en": "Objects of precious metals (033) - (092A)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 15
+    },
+    {
+     "text": {
+      "sk": "Stavby (021) - (081+092AÚ)",
+      "en": "Structures (021) - (081+092A)"
+     },
+     "oznacenie": "4.",
+     "cisloRiadku": 16
+    },
+    {
+     "text": {
+      "sk": "Samostatné hnuteľné veci a súbory hnuteľných vecí (022)-(082+092AÚ)",
+      "en": "Individual movable assets and sets of movable assets (022) - (082+092A)"
+     },
+     "oznacenie": "5.",
+     "cisloRiadku": 17
+    },
+    {
+     "text": {
+      "sk": "Dopravné prostriedky (023) - (083+092AÚ)",
+      "en": "Means of transport (023) - (083+092A)"
+     },
+     "oznacenie": "6.",
+     "cisloRiadku": 18
+    },
+    {
+     "text": {
+      "sk": "Pestovateľské celky trvalých porastov (025) - (085+092AÚ)",
+      "en": "Perennial crops (025) - (085+092A)"
+     },
+     "oznacenie": "7.",
+     "cisloRiadku": 19
+    },
+    {
+     "text": {
+      "sk": "Základné stádo a ťažné zvieratá (026) - (086+092AÚ)",
+      "en": "Livestoc (026) - (086+092A)"
+     },
+     "oznacenie": "8.",
+     "cisloRiadku": 20
+    },
+    {
+     "text": {
+      "sk": "Drobný dlhodobý hmotný majetok (028) - (088+092AÚ)",
+      "en": "Small non-current tangible assets (028) - (088+092A)"
+     },
+     "oznacenie": "9.",
+     "cisloRiadku": 21
+    },
+    {
+     "text": {
+      "sk": "Ostatný dlhodobý hmotný majetok (029) - (089+092AÚ)",
+      "en": "Other property, plant and equipment (029) - (089+092A)"
+     },
+     "oznacenie": "10.",
+     "cisloRiadku": 22
+    },
+    {
+     "text": {
+      "sk": "Obstaranie dlhodobého hmotného majetku (042) - (094)",
+      "en": "Acquisition of property, plant and equipment (042) - (094)"
+     },
+     "oznacenie": "11.",
+     "cisloRiadku": 23
+    },
+    {
+     "text": {
+      "sk": "Poskytnuté preddavky na dlhodobý hmotný majetok (052) - (095AÚ)",
+      "en": "Advance payments made for property, plant and equipment (052) - (095A)"
+     },
+     "oznacenie": "12.",
+     "cisloRiadku": 24
+    },
+    {
+     "text": {
+      "sk": "Dlhodobý finančný majetok súčet (r. 026 + r. 027 + r. 029 až 034)",
+      "en": "Non-current financial assets - total (line 026 + line 027 + lines 029 to 034)"
+     },
+     "oznacenie": "A.III.",
+     "cisloRiadku": 25
+    },
+    {
+     "text": {
+      "sk": "Podielové cenné papiere a podiely v dcérskej účtovnej jednotke (061) - (096AÚ)",
+      "en": "Shares and ownership interests in subsidiary (061) - (096A)"
+     },
+     "oznacenie": "A.III.1.",
+     "cisloRiadku": 26
+    },
+    {
+     "text": {
+      "sk": "Podielové cenné papiere a podiely v spoločnosti s podstatným vplyvom (062) - (096AÚ)",
+      "en": "Shares and ownership interests with significant influence over enterprises (062) - (096A)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 27
+    },
+    {
+     "text": {
+      "sk": "z toho: goodwill",
+      "en": "of that: goodwill"
+     },
+     "cisloRiadku": 28
+    },
+    {
+     "text": {
+      "sk": "Realizovateľné cenné papiere a podiely (063) - (096AÚ)",
+      "en": "Realisable securities and shares (063) - (096A)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 29
+    },
+    {
+     "text": {
+      "sk": "Dlhové cenné papiere držané do splatnosti (065) - (096AÚ)",
+      "en": "Debt securities held up to their maturity (065) - (096A)"
+     },
+     "oznacenie": "4.",
+     "cisloRiadku": 30
+    },
+    {
+     "text": {
+      "sk": "Pôžičky účtovnej jednotke v konsolidovanom celku (066) - (096AÚ)",
+      "en": "Loans to accounting entity within consolidated unit (066) - (096A)"
+     },
+     "oznacenie": "5.",
+     "cisloRiadku": 31
+    },
+    {
+     "text": {
+      "sk": "Ostatné pôžičky (067) - (096AÚ)",
+      "en": "Other loans (067) - (096AA)"
+     },
+     "oznacenie": "6.",
+     "cisloRiadku": 32
+    },
+    {
+     "text": {
+      "sk": "Ostatný dlhodobý finančný majetok (069) - (096AÚ)",
+      "en": "Other non-current financial assets (069) - (089+092A)"
+     },
+     "oznacenie": "7.",
+     "cisloRiadku": 33
+    },
+    {
+     "text": {
+      "sk": "Obstaranie dlhodobého finančného majetku (043) - (096AÚ)",
+      "en": "Acquisition of non-current financial assets (043) - (096A)"
+     },
+     "oznacenie": "8.",
+     "cisloRiadku": 34
+    },
+    {
+     "text": {
+      "sk": "Obežný majetok r. 036 + r. 042 + r. 050 + r. 063 + r. 088+ r. 101 + r. 107",
+      "en": "Current assets line 036 + line 042 + line 050 + line 063 + line 088 + line 101 + line 107"
+     },
+     "oznacenie": "B.",
+     "cisloRiadku": 35
+    },
+    {
+     "text": {
+      "sk": "Zásoby súčet (r. 037 až 041)",
+      "en": "Inventory - total (lines 035 to 039)"
+     },
+     "oznacenie": "B.I.",
+     "cisloRiadku": 36
+    },
+    {
+     "text": {
+      "sk": "Materiál (112 + 119) - (191)",
+      "en": "Raw material (112 + 119) - (191)"
+     },
+     "oznacenie": "B.I.1.",
+     "cisloRiadku": 37
+    },
+    {
+     "text": {
+      "sk": "Nedokončená výroba a polotovary (121 + 122) - (192 + 193)",
+      "en": "Work in progress and semi-finished products (121 + 122) - (192 + 193)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 38
+    },
+    {
+     "text": {
+      "sk": "Výrobky (123) - (194)",
+      "en": "Finished goods (123) - (194)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 39
+    },
+    {
+     "text": {
+      "sk": "Zvieratá (124) - (195)",
+      "en": "Animals (124) - (195)"
+     },
+     "oznacenie": "4.",
+     "cisloRiadku": 40
+    },
+    {
+     "text": {
+      "sk": "Tovar (132 + 133 + 139) - (196)",
+      "en": "Merchandise (132 + 133 + 139) - (196)"
+     },
+     "oznacenie": "5.",
+     "cisloRiadku": 41
+    },
+    {
+     "text": {
+      "sk": "Zúčtovanie medzi subjektami verejnej správy súčet (r. 043 až r. 049)",
+      "en": "Clearance between the public administration entities - total (lines 043 to 049)"
+     },
+     "oznacenie": "B.II.",
+     "cisloRiadku": 42
+    },
+    {
+     "text": {
+      "sk": "Zúčtovanie odvodov príjmov rozpočtových organizácií do rozpočtu zriaďovateľa (351)",
+      "en": "Clearing of state-funded organisation's contributions to founder's budget (351)"
+     },
+     "oznacenie": "B.II.1.",
+     "cisloRiadku": 43
+    },
+    {
+     "text": {
+      "sk": "Zúčtovanie transferov štátneho rozpočtu (353)",
+      "en": "Clearing of state budget transfers (353)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 44
+    },
+    {
+     "text": {
+      "sk": "Zúčtovanie transferov rozpočtu obce a vyššieho územného celku (355)",
+      "en": "Clearing of transfers of the budget of municipalities and higher territorial units (355)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 45
+    },
+    {
+     "text": {
+      "sk": "Zúčtovanie transferov zo štátneho rozpočtu v rámci konsolidovaného celku (356)",
+      "en": "Clearing of transfers from state budget within consolidated unit (356)"
+     },
+     "oznacenie": "4.",
+     "cisloRiadku": 46
+    },
+    {
+     "text": {
+      "sk": "Ostatné zúčtovanie rozpočtu obce a vyššieho územného celku (357)",
+      "en": "Other clearing of the budget of municipalities and higher territorial units (357)"
+     },
+     "oznacenie": "5.",
+     "cisloRiadku": 47
+    },
+    {
+     "text": {
+      "sk": "Zúčtovanie transferov zo štátneho rozpočtu iným subjektom (358)",
+      "en": "Clearing of transfers from state budget to other entities (358)"
+     },
+     "oznacenie": "6.",
+     "cisloRiadku": 48
+    },
+    {
+     "text": {
+      "sk": "Zúčtovanie transferov medzi subjektami verejnej správy a iné zúčtovania (359)",
+      "en": "Clearance of transfers between the public administration entities and other clearance transactions (359)"
+     },
+     "oznacenie": "7.",
+     "cisloRiadku": 49
+    },
+    {
+     "text": {
+      "sk": "Dlhodobé pohľadávky súčet (r. 051 až 061)",
+      "en": "Non-current receivables - total (lines 051 to 061)"
+     },
+     "oznacenie": "B. III",
+     "cisloRiadku": 50
+    },
+    {
+     "text": {
+      "sk": "Odberatelia (311AÚ) - (391AÚ)",
+      "en": "Customers (311A) - (391A)"
+     },
+     "oznacenie": "B.III.1.",
+     "cisloRiadku": 51
+    },
+    {
+     "text": {
+      "sk": "Zmenky na inkaso (312AÚ) - (391AÚ)",
+      "en": "Bills of exchange to be collected (312A) - (391A)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 52
+    },
+    {
+     "text": {
+      "sk": "Pohľadávky za eskontované cenné papiere (313AÚ) - (391AÚ)",
+      "en": "Receivables for discounted securities (313A) - (391A)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 53
+    },
+    {
+     "text": {
+      "sk": "Ostatné pohľadávky (315AÚ) - (391AÚ)",
+      "en": "Other receivables (315A) - (391A)"
+     },
+     "oznacenie": "4.",
+     "cisloRiadku": 54
+    },
+    {
+     "text": {
+      "sk": "Pohľadávky voči zamestnancom (335AÚ) - (391AÚ)",
+      "en": "Receivables to employees (335A) - (391A)"
+     },
+     "oznacenie": "5.",
+     "cisloRiadku": 55
+    },
+    {
+     "text": {
+      "sk": "Pohľadávky voči združeniu (369AÚ) - (391AÚ)",
+      "en": "Receivables from participants in association (369A) - (391A)"
+     },
+     "oznacenie": "6.",
+     "cisloRiadku": 56
+    },
+    {
+     "text": {
+      "sk": "Pohľadávky a záväzky z pevných termínových operácií (373AÚ) - (391AÚ)",
+      "en": "Receivables and liabilities from fixed term transactions (373A) - (391A)"
+     },
+     "oznacenie": "7.",
+     "cisloRiadku": 57
+    },
+    {
+     "text": {
+      "sk": "Pohľadávky z nájmu (374AÚ) - (391AÚ)",
+      "en": "Receivables from leasing (374A) - (391A)"
+     },
+     "oznacenie": "8.",
+     "cisloRiadku": 58
+    },
+    {
+     "text": {
+      "sk": "Pohľadávky z vydaných dlhopisov (375AÚ) - (391AÚ)",
+      "en": "Receivables from issued bonds (375A) - (391A)"
+     },
+     "oznacenie": "9.",
+     "cisloRiadku": 59
+    },
+    {
+     "text": {
+      "sk": "Nakúpené opcie (376AÚ) - (391AÚ)",
+      "en": "Options purchased (376A) - (391A)"
+     },
+     "oznacenie": "10.",
+     "cisloRiadku": 60
+    },
+    {
+     "text": {
+      "sk": "Iné pohľadávky (378AÚ) - (391AÚ)",
+      "en": "Other receivables (378A) - (391A)"
+     },
+     "oznacenie": "11.",
+     "cisloRiadku": 61
+    },
+    {
+     "text": {
+      "sk": "z toho: odložená daňová pohľadávka",
+      "en": "of that: deffered tax assets"
+     },
+     "cisloRiadku": 62
+    },
+    {
+     "text": {
+      "sk": "Krátkodobé pohľadávky súčet (r. 064 až 087)",
+      "en": "Current receivables - total (lines 064 to 087)"
+     },
+     "oznacenie": "B.IV.",
+     "cisloRiadku": 63
+    },
+    {
+     "text": {
+      "sk": "Odberatelia (311AÚ) - (391AÚ)",
+      "en": "Customers (311A) - (391A)"
+     },
+     "oznacenie": "B.IV.1.",
+     "cisloRiadku": 64
+    },
+    {
+     "text": {
+      "sk": "Zmenky na inkaso (312AÚ) - (391AÚ)",
+      "en": "Bills of exchange to be collected (312AA) - (391A)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 65
+    },
+    {
+     "text": {
+      "sk": "Pohľadávky za eskontované cenné papiere (313AÚ) - (391AÚ)",
+      "en": "Receivables for discounted securities (313A) - (391A)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 66
+    },
+    {
+     "text": {
+      "sk": "Poskytnuté prevádzkové preddavky (314) - (391AÚ)",
+      "en": "Provided advance payments (314) - (391A)"
+     },
+     "oznacenie": "4.",
+     "cisloRiadku": 67
+    },
+    {
+     "text": {
+      "sk": "Ostatné pohľadávky (315AÚ) - (391AÚ)",
+      "en": "Other receivables (315A) - (391A)"
+     },
+     "oznacenie": "5.",
+     "cisloRiadku": 68
+    },
+    {
+     "text": {
+      "sk": "Pohľadávky z nedaňových rozpočtových príjmov (316) - (391AÚ)",
+      "en": "Receivables from non-tax revenue (316) - (391A)"
+     },
+     "oznacenie": "6.",
+     "cisloRiadku": 69
+    },
+    {
+     "text": {
+      "sk": "Pohľadávky z daňových a colných rozpočtových príjmov (317) - (391AÚ)",
+      "en": "Receivables from tax and customs revenue (317) - (391A)"
+     },
+     "oznacenie": "7.",
+     "cisloRiadku": 70
+    },
+    {
+     "text": {
+      "sk": "Pohľadávky z nedaňových príjmov obcí a vyšších územných celkov a rozpočtových organizácií zriadených obcou a vyšším územným celkom (318) - (391AÚ)",
+      "en": "Receivables from non-tax revenue of municipalities and higher territorial units and state-funded organisations founded by municipality and higher territorial unit (318) - (391A)"
+     },
+     "oznacenie": "8.",
+     "cisloRiadku": 71
+    },
+    {
+     "text": {
+      "sk": "Pohľadávky z daňových príjmov obcí a vyšších územných celkov (319) - (391AÚ)",
+      "en": "Receivables from tax revenue of municipalities and higher territorial units (319) - (391A)"
+     },
+     "oznacenie": "9.",
+     "cisloRiadku": 72
+    },
+    {
+     "text": {
+      "sk": "Pohľadávky voči zamestnancom (335AÚ) - (391AÚ)",
+      "en": "Receivables to employees (335A) - (391A)"
+     },
+     "oznacenie": "10.",
+     "cisloRiadku": 73
+    },
+    {
+     "text": {
+      "sk": "Zúčtovanie s orgánmi sociálneho poistenia a zdravotného poistenia (336) - (391AÚ)",
+      "en": "Clearing with social and health insurance institutions (336) - (391A)"
+     },
+     "oznacenie": "11.",
+     "cisloRiadku": 74
+    },
+    {
+     "text": {
+      "sk": "Daň z príjmov (341) - (391AÚ)",
+      "en": "Income tax (341) - (391A)"
+     },
+     "oznacenie": "12.",
+     "cisloRiadku": 75
+    },
+    {
+     "text": {
+      "sk": "Ostatné priame dane (342) - (391AÚ)",
+      "en": "Other direct taxes (342) - (391A)"
+     },
+     "oznacenie": "13.",
+     "cisloRiadku": 76
+    },
+    {
+     "text": {
+      "sk": "Daň z pridanej hodnoty (343) - (391AÚ)",
+      "en": "Value added tax (343) - (391A)"
+     },
+     "oznacenie": "14.",
+     "cisloRiadku": 77
+    },
+    {
+     "text": {
+      "sk": "Ostatné dane a poplatky (345) - (391AÚ)",
+      "en": "Other taxes and fees (345) - (391A)"
+     },
+     "oznacenie": "15.",
+     "cisloRiadku": 78
+    },
+    {
+     "text": {
+      "sk": "Pohľadávky voči združeniu (369AÚ) - (391AÚ)",
+      "en": "Receivables from participants in association (369A) - (391A)"
+     },
+     "oznacenie": "16.",
+     "cisloRiadku": 79
+    },
+    {
+     "text": {
+      "sk": "Pohľadávky a záväzky z pevných termínovaných operácií (373AÚ) - (391AÚ)",
+      "en": "Receivables and liabilities from fixed term transactions (373A) - (391A)"
+     },
+     "oznacenie": "17.",
+     "cisloRiadku": 80
+    },
+    {
+     "text": {
+      "sk": "Pohľadávky z nájmu (374AÚ) - (391AÚ)",
+      "en": "Receivables from leasing (374A) - (391A)"
+     },
+     "oznacenie": "18.",
+     "cisloRiadku": 81
+    },
+    {
+     "text": {
+      "sk": "Pohľadávky z vydaných dlhopisov (375AÚ) - (391AÚ)",
+      "en": "Receivables from issued bonds (375A) - (391A)"
+     },
+     "oznacenie": "19.",
+     "cisloRiadku": 82
+    },
+    {
+     "text": {
+      "sk": "Nakúpené opcie (376AÚ) - (391AÚ)",
+      "en": "Options purchased (376A) - (391A)"
+     },
+     "oznacenie": "20.",
+     "cisloRiadku": 83
+    },
+    {
+     "text": {
+      "sk": "Iné pohľadávky (378AÚ) - (391AÚ)",
+      "en": "Other receivables (378A) - (391A)"
+     },
+     "oznacenie": "21.",
+     "cisloRiadku": 84
+    },
+    {
+     "text": {
+      "sk": "Spojovací účet pri združení (396AÚ)",
+      "en": "Control account at association (396A)"
+     },
+     "oznacenie": "22.",
+     "cisloRiadku": 85
+    },
+    {
+     "text": {
+      "sk": "Zúčtovanie s Európskou úniou (371AÚ)- (391AÚ)",
+      "en": "Clearing with the European Union (371A)- (391A)"
+     },
+     "oznacenie": "23.",
+     "cisloRiadku": 86
+    },
+    {
+     "text": {
+      "sk": "Transfery a ostatné zúčtovanie so subjektami mimo verejnej správy (372AÚ) - (391AÚ)",
+      "en": "Transfers and other clearance with entities outside public administration (372A) - (391A)"
+     },
+     "oznacenie": "24.",
+     "cisloRiadku": 87
+    },
+    {
+     "text": {
+      "sk": "Finančné účty súčet (r. 089 až 100)",
+      "en": "Financial accounts - total (lines 089 to 100)"
+     },
+     "oznacenie": "B.V.",
+     "cisloRiadku": 88
+    },
+    {
+     "text": {
+      "sk": "Pokladnica (211)",
+      "en": "Cash (211)"
+     },
+     "oznacenie": "B.V.1.",
+     "cisloRiadku": 89
+    },
+    {
+     "text": {
+      "sk": "Ceniny (213)",
+      "en": "Stamps and vouchers (213)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 90
+    },
+    {
+     "text": {
+      "sk": "Bankové účty (221AÚ +/- 261)",
+      "en": "Bank accounts (221AA +/- 261)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 91
+    },
+    {
+     "text": {
+      "sk": "Účty v bankách s dobou viazanosti dlhšou ako jeden rok (221AÚ)",
+      "en": "Accounts in banks with term longer than one year (221A)"
+     },
+     "oznacenie": "4.",
+     "cisloRiadku": 92
+    },
+    {
+     "text": {
+      "sk": "Výdavkový rozpočtový účet (222)",
+      "en": "Account of budgetary expenditures (222)"
+     },
+     "oznacenie": "5.",
+     "cisloRiadku": 93
+    },
+    {
+     "text": {
+      "sk": "Príjmový rozpočtový účet (223)",
+      "en": "Account of budgetary revenue (223)"
+     },
+     "oznacenie": "6.",
+     "cisloRiadku": 94
+    },
+    {
+     "text": {
+      "sk": "Majetkové cenné papiere na obchodovanie (251) - (291AÚ)",
+      "en": "Equity securities held for trading (251) - (291A)"
+     },
+     "oznacenie": "7.",
+     "cisloRiadku": 95
+    },
+    {
+     "text": {
+      "sk": "Dlhové cenné papiere na obchodovanie (253) - (291AÚ)",
+      "en": "Debt securities held for trading (253) - (291A)"
+     },
+     "oznacenie": "8.",
+     "cisloRiadku": 96
+    },
+    {
+     "text": {
+      "sk": "Dlhové cenné papiere so splatnosťou do jedného roka držané do splatnosti (256) - (291AÚ)",
+      "en": "Debt securities payable to one year held to maturity (256) - (291A)"
+     },
+     "oznacenie": "9.",
+     "cisloRiadku": 97
+    },
+    {
+     "text": {
+      "sk": "Ostatné realizovateľné cenné papiere (257) - (291AÚ)",
+      "en": "Other realisable securities (257) - (291A)"
+     },
+     "oznacenie": "10.",
+     "cisloRiadku": 98
+    },
+    {
+     "text": {
+      "sk": "Obstaranie krátkodobého finančného majetku (259) - (291AÚ)",
+      "en": "Acquisition of current financial assets (259) - (291A)"
+     },
+     "oznacenie": "11.",
+     "cisloRiadku": 99
+    },
+    {
+     "text": {
+      "sk": "Účty Štátnej pokladnice (účtová skupina 28)",
+      "en": "State Treasury accounts (account group 28)"
+     },
+     "oznacenie": "12.",
+     "cisloRiadku": 100
+    },
+    {
+     "text": {
+      "sk": "Poskytnuté návratné finančné výpomoci dlhodobé súčet (r. 102 až r. 106)",
+      "en": "Provided non-current repayable financial assistance - total (lines 102 to 106)"
+     },
+     "oznacenie": "B.VI.",
+     "cisloRiadku": 101
+    },
+    {
+     "text": {
+      "sk": "Poskytnuté návratné finančné výpomoci subjektom v rámci konsolidovaného celku (271AÚ) - (291AÚ)",
+      "en": "Repayable financial assistance provided to entities within consolidated unit (271A) - (291A)"
+     },
+     "oznacenie": "B.VI.1.",
+     "cisloRiadku": 102
+    },
+    {
+     "text": {
+      "sk": "Poskytnuté návratné finančné výpomoci ostatným subjektom verejnej správy (272AÚ) - (291AÚ)",
+      "en": "Repayable financial assistance provided to other entities of general government (272A) - (291A)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 103
+    },
+    {
+     "text": {
+      "sk": "Poskytnuté návratné finančné výpomoci podnikateľským subjektom (274AÚ) - (291AÚ)",
+      "en": "Repayable financial assistance provided to business entities (274A) - (291A)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 104
+    },
+    {
+     "text": {
+      "sk": "Poskytnuté návratné finančné výpomoci ostatným organizáciám (275AÚ) - (291AÚ)",
+      "en": "Repayable financial assistance provided to other organisations (275A) - (291A)"
+     },
+     "oznacenie": "4.",
+     "cisloRiadku": 105
+    },
+    {
+     "text": {
+      "sk": "Poskytnuté návratné finančné výpomoci fyzickým osobám (277AÚ) - (291AÚ)",
+      "en": "Repayable financial assistance provided to natural persons (277A) - (291A)"
+     },
+     "oznacenie": "5.",
+     "cisloRiadku": 106
+    },
+    {
+     "text": {
+      "sk": "Poskytnuté návratné finančné výpomoci krátkodobé súčet (r. 108 až r. 112)",
+      "en": "Provided current repayable financial assistance - total (lines 108 to 112)"
+     },
+     "oznacenie": "B.VII.",
+     "cisloRiadku": 107
+    },
+    {
+     "text": {
+      "sk": "Poskytnuté návratné finančné výpomoci subjektom v rámci konsolidovaného celku (271AÚ) - (291AÚ)",
+      "en": "Repayable financial assistance provided to entities within consolidated unit (271A) - (291A)"
+     },
+     "oznacenie": "B.VII.1.",
+     "cisloRiadku": 108
+    },
+    {
+     "text": {
+      "sk": "Poskytnuté návratné finančné výpomoci ostatným subjektom verejnej správy (272AÚ) - (291AÚ)",
+      "en": "Repayable financial assistance provided to other entities of general government (272A) - (291A)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 109
+    },
+    {
+     "text": {
+      "sk": "Poskytnuté návratné finančné výpomoci podnikateľským subjektom (274AÚ) - (291AÚ)",
+      "en": "Repayable financial assistance provided to business entities (274A) - (291A)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 110
+    },
+    {
+     "text": {
+      "sk": "Poskytnuté návratné finančné výpomoci ostatným organizáciám (275AÚ) - (291AÚ)",
+      "en": "Repayable financial assistance provided to other organisations (275A) - (291A)"
+     },
+     "oznacenie": "4.",
+     "cisloRiadku": 111
+    },
+    {
+     "text": {
+      "sk": "Poskytnuté návratné finančné výpomoci fyzickým osobám (277AÚ) - (291AÚ)",
+      "en": "Repayable financial assistance provided to natural persons (277A) - (291A)"
+     },
+     "oznacenie": "5.",
+     "cisloRiadku": 112
+    },
+    {
+     "text": {
+      "sk": "Časové rozlíšenie súčet (r. 114 až r. 116)",
+      "en": "Accruals and deferrals - total (lines 114 to 116)"
+     },
+     "oznacenie": "C.",
+     "cisloRiadku": 113
+    },
+    {
+     "text": {
+      "sk": "Náklady budúcich období (381)",
+      "en": "Prepaid expenses (381)"
+     },
+     "oznacenie": "C. 1.",
+     "cisloRiadku": 114
+    },
+    {
+     "text": {
+      "sk": "Komplexné náklady budúcich období (382)",
+      "en": "Complex prepaid expenses (382)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 115
+    },
+    {
+     "text": {
+      "sk": "Príjmy budúcich období (385)",
+      "en": "Accrued income (385)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 116
+    },
+    {
+     "text": {
+      "sk": "Vzťahy k účtom klientov Štátnej pokladnice (účtová skupina 20)",
+      "en": "Relationships to the State Treasury client accounts (account group 20)"
+     },
+     "oznacenie": "D.",
+     "cisloRiadku": 117
+    }
+   ],
+   "pocetStlpcov": 5,
+   "pocetDatovychStlpcov": 2
+  },
+  {
+   "nazov": {
+    "sk": "Strana pasív",
+    "en": "Liabilities and Equity"
+   },
+   "hlavicka": [
+    {
+     "text": {
+      "sk": "Označenie",
+      "en": "Designation"
+     },
+     "riadok": 1,
+     "stlpec": 1,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "STRANA PASÍV",
+      "en": "LIABILITIES AND EQUITY"
+     },
+     "riadok": 1,
+     "stlpec": 2,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "Číslo riadku",
+      "en": "Line No."
+     },
+     "riadok": 1,
+     "stlpec": 3,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "20xx",
+      "en": "20xx"
+     },
+     "riadok": 1,
+     "stlpec": 4,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "20xx-1",
+      "en": "20xx-1"
+     },
+     "riadok": 1,
+     "stlpec": 5,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "a",
+      "en": "a"
+     },
+     "riadok": 2,
+     "stlpec": 1,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "b",
+      "en": "b"
+     },
+     "riadok": 2,
+     "stlpec": 2,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "c",
+      "en": "c"
+     },
+     "riadok": 2,
+     "stlpec": 3,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "3",
+      "en": "3"
+     },
+     "riadok": 2,
+     "stlpec": 4,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "4",
+      "en": "4"
+     },
+     "riadok": 2,
+     "stlpec": 5,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    }
+   ],
+   "riadky": [
+    {
+     "text": {
+      "sk": "VLASTNÉ IMANIE A ZÁVÄZKY r. 119 + r. 130 + r. 185 + r. 188",
+      "en": "TOTAL EQUITY AND LIABILITIES line 119 + line 130 + line 185 + line 188"
+     },
+     "cisloRiadku": 118
+    },
+    {
+     "text": {
+      "sk": "Vlastné imanie r. 120 + r. 123 + r. 126 + r. 129",
+      "en": "Equity line 120 + line 123 + line 126 + line 129"
+     },
+     "oznacenie": "A.",
+     "cisloRiadku": 119
+    },
+    {
+     "text": {
+      "sk": "Oceňovacie rozdiely súčet (r. 121 + r. 122)",
+      "en": "Differences from revaluation - total (lines 121 to 122)"
+     },
+     "oznacenie": "A.I.",
+     "cisloRiadku": 120
+    },
+    {
+     "text": {
+      "sk": "Oceňovacie rozdiely z precenenia majetku a záväzkov (+/– 414)",
+      "en": "Differences from revaluation of assets and liabilities (+/- 414)"
+     },
+     "oznacenie": "A.I.1.",
+     "cisloRiadku": 121
+    },
+    {
+     "text": {
+      "sk": "Oceňovacie rozdiely z kapitálových účastín (+/– 415)",
+      "en": "Investment revaluation reserves (+/- 415)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 122
+    },
+    {
+     "text": {
+      "sk": "Fondy súčet (r. 124 + r. 125)",
+      "en": "Funds - total (lines 124 to 125)"
+     },
+     "oznacenie": "A.II.",
+     "cisloRiadku": 123
+    },
+    {
+     "text": {
+      "sk": "Zákonný rezervný fond (421)",
+      "en": "Statutory reserve fund (421)"
+     },
+     "oznacenie": "A.II.1.",
+     "cisloRiadku": 124
+    },
+    {
+     "text": {
+      "sk": "Ostatné fondy (427)",
+      "en": "Other funds (427)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 125
+    },
+    {
+     "text": {
+      "sk": "Výsledok hospodárenia (+/-) súčet (r. 127 až 128)",
+      "en": "Net profit or loss (+/-) total (lines 127 to 128)"
+     },
+     "oznacenie": "A.III.",
+     "cisloRiadku": 126
+    },
+    {
+     "text": {
+      "sk": "Nevysporiadaný výsledok hospodárenia minulých rokov (+/– 428)",
+      "en": "Retained earnings or accumulated losses from previous years (+/- 428)"
+     },
+     "oznacenie": "A.III.1.",
+     "cisloRiadku": 127
+    },
+    {
+     "text": {
+      "sk": "Výsledok hospodárenia za účtovné obdobie (+/–) r. 001 - (r.120 + r. 123 + r.127 + r.129 + r. 130 + r. 185 + r. 188)",
+      "en": "Net profit/loss for the accounting period (+/-) line 001 - (line 117 + line 120 + line 124 + line 126 + line 180 + line 183)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 128
+    },
+    {
+     "text": {
+      "sk": "Podiely iných učtovných jednotiek",
+      "en": "Shares of other entities"
+     },
+     "oznacenie": "A.IV.",
+     "cisloRiadku": 129
+    },
+    {
+     "text": {
+      "sk": "Záväzky súčet r. 131 + r. 136 + r. 144 + r. 156 + r. 178",
+      "en": "Liabilities - line 131 + line 136 + line 144 + line 156 + line 178"
+     },
+     "oznacenie": "B.",
+     "cisloRiadku": 130
+    },
+    {
+     "text": {
+      "sk": "Rezervy súčet (r. 132 až 135)",
+      "en": "Provisions - total (lines 132 to 135)"
+     },
+     "oznacenie": "B.I.",
+     "cisloRiadku": 131
+    },
+    {
+     "text": {
+      "sk": "Rezervy zákonné dlhodobé (451AÚ)",
+      "en": "Legal provisions - long-term (451A)"
+     },
+     "oznacenie": "B.I.1.",
+     "cisloRiadku": 132
+    },
+    {
+     "text": {
+      "sk": "Ostatné rezervy (459AÚ)",
+      "en": "Other provisions (459A)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 133
+    },
+    {
+     "text": {
+      "sk": "Rezervy zákonné krátkodobé (323AÚ, 451AÚ)",
+      "en": "Legal provisions - short-term (323A, 451A)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 134
+    },
+    {
+     "text": {
+      "sk": "Ostatné krátkodobé rezervy (323AÚ, 459AÚ)",
+      "en": "Other short-term provisions (323A, 459A)"
+     },
+     "oznacenie": "4.",
+     "cisloRiadku": 135
+    },
+    {
+     "text": {
+      "sk": "Zúčtovanie medzi subjektami verejnej správy súčet (r. 137 až r. 143)",
+      "en": "Clearance between the public administration entities - total (lines 137 to 143)"
+     },
+     "oznacenie": "B.II.",
+     "cisloRiadku": 136
+    },
+    {
+     "text": {
+      "sk": "Zúčtovanie odvodov príjmov rozpočtových organizácií do rozpočtu zriaďovateľa (351)",
+      "en": "Clearing of state-funded organisation's contributions to founder's budget (351)"
+     },
+     "oznacenie": "B.II.1.",
+     "cisloRiadku": 137
+    },
+    {
+     "text": {
+      "sk": "Zúčtovanie transferov štátneho rozpočtu (353)",
+      "en": "Clearing of state budget transfers (353)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 138
+    },
+    {
+     "text": {
+      "sk": "Zúčtovanie transferov rozpočtu obce a vyššieho územného celku (355)",
+      "en": "Clearing of transfers of the budget of municipalities and higher territorial units (355)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 139
+    },
+    {
+     "text": {
+      "sk": "Zúčtovanie transferov zo štátneho rozpočtu v rámci konsolidovaného celku (356)",
+      "en": "Clearing of transfers from state budget within consolidated unit (356)"
+     },
+     "oznacenie": "4.",
+     "cisloRiadku": 140
+    },
+    {
+     "text": {
+      "sk": "Ostatné zúčtovanie rozpočtu obce a vyššieho územného celku (357)",
+      "en": "Other clearing of the budget of municipalities and higher territorial units (357)"
+     },
+     "oznacenie": "5.",
+     "cisloRiadku": 141
+    },
+    {
+     "text": {
+      "sk": "Zúčtovanie transferov zo štátneho rozpočtu iným subjektom (358)",
+      "en": "Clearing of transfers from state budget to other entities (358)"
+     },
+     "oznacenie": "6.",
+     "cisloRiadku": 142
+    },
+    {
+     "text": {
+      "sk": "Zúčtovanie transferov medzi subjektami verejnej správy a iné zúčtovania (359)",
+      "en": "Clearance of transfers between the public administration entities and other clearance transactions (359)"
+     },
+     "oznacenie": "7.",
+     "cisloRiadku": 143
+    },
+    {
+     "text": {
+      "sk": "Dlhodobé záväzky súčet (r. 145 až 153 + r. 155)",
+      "en": "Non-current liabilities - total (lines 145 to 153 + line 155)"
+     },
+     "oznacenie": "B.III.",
+     "cisloRiadku": 144
+    },
+    {
+     "text": {
+      "sk": "Ostatné dlhodobé záväzky (479AÚ)",
+      "en": "Other non-current liabilities (479A)"
+     },
+     "oznacenie": "B.III.1.",
+     "cisloRiadku": 145
+    },
+    {
+     "text": {
+      "sk": "Dlhodobé prijaté preddavky (475AÚ)",
+      "en": "Long-term advance payments received (475A)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 146
+    },
+    {
+     "text": {
+      "sk": "Dlhodobé zmenky na úhradu (478AÚ)",
+      "en": "Long-term bills of exchange to be paid (478A)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 147
+    },
+    {
+     "text": {
+      "sk": "Záväzky zo sociálneho fondu (472)",
+      "en": "Liabilities related to social fund (472)"
+     },
+     "oznacenie": "4.",
+     "cisloRiadku": 148
+    },
+    {
+     "text": {
+      "sk": "Záväzky z nájmu (474AÚ)",
+      "en": "Liabilities under leasing contracts (474A)"
+     },
+     "oznacenie": "5.",
+     "cisloRiadku": 149
+    },
+    {
+     "text": {
+      "sk": "Dlhodobé nevyfakturované dodávky (476AÚ)",
+      "en": "Unbilled long-term supplies (476A)"
+     },
+     "oznacenie": "6.",
+     "cisloRiadku": 150
+    },
+    {
+     "text": {
+      "sk": "Pohľadávky a záväzky z pevných termínových operácií (373AÚ)",
+      "en": "Receivables and liabilities from fixed term transactions (373A)"
+     },
+     "oznacenie": "7.",
+     "cisloRiadku": 151
+    },
+    {
+     "text": {
+      "sk": "Predané opcie (377AÚ)",
+      "en": "Options sold (377A)"
+     },
+     "oznacenie": "8.",
+     "cisloRiadku": 152
+    },
+    {
+     "text": {
+      "sk": "Iné záväzky (379AÚ)",
+      "en": "Other liabilities (379A)"
+     },
+     "oznacenie": "9.",
+     "cisloRiadku": 153
+    },
+    {
+     "text": {
+      "sk": "z toho: odložený daňový záväzok",
+      "en": "of that: deffered tax liability"
+     },
+     "cisloRiadku": 154
+    },
+    {
+     "text": {
+      "sk": "Vydané dlhopisy dlhodobé (473AÚ) - (255AÚ)",
+      "en": "Bonds issued (473A ) - (255A)"
+     },
+     "oznacenie": "10.",
+     "cisloRiadku": 155
+    },
+    {
+     "text": {
+      "sk": "Krátkodobé záväzky súčet (r. 157 až 177)",
+      "en": "Current liabilities - total (lines 157 to 177)"
+     },
+     "oznacenie": "B.IV.",
+     "cisloRiadku": 156
+    },
+    {
+     "text": {
+      "sk": "Dodávatelia (321)",
+      "en": "Suppliers (321)"
+     },
+     "oznacenie": "B.IV.1.",
+     "cisloRiadku": 157
+    },
+    {
+     "text": {
+      "sk": "Zmenky na úhradu (322, 478AÚ)",
+      "en": "Bills of exchange to be paid (322, 478A)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 158
+    },
+    {
+     "text": {
+      "sk": "Prijaté preddavky (324, 475AÚ)",
+      "en": "Advance payments received (324, 475A)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 159
+    },
+    {
+     "text": {
+      "sk": "Ostatné záväzky (325, 479AÚ)",
+      "en": "Other liabilities (325, 479A)"
+     },
+     "oznacenie": "4.",
+     "cisloRiadku": 160
+    },
+    {
+     "text": {
+      "sk": "Nevyfakturované dodávky (326, 476AÚ)",
+      "en": "Unbilled supplies (326, 476A)"
+     },
+     "oznacenie": "5.",
+     "cisloRiadku": 161
+    },
+    {
+     "text": {
+      "sk": "Záväzky z nájmu (474AÚ)",
+      "en": "Liabilities under leasing contracts (474A)"
+     },
+     "oznacenie": "6.",
+     "cisloRiadku": 162
+    },
+    {
+     "text": {
+      "sk": "Pohľadávky a záväzky z pevných termínových operácií (373AÚ)",
+      "en": "Receivables and liabilities from fixed term transactions (373A)"
+     },
+     "oznacenie": "7.",
+     "cisloRiadku": 163
+    },
+    {
+     "text": {
+      "sk": "Predané opcie (377AÚ)",
+      "en": "Options sold (377A)"
+     },
+     "oznacenie": "8.",
+     "cisloRiadku": 164
+    },
+    {
+     "text": {
+      "sk": "Iné záväzky (379AÚ)",
+      "en": "Other liabilities (379A)"
+     },
+     "oznacenie": "9.",
+     "cisloRiadku": 165
+    },
+    {
+     "text": {
+      "sk": "Záväzky z upísaných nesplatených cenných papierov a vkladov (367)",
+      "en": "Liabilities out of subscribed unpaid securities and contributions (367)"
+     },
+     "oznacenie": "10.",
+     "cisloRiadku": 166
+    },
+    {
+     "text": {
+      "sk": "Záväzky voči združeniu (368)",
+      "en": "Liabilities to participants in association (368)"
+     },
+     "oznacenie": "11.",
+     "cisloRiadku": 167
+    },
+    {
+     "text": {
+      "sk": "Zamestnanci (331)",
+      "en": "Employees (331)"
+     },
+     "oznacenie": "12.",
+     "cisloRiadku": 168
+    },
+    {
+     "text": {
+      "sk": "Ostatné záväzky voči zamestnancom (333)",
+      "en": "Other liabilities to employees (333)"
+     },
+     "oznacenie": "13.",
+     "cisloRiadku": 169
+    },
+    {
+     "text": {
+      "sk": "Zúčtovanie s orgánmi sociálneho poistenia a zdravotného poistenia (336)",
+      "en": "Clearing with social and health insurance institutions (336)"
+     },
+     "oznacenie": "14.",
+     "cisloRiadku": 170
+    },
+    {
+     "text": {
+      "sk": "Daň z príjmov (341)",
+      "en": "Income tax (341)"
+     },
+     "oznacenie": "15.",
+     "cisloRiadku": 171
+    },
+    {
+     "text": {
+      "sk": "Ostatné priame dane (342)",
+      "en": "Other direct taxes (342)"
+     },
+     "oznacenie": "16.",
+     "cisloRiadku": 172
+    },
+    {
+     "text": {
+      "sk": "Daň z pridanej hodnoty (343)",
+      "en": "Value added tax (343)"
+     },
+     "oznacenie": "17.",
+     "cisloRiadku": 173
+    },
+    {
+     "text": {
+      "sk": "Ostatné dane a poplatky (345)",
+      "en": "Other taxes and fees (345)"
+     },
+     "oznacenie": "18.",
+     "cisloRiadku": 174
+    },
+    {
+     "text": {
+      "sk": "Spojovací účet pri združení (396AÚ)",
+      "en": "Control account at association (396A)"
+     },
+     "oznacenie": "19.",
+     "cisloRiadku": 175
+    },
+    {
+     "text": {
+      "sk": "Zúčtovanie s Európskou úniou (371AÚ)",
+      "en": "Clearing with the European Union (371A)"
+     },
+     "oznacenie": "20.",
+     "cisloRiadku": 176
+    },
+    {
+     "text": {
+      "sk": "Transfery a ostatné zúčtovanie so subjektami mimo verejnej správy (372AÚ)",
+      "en": "Transfers and other clearance with entities outside public administration (372A)"
+     },
+     "oznacenie": "21.",
+     "cisloRiadku": 177
+    },
+    {
+     "text": {
+      "sk": "Bankové úvery a výpomoci súčet (r. 179 až 184)",
+      "en": "Bank loans and assistances - total (lines 179 to 184)"
+     },
+     "oznacenie": "B.V.",
+     "cisloRiadku": 178
+    },
+    {
+     "text": {
+      "sk": "Bankové úvery dlhodobé (461AÚ)",
+      "en": "Long-term bank loans (461A)"
+     },
+     "oznacenie": "B.V.1.",
+     "cisloRiadku": 179
+    },
+    {
+     "text": {
+      "sk": "Bežné bankové úvery (461AÚ, 221AÚ, 231, 232)",
+      "en": "Current bank loans (461A, 221A, 231, 232)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 180
+    },
+    {
+     "text": {
+      "sk": "Vydané dlhopisy krátkodobé (473AÚ, 241) - (255AÚ)",
+      "en": "Issued short-term bonds (473A, 241 ) - (255A)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 181
+    },
+    {
+     "text": {
+      "sk": "Ostatné krátkodobé finančné výpomoci (249)",
+      "en": "Other short-term financial assistance (249)"
+     },
+     "oznacenie": "4.",
+     "cisloRiadku": 182
+    },
+    {
+     "text": {
+      "sk": "Prijaté návratné finančné výpomoci od subjektov verejnej správy dlhodobé (273AÚ)",
+      "en": "Repayable financial assistance accepted from entities of public administration - long-term (273A)"
+     },
+     "oznacenie": "5.",
+     "cisloRiadku": 183
+    },
+    {
+     "text": {
+      "sk": "Prijaté návratné finančné výpomoci od subjektov verejnej správy krátkodobé (273AÚ)",
+      "en": "Repayable financial assistance accepted from entities of public administration - short-term (273A)"
+     },
+     "oznacenie": "6.",
+     "cisloRiadku": 184
+    },
+    {
+     "text": {
+      "sk": "Časové rozlíšenie súčet (r. 186 + r. 187)",
+      "en": "Accruals and deferrals - total (lines 186 to 187)"
+     },
+     "oznacenie": "C.",
+     "cisloRiadku": 185
+    },
+    {
+     "text": {
+      "sk": "Výdavky budúcich období (383)",
+      "en": "Accrued expenses (383)"
+     },
+     "oznacenie": "C.1.",
+     "cisloRiadku": 186
+    },
+    {
+     "text": {
+      "sk": "Výnosy budúcich období (384)",
+      "en": "Deferred income (384)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 187
+    },
+    {
+     "text": {
+      "sk": "Vzťahy k účtom klientov Štátnej pokladnice (účtová skupina 20)",
+      "en": "Relationships to the State Treasury client accounts (account group 20)"
+     },
+     "oznacenie": "D.",
+     "cisloRiadku": 188
+    }
+   ],
+   "pocetStlpcov": 5,
+   "pocetDatovychStlpcov": 2
+  }
+ ],
+ "nazov": "Kons S UJ VS Úč 1-01",
+ "nariadenieMF": "MF/21230/2014-31",
+ "platneOd": "2014-01-01"
+}

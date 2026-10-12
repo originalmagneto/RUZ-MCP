@@ -1,0 +1,15 @@
+{
+ "id": 2609439,
+ "datumZostaveniaK": "2013-12-31",
+ "idUJ": 10882,
+ "idUctovnychVykazov": [
+  4934673
+ ],
+ "konsolidovana": true,
+ "datumPoslednejUpravy": "2015-08-20",
+ "zdrojDat": "DC",
+ "datumPrilozeniaSpravyAuditora": "2015-08-19",
+ "typ": "Riadna",
+ "obdobieOd": "2013-01",
+ "obdobieDo": "2013-12"
+}

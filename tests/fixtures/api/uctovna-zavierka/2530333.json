@@ -1,0 +1,21 @@
+{
+ "id": 2530333,
+ "idUJ": 10882,
+ "idUctovnychVykazov": [
+  4828111,
+  4828091,
+  4828102,
+  4828082,
+  4952402
+ ],
+ "datumZostaveniaK": "2014-12-31",
+ "konsolidovana": true,
+ "datumPrilozeniaSpravyAuditora": "2015-11-13",
+ "typ": "Riadna",
+ "datumPodania": "2015-06-23",
+ "datumZostavenia": "2015-06-19",
+ "obdobieOd": "2014-01",
+ "obdobieDo": "2014-12",
+ "datumPoslednejUpravy": "2015-11-14",
+ "zdrojDat": "SAM"
+}

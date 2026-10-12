@@ -1,0 +1,21 @@
+{
+ "id": 5697481,
+ "datumZostaveniaK": "2022-12-31",
+ "idUJ": 10882,
+ "idUctovnychVykazov": [
+  8753994,
+  8753993,
+  8753991,
+  8795720,
+  8753992
+ ],
+ "konsolidovana": true,
+ "datumPoslednejUpravy": "2023-12-28",
+ "zdrojDat": "SAM",
+ "datumPrilozeniaSpravyAuditora": "2023-12-28",
+ "typ": "Riadna",
+ "obdobieOd": "2022-01",
+ "obdobieDo": "2022-12",
+ "datumPodania": "2023-07-24",
+ "datumZostavenia": "2023-06-20"
+}

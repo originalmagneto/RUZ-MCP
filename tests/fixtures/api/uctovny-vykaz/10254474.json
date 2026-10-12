@@ -1,0 +1,33 @@
+{
+ "prilohy": [
+  {
+   "id": 12702977,
+   "velkostPrilohy": 310806,
+   "jazyk": "SLK",
+   "digest": "3939acfe587bbe2d1f3357e95bb6a6b274c453c90b6202fabd05233188f2a1e1",
+   "mimeType": "application/pdf",
+   "meno": "CKS_UZTS_SP_40825.PDF"
+  }
+ ],
+ "id": 10254474,
+ "idUctovnejZavierky": 6955125,
+ "obsah": {
+  "titulnaStrana": {
+   "nazovUctovnejJednotky": "Sociálna poisťovňa",
+   "ico": "30807484",
+   "adresa": {
+    "ulica": "29. augusta 8 a 10",
+    "psc": "81363",
+    "mesto": "Bratislava - mestská časť Staré Mesto"
+   },
+   "typZavierky": "Riadna",
+   "obdobieOd": "2025-01",
+   "obdobieDo": "2025-12",
+   "datumZostavenia": "2026-02-09"
+  }
+ },
+ "pristupnostDat": "Verejné",
+ "datumPoslednejUpravy": "2026-06-23",
+ "zdrojDat": "CKS",
+ "idSablony": 725
+}

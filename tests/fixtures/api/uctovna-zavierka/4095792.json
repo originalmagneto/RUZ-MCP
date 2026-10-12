@@ -1,0 +1,21 @@
+{
+ "id": 4095792,
+ "idUJ": 10882,
+ "idUctovnychVykazov": [
+  6785465,
+  6871540,
+  6785115,
+  6785113,
+  6785470
+ ],
+ "datumZostaveniaK": "2018-12-31",
+ "konsolidovana": true,
+ "datumPrilozeniaSpravyAuditora": "2019-12-17",
+ "typ": "Riadna",
+ "datumPodania": "2019-06-28",
+ "datumZostavenia": "2019-06-20",
+ "obdobieOd": "2018-01",
+ "obdobieDo": "2018-12",
+ "datumPoslednejUpravy": "2019-12-18",
+ "zdrojDat": "SAM"
+}

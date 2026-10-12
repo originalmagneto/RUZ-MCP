@@ -1,0 +1,20 @@
+{
+ "id": 5486770,
+ "idUJ": 10882,
+ "idUctovnychVykazov": [
+  8504564,
+  8504566,
+  8504563,
+  8757605,
+  8504565
+ ],
+ "datumZostaveniaK": "2022-12-31",
+ "datumPrilozeniaSpravyAuditora": "2023-08-08",
+ "typ": "Riadna",
+ "datumPodania": "2023-03-30",
+ "datumZostavenia": "2023-03-30",
+ "obdobieOd": "2022-01",
+ "obdobieDo": "2022-12",
+ "datumPoslednejUpravy": "2023-08-08",
+ "zdrojDat": "SAM"
+}

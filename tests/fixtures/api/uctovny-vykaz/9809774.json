@@ -1,0 +1,27 @@
+{
+ "prilohy": [
+  {
+   "id": 12008487,
+   "mimeType": "application/pdf",
+   "jazyk": "SK",
+   "velkostPrilohy": 129381,
+   "digest": "98d1f805d52a5657fe69f0b5364e3203518b0f909b521cfca4fef2fa4b5a6598",
+   "meno": "poznamky_tabulky.pdf"
+  },
+  {
+   "id": 12008488,
+   "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+   "jazyk": "SK",
+   "velkostPrilohy": 90176,
+   "digest": "6031dc73eb9495894aa26d0bcebf4fedd081b67825aa1541012d00e83d80ad56",
+   "meno": "POZNAMKY_KUZ_2024v2_DG.docx"
+  }
+ ],
+ "id": 9809774,
+ "idUctovnejZavierky": 6579085,
+ "obsah": {},
+ "pristupnostDat": "Verejné",
+ "idSablony": 483,
+ "datumPoslednejUpravy": "2025-08-22",
+ "zdrojDat": "SAM"
+}

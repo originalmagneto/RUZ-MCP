@@ -1,0 +1,27 @@
+{
+ "prilohy": [
+  {
+   "id": 11546407,
+   "mimeType": "application/pdf",
+   "jazyk": "SK",
+   "velkostPrilohy": 87765,
+   "digest": "69f8adea2de52eba14c2801b78c75b06f9ca67c61df78c17e5f01bcfdc9e2729",
+   "meno": "poznamky_tabulky.pdf"
+  },
+  {
+   "id": 11546408,
+   "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+   "jazyk": "SK",
+   "velkostPrilohy": 309686,
+   "digest": "b5a2417337616aab1783137de13bb1c78909257958dc3739160ceff06976942f",
+   "meno": "Textova časť poznamky k IUZ_2024.docx"
+  }
+ ],
+ "id": 9543239,
+ "idUctovnejZavierky": 6350099,
+ "obsah": {},
+ "pristupnostDat": "Verejné",
+ "idSablony": 483,
+ "datumPoslednejUpravy": "2025-04-01",
+ "zdrojDat": "SAM"
+}

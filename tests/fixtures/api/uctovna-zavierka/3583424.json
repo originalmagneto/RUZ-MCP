@@ -1,0 +1,18 @@
+{
+ "id": 3583424,
+ "datumZostaveniaK": "2017-12-31",
+ "idUJ": 10882,
+ "idUctovnychVykazov": [
+  6153056,
+  6148795,
+  6150029,
+  6153020
+ ],
+ "datumPoslednejUpravy": "2018-03-30",
+ "zdrojDat": "SAM",
+ "typ": "Riadna",
+ "obdobieOd": "2017-01",
+ "obdobieDo": "2017-12",
+ "datumPodania": "2018-03-29",
+ "datumZostavenia": "2018-03-29"
+}

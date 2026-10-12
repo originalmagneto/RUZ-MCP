@@ -1,0 +1,21 @@
+{
+ "id": 4906043,
+ "idUJ": 10882,
+ "idUctovnychVykazov": [
+  7788826,
+  7788825,
+  7788824,
+  7788823,
+  7914527
+ ],
+ "datumZostaveniaK": "2020-12-31",
+ "konsolidovana": true,
+ "datumPrilozeniaSpravyAuditora": "2022-03-15",
+ "typ": "Riadna",
+ "datumPodania": "2021-09-14",
+ "datumZostavenia": "2021-09-02",
+ "obdobieOd": "2020-01",
+ "obdobieDo": "2020-12",
+ "datumPoslednejUpravy": "2022-03-15",
+ "zdrojDat": "SAM"
+}

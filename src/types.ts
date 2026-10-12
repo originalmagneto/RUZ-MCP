@@ -88,6 +88,7 @@ export interface TemplateRow {
 
 export interface TemplateTable {
   nazov?: { sk?: string };
+  hlavicka?: Array<{ text?: { sk?: string } }>; // column header cells
   riadky?: TemplateRow[];
   pocetStlpcov?: number;
   pocetDatovychStlpcov?: number; // number of numeric data columns per row
@@ -110,6 +111,7 @@ export interface IndicatorValue {
   cisloRiadku: number | null;    // first statutory row the value came from
   rows?: number[];               // every statutory row summed into the value
   available: boolean;
+  note?: string;                 // e.g. the matched row is empty in the filing
 }
 
 /** Another statement filed for the same period as the one a year was built from. */

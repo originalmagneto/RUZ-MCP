@@ -1,0 +1,1428 @@
+{
+ "id": 727,
+ "nazov": "Výkaz ziskov a strát Úč ROPO SFOV 2-01",
+ "platneOd": "2014-01-01",
+ "nariadenieMF": "MF/21227/2014-31",
+ "tabulky": [
+  {
+   "nazov": {
+    "sk": "Náklady",
+    "en": "Expenses"
+   },
+   "pocetDatovychStlpcov": 4,
+   "pocetStlpcov": 7,
+   "hlavicka": [
+    {
+     "text": {
+      "sk": "Číslo účtu alebo skupiny",
+      "en": "Account or group number"
+     },
+     "riadok": 1,
+     "stlpec": 1,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 2
+    },
+    {
+     "text": {
+      "sk": "Náklady",
+      "en": "Expenses"
+     },
+     "riadok": 1,
+     "stlpec": 2,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 2
+    },
+    {
+     "text": {
+      "sk": "Číslo riadku",
+      "en": "Line No."
+     },
+     "riadok": 1,
+     "stlpec": 3,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 2
+    },
+    {
+     "text": {
+      "sk": "20xx",
+      "en": "20xx"
+     },
+     "riadok": 1,
+     "stlpec": 4,
+     "sirkaStlpca": 3,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "20xx-1",
+      "en": "20xx-1"
+     },
+     "riadok": 1,
+     "stlpec": 7,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 2
+    },
+    {
+     "text": {
+      "sk": "Hlavná činnosť",
+      "en": "Core activity"
+     },
+     "riadok": 2,
+     "stlpec": 4,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "Podnikateľská činnosť",
+      "en": "Business activity"
+     },
+     "riadok": 2,
+     "stlpec": 5,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "Spolu",
+      "en": "Total"
+     },
+     "riadok": 2,
+     "stlpec": 6,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "a",
+      "en": "a"
+     },
+     "riadok": 3,
+     "stlpec": 1,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "b",
+      "en": "b"
+     },
+     "riadok": 3,
+     "stlpec": 2,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "c",
+      "en": "c"
+     },
+     "riadok": 3,
+     "stlpec": 3,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "1",
+      "en": "1"
+     },
+     "riadok": 3,
+     "stlpec": 4,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "2",
+      "en": "2"
+     },
+     "riadok": 3,
+     "stlpec": 5,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "3",
+      "en": "3"
+     },
+     "riadok": 3,
+     "stlpec": 6,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "4",
+      "en": "4"
+     },
+     "riadok": 3,
+     "stlpec": 7,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    }
+   ],
+   "riadky": [
+    {
+     "text": {
+      "sk": "Spotrebované nákupy (r. 002 až r. 005)",
+      "en": "Consumed purchases - total (lines 002 to 005)"
+     },
+     "oznacenie": "50",
+     "cisloRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "Spotreba materiálu",
+      "en": "Raw material consumption"
+     },
+     "oznacenie": "501",
+     "cisloRiadku": 2
+    },
+    {
+     "text": {
+      "sk": "Spotreba energie",
+      "en": "Energy consumption"
+     },
+     "oznacenie": "502",
+     "cisloRiadku": 3
+    },
+    {
+     "text": {
+      "sk": "Spotreba ostatných neskladovateľných dodávok",
+      "en": "Consumption of other non-inventory supplies"
+     },
+     "oznacenie": "503",
+     "cisloRiadku": 4
+    },
+    {
+     "text": {
+      "sk": "Predaný tovar, Predaná nehnuteľnosť",
+      "en": "Cost on merchandise sold"
+     },
+     "oznacenie": "504, 507",
+     "cisloRiadku": 5
+    },
+    {
+     "text": {
+      "sk": "Služby (r. 007 až r. 010)",
+      "en": "Services - total (lines 007 to 010)"
+     },
+     "oznacenie": "51",
+     "cisloRiadku": 6
+    },
+    {
+     "text": {
+      "sk": "Opravy a udržiavanie",
+      "en": "Repairs and maintenance"
+     },
+     "oznacenie": "511",
+     "cisloRiadku": 7
+    },
+    {
+     "text": {
+      "sk": "Cestovné",
+      "en": "Travel expenses"
+     },
+     "oznacenie": "512",
+     "cisloRiadku": 8
+    },
+    {
+     "text": {
+      "sk": "Náklady na reprezentáciu",
+      "en": "Representation costs"
+     },
+     "oznacenie": "513",
+     "cisloRiadku": 9
+    },
+    {
+     "text": {
+      "sk": "Ostatné služby",
+      "en": "Other services"
+     },
+     "oznacenie": "518",
+     "cisloRiadku": 10
+    },
+    {
+     "text": {
+      "sk": "Osobné náklady (r. 012 až r. 016)",
+      "en": "Personnel expenses - total (lines 012 to 016)"
+     },
+     "oznacenie": "52",
+     "cisloRiadku": 11
+    },
+    {
+     "text": {
+      "sk": "Mzdové náklady",
+      "en": "Wages and salaries"
+     },
+     "oznacenie": "521",
+     "cisloRiadku": 12
+    },
+    {
+     "text": {
+      "sk": "Zákonné sociálne poistenie",
+      "en": "Legal social insurance"
+     },
+     "oznacenie": "524",
+     "cisloRiadku": 13
+    },
+    {
+     "text": {
+      "sk": "Ostatné sociálne poistenie",
+      "en": "Other social insurance"
+     },
+     "oznacenie": "525",
+     "cisloRiadku": 14
+    },
+    {
+     "text": {
+      "sk": "Zákonné sociálne náklady",
+      "en": "Legal social expenses"
+     },
+     "oznacenie": "527",
+     "cisloRiadku": 15
+    },
+    {
+     "text": {
+      "sk": "Ostatné sociálne náklady",
+      "en": "Other social costs"
+     },
+     "oznacenie": "528",
+     "cisloRiadku": 16
+    },
+    {
+     "text": {
+      "sk": "Dane a poplatky (r. 018 až r. 020)",
+      "en": "Taxes and fees - total (lines 018 to 020)"
+     },
+     "oznacenie": "53",
+     "cisloRiadku": 17
+    },
+    {
+     "text": {
+      "sk": "Daň z motorových vozidiel",
+      "en": "Road tax"
+     },
+     "oznacenie": "531",
+     "cisloRiadku": 18
+    },
+    {
+     "text": {
+      "sk": "Daň z nehnuteľnosti",
+      "en": "Real estate tax"
+     },
+     "oznacenie": "532",
+     "cisloRiadku": 19
+    },
+    {
+     "text": {
+      "sk": "Ostatné dane a poplatky",
+      "en": "Other taxes and fees"
+     },
+     "oznacenie": "538",
+     "cisloRiadku": 20
+    },
+    {
+     "text": {
+      "sk": "Ostatné náklady na prevádzkovú činnosť (r. 022 až r. 028)",
+      "en": "Other operating expenses - total (lines 022 to 028)"
+     },
+     "oznacenie": "54",
+     "cisloRiadku": 21
+    },
+    {
+     "text": {
+      "sk": "Zostatková cena predaného dlhodobého nehmotného majetku a dlhodobého hmotného majetku",
+      "en": "Carrying value of non-current intangible and tangible assets sold"
+     },
+     "oznacenie": "541",
+     "cisloRiadku": 22
+    },
+    {
+     "text": {
+      "sk": "Predaný materiál",
+      "en": "Material sold"
+     },
+     "oznacenie": "542",
+     "cisloRiadku": 23
+    },
+    {
+     "text": {
+      "sk": "Zmluvné pokuty, penále a úroky z omeškania",
+      "en": "Contractual fines, penalties, and interest on late payment"
+     },
+     "oznacenie": "544",
+     "cisloRiadku": 24
+    },
+    {
+     "text": {
+      "sk": "Ostatné pokuty, penále a úroky z omeškania",
+      "en": "Other fines, penalties, and interest on late payment"
+     },
+     "oznacenie": "545",
+     "cisloRiadku": 25
+    },
+    {
+     "text": {
+      "sk": "Odpis pohľadávky",
+      "en": "Receivable write off"
+     },
+     "oznacenie": "546",
+     "cisloRiadku": 26
+    },
+    {
+     "text": {
+      "sk": "Ostatné náklady na prevádzkovú činnosť",
+      "en": "Other operating expenses"
+     },
+     "oznacenie": "548",
+     "cisloRiadku": 27
+    },
+    {
+     "text": {
+      "sk": "Manká a škody",
+      "en": "Deficits and damages"
+     },
+     "oznacenie": "549",
+     "cisloRiadku": 28
+    },
+    {
+     "text": {
+      "sk": "Odpisy, rezervy a opravné položky z prevádzkovej činnosti a finančnej činnosti a zúčtovanie časového rozlíšenia (r. 030 + r. 031 + r. 036 + r. 039)",
+      "en": "Depreciation, provisions and adjusting entries to operating and financial expenses, and accrual-based accounting - total (line 030 + line 031 + line 036 + line 039)"
+     },
+     "oznacenie": "55",
+     "cisloRiadku": 29
+    },
+    {
+     "text": {
+      "sk": "Odpisy dlhodobého nehmotného majetku a dlhodobého hmotného majetku",
+      "en": "Depreciation of non-current intangible assets and non-current tangible assets"
+     },
+     "oznacenie": "551",
+     "cisloRiadku": 30
+    },
+    {
+     "text": {
+      "sk": "Rezervy a opravné položky z prevádzkovej činnosti (r. 032 až r. 035)",
+      "en": "Provisions and adjusting entries to operating expenses - total (lines 032 to 035)"
+     },
+     "cisloRiadku": 31
+    },
+    {
+     "text": {
+      "sk": "Tvorba zákonných rezerv z prevádzkovej činnosti",
+      "en": "Additions to legal provisions out of operations"
+     },
+     "oznacenie": "552",
+     "cisloRiadku": 32
+    },
+    {
+     "text": {
+      "sk": "Tvorba ostatných rezerv z prevádzkovej činnosti",
+      "en": "Additions to other provisions out of operations"
+     },
+     "oznacenie": "553",
+     "cisloRiadku": 33
+    },
+    {
+     "text": {
+      "sk": "Tvorba zákonných opravných položiek z prevádzkovej činnosti",
+      "en": "Additions to legal adjusting entries out of operations"
+     },
+     "oznacenie": "557",
+     "cisloRiadku": 34
+    },
+    {
+     "text": {
+      "sk": "Tvorba ostatných opravných položiek z prevádzkovej činnosti",
+      "en": "Additions to other adjusting entries out of operations"
+     },
+     "oznacenie": "558",
+     "cisloRiadku": 35
+    },
+    {
+     "text": {
+      "sk": "Rezervy a opravné položky z finančnej činnosti (r. 037+ r. 038)",
+      "en": "Provisions and adjusting entries to financial expenses - total (lines 037 to 038)"
+     },
+     "cisloRiadku": 36
+    },
+    {
+     "text": {
+      "sk": "Tvorba rezerv z finančnej činnosti",
+      "en": "Additions to provisions out of financial activity"
+     },
+     "oznacenie": "554",
+     "cisloRiadku": 37
+    },
+    {
+     "text": {
+      "sk": "Tvorba opravných položiek z finančnej činnosti",
+      "en": "Additions to adjusting entries out of financial activity"
+     },
+     "oznacenie": "559",
+     "cisloRiadku": 38
+    },
+    {
+     "text": {
+      "sk": "Zúčtovanie komplexných nákladov budúcich období",
+      "en": "Clearing of complex deferred expenses"
+     },
+     "oznacenie": "555",
+     "cisloRiadku": 39
+    },
+    {
+     "text": {
+      "sk": "Finančné náklady (r. 041 až r. 048)",
+      "en": "Financial expenses - total (lines 041 to 048)"
+     },
+     "oznacenie": "56",
+     "cisloRiadku": 40
+    },
+    {
+     "text": {
+      "sk": "Predané cenné papiere a podiely",
+      "en": "Securities and shares sold"
+     },
+     "oznacenie": "561",
+     "cisloRiadku": 41
+    },
+    {
+     "text": {
+      "sk": "Úroky",
+      "en": "Interest expense"
+     },
+     "oznacenie": "562",
+     "cisloRiadku": 42
+    },
+    {
+     "text": {
+      "sk": "Kurzové straty",
+      "en": "Exchange rate losses"
+     },
+     "oznacenie": "563",
+     "cisloRiadku": 43
+    },
+    {
+     "text": {
+      "sk": "Náklady na precenenie cenných papierov",
+      "en": "Costs of securities revaluation"
+     },
+     "oznacenie": "564",
+     "cisloRiadku": 44
+    },
+    {
+     "text": {
+      "sk": "Náklady na krátkodobý finančný majetok",
+      "en": "Costs of current financial assets"
+     },
+     "oznacenie": "566",
+     "cisloRiadku": 45
+    },
+    {
+     "text": {
+      "sk": "Náklady na derivátové operácie",
+      "en": "Costs of derivative operations"
+     },
+     "oznacenie": "567",
+     "cisloRiadku": 46
+    },
+    {
+     "text": {
+      "sk": "Ostatné finančné náklady",
+      "en": "Other financial expenses"
+     },
+     "oznacenie": "568",
+     "cisloRiadku": 47
+    },
+    {
+     "text": {
+      "sk": "Manká a škody na finančnom majetku",
+      "en": "Deficits and damages to financial assets"
+     },
+     "oznacenie": "569",
+     "cisloRiadku": 48
+    },
+    {
+     "text": {
+      "sk": "Mimoriadne náklady (r. 050 až r. 053)",
+      "en": "Extraordinary expenses - total (lines 050 to 053)"
+     },
+     "oznacenie": "57",
+     "cisloRiadku": 49
+    },
+    {
+     "text": {
+      "sk": "Škody",
+      "en": "Damages"
+     },
+     "oznacenie": "572",
+     "cisloRiadku": 50
+    },
+    {
+     "text": {
+      "sk": "Tvorba rezerv",
+      "en": "Additions to provisions"
+     },
+     "oznacenie": "574",
+     "cisloRiadku": 51
+    },
+    {
+     "text": {
+      "sk": "Ostatné mimoriadne náklady",
+      "en": "Other extraordinary expenses"
+     },
+     "oznacenie": "578",
+     "cisloRiadku": 52
+    },
+    {
+     "text": {
+      "sk": "Tvorba opravných položiek",
+      "en": "Additions to adjusting entries"
+     },
+     "oznacenie": "579",
+     "cisloRiadku": 53
+    },
+    {
+     "text": {
+      "sk": "Náklady na transfery a náklady z odvodu príjmov (r. 055 až r. 063)",
+      "en": "Costs of transfers and costs of revenue transfer - total (lines 055 to 063)"
+     },
+     "oznacenie": "58",
+     "cisloRiadku": 54
+    },
+    {
+     "text": {
+      "sk": "Náklady na transfery zo štátneho rozpočtu do štátnych rozpočtových organizácií a príspevkových organizácií",
+      "en": "Cost of transfers from state budget to state-funded and state-subsidized organizations"
+     },
+     "oznacenie": "581",
+     "cisloRiadku": 55
+    },
+    {
+     "text": {
+      "sk": "Náklady na transfery zo štátneho rozpočtu ostatným subjektom verejnej správy",
+      "en": "Cost of transfers from state budget to other entities of general government"
+     },
+     "oznacenie": "582",
+     "cisloRiadku": 56
+    },
+    {
+     "text": {
+      "sk": "Náklady na transfery zo štátneho rozpočtu subjektom mimo verejnej správy",
+      "en": "Cost of transfers from state budget to the entities outside of general government"
+     },
+     "oznacenie": "583",
+     "cisloRiadku": 57
+    },
+    {
+     "text": {
+      "sk": "Náklady na transfery z rozpočtu obce alebo z rozpočtu vyššieho územného celku do rozpočtových organizácií a príspevkových organizácií zriadených obcou alebo vyšším územným celkom",
+      "en": "Cost of transfers from the budget of municipality or higher regional unit to state-funded and state-subsidized organisations founded by the municipality or higher regional unit"
+     },
+     "oznacenie": "584",
+     "cisloRiadku": 58
+    },
+    {
+     "text": {
+      "sk": "Náklady na transfery z rozpočtu obce alebo z rozpočtu vyššieho územného celku ostatným subjektom verejnej správy",
+      "en": "Cost of transfers from the budget of municipality or higher regional unit to other entities of general government"
+     },
+     "oznacenie": "585",
+     "cisloRiadku": 59
+    },
+    {
+     "text": {
+      "sk": "Náklady na transfery z rozpočtu obce alebo z rozpočtu vyššieho územného celku subjektom mimo verejnej správy",
+      "en": "Cost of transfers from the budget of municipality or higher regional unit to the entities outside of general government"
+     },
+     "oznacenie": "586",
+     "cisloRiadku": 60
+    },
+    {
+     "text": {
+      "sk": "Náklady na ostatné transfery",
+      "en": "Costs of other transfers"
+     },
+     "oznacenie": "587",
+     "cisloRiadku": 61
+    },
+    {
+     "text": {
+      "sk": "Náklady z odvodu príjmov",
+      "en": "Cost of budgetary contributions"
+     },
+     "oznacenie": "588",
+     "cisloRiadku": 62
+    },
+    {
+     "text": {
+      "sk": "Náklady z budúceho odvodu príjmov",
+      "en": "Cost of future budgetary contributions"
+     },
+     "oznacenie": "589",
+     "cisloRiadku": 63
+    },
+    {
+     "text": {
+      "sk": "Účtové skupiny 50 - 58 súčet (r.001 + r.006 + r.011 + r.017 + r.021 + r.029 + r.040 + r.049 + r.054)",
+      "en": "Account groups 50 - 58, line 001 + line 006 + line 011 + line 017 + line 021 + line 029 + line 040 + line 049 + line 054"
+     },
+     "cisloRiadku": 64
+    }
+   ]
+  },
+  {
+   "nazov": {
+    "sk": "Výnosy",
+    "en": "Revenues"
+   },
+   "pocetDatovychStlpcov": 4,
+   "pocetStlpcov": 7,
+   "hlavicka": [
+    {
+     "text": {
+      "sk": "Číslo účtu alebo skupiny",
+      "en": "Account or group number"
+     },
+     "riadok": 1,
+     "stlpec": 1,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 2
+    },
+    {
+     "text": {
+      "sk": "Výnosy, daň z príjmov a výsledok hospodárenia",
+      "en": "Revenues, income tax, and net profit/loss"
+     },
+     "riadok": 1,
+     "stlpec": 2,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 2
+    },
+    {
+     "text": {
+      "sk": "Číslo riadku",
+      "en": "Line No."
+     },
+     "riadok": 1,
+     "stlpec": 3,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 2
+    },
+    {
+     "text": {
+      "sk": "20xx",
+      "en": "20xx"
+     },
+     "riadok": 1,
+     "stlpec": 4,
+     "sirkaStlpca": 3,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "20xx-1",
+      "en": "20xx-1"
+     },
+     "riadok": 1,
+     "stlpec": 7,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 2
+    },
+    {
+     "text": {
+      "sk": "Hlavná činnosť",
+      "en": "Core activity"
+     },
+     "riadok": 2,
+     "stlpec": 4,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "Podnikateľská činnosť",
+      "en": "Business activity"
+     },
+     "riadok": 2,
+     "stlpec": 5,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "Spolu",
+      "en": "Total"
+     },
+     "riadok": 2,
+     "stlpec": 6,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "a",
+      "en": "a"
+     },
+     "riadok": 3,
+     "stlpec": 1,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "b",
+      "en": "b"
+     },
+     "riadok": 3,
+     "stlpec": 2,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "c",
+      "en": "c"
+     },
+     "riadok": 3,
+     "stlpec": 3,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "1",
+      "en": "1"
+     },
+     "riadok": 3,
+     "stlpec": 4,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "2",
+      "en": "2"
+     },
+     "riadok": 3,
+     "stlpec": 5,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "3",
+      "en": "3"
+     },
+     "riadok": 3,
+     "stlpec": 6,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "4",
+      "en": "4"
+     },
+     "riadok": 3,
+     "stlpec": 7,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    }
+   ],
+   "riadky": [
+    {
+     "text": {
+      "sk": "Tržby za vlastné výkony a tovar (r. 066 až r. 068)",
+      "en": "Revenues from own activity and merchandise - total (lines 066 to 068)"
+     },
+     "oznacenie": "60",
+     "cisloRiadku": 65
+    },
+    {
+     "text": {
+      "sk": "Tržby za vlastné výrobky",
+      "en": "Revenues from the sale of own products"
+     },
+     "oznacenie": "601",
+     "cisloRiadku": 66
+    },
+    {
+     "text": {
+      "sk": "Tržby z predaja služieb",
+      "en": "Revenues from the sale of services provided"
+     },
+     "oznacenie": "602",
+     "cisloRiadku": 67
+    },
+    {
+     "text": {
+      "sk": "Tržby za tovar, Výnosy z nehnuteľnosti na predaj",
+      "en": "Revenues from the sale of merchandise"
+     },
+     "oznacenie": "604, 607",
+     "cisloRiadku": 68
+    },
+    {
+     "text": {
+      "sk": "Zmena stavu vnútroorganizačných zásob (r. 070 až r. 073)",
+      "en": "Changes in internal inventory - total (lines 070 to 073) (+/-)"
+     },
+     "oznacenie": "61",
+     "cisloRiadku": 69
+    },
+    {
+     "text": {
+      "sk": "Zmena stavu nedokončenej výroby",
+      "en": "Change in inventory of work in progress"
+     },
+     "oznacenie": "611",
+     "cisloRiadku": 70
+    },
+    {
+     "text": {
+      "sk": "Zmena stavu polotovarov",
+      "en": "Change in inventory of semi-finished products"
+     },
+     "oznacenie": "612",
+     "cisloRiadku": 71
+    },
+    {
+     "text": {
+      "sk": "Zmena stavu výrobkov",
+      "en": "Change in inventory of finished products"
+     },
+     "oznacenie": "613",
+     "cisloRiadku": 72
+    },
+    {
+     "text": {
+      "sk": "Zmena stavu zvierat",
+      "en": "Change in animal inventory"
+     },
+     "oznacenie": "614",
+     "cisloRiadku": 73
+    },
+    {
+     "text": {
+      "sk": "Aktivácia (r. 075 až r. 078)",
+      "en": "Capitalization - total (lines 075 to 078)"
+     },
+     "oznacenie": "62",
+     "cisloRiadku": 74
+    },
+    {
+     "text": {
+      "sk": "Aktivácia materiálu a tovaru",
+      "en": "Capitalization of material and merchandise"
+     },
+     "oznacenie": "621",
+     "cisloRiadku": 75
+    },
+    {
+     "text": {
+      "sk": "Aktivácia vnútroorganizačných služieb",
+      "en": "Capitalization of internal services"
+     },
+     "oznacenie": "622",
+     "cisloRiadku": 76
+    },
+    {
+     "text": {
+      "sk": "Aktivácia dlhodobého nehmotného majetku",
+      "en": "Capitalization of long-term intangible assets"
+     },
+     "oznacenie": "623",
+     "cisloRiadku": 77
+    },
+    {
+     "text": {
+      "sk": "Aktivácia dlhodobého hmotného majetku",
+      "en": "Capitalization of long-term tangible assets"
+     },
+     "oznacenie": "624",
+     "cisloRiadku": 78
+    },
+    {
+     "text": {
+      "sk": "Daňové a colné výnosy a výnosy z poplatkov (r. 080 až r. 082)",
+      "en": "Tax and customs revenues and revenues from fees - total (lines 080 to 082)"
+     },
+     "oznacenie": "63",
+     "cisloRiadku": 79
+    },
+    {
+     "text": {
+      "sk": "Daňové a colné výnosy štátu",
+      "en": "Tax and customs revenues of the state"
+     },
+     "oznacenie": "631",
+     "cisloRiadku": 80
+    },
+    {
+     "text": {
+      "sk": "Daňové výnosy samosprávy",
+      "en": "Tax revenues of the local government"
+     },
+     "oznacenie": "632",
+     "cisloRiadku": 81
+    },
+    {
+     "text": {
+      "sk": "Výnosy z poplatkov",
+      "en": "Revenues from fees"
+     },
+     "oznacenie": "633",
+     "cisloRiadku": 82
+    },
+    {
+     "text": {
+      "sk": "Ostatné výnosy z prevádzkovej činnosti (r. 084 až r. 089)",
+      "en": "Other operating revenues - total (lines 084 to 089)"
+     },
+     "oznacenie": "64",
+     "cisloRiadku": 83
+    },
+    {
+     "text": {
+      "sk": "Tržby z predaja dlhodobého nehmotného majetku a dlhodobého hmotného majetku",
+      "en": "Revenues from the sale of non-current intangible assets and non-current tangible assets"
+     },
+     "oznacenie": "641",
+     "cisloRiadku": 84
+    },
+    {
+     "text": {
+      "sk": "Tržby z predaja materiálu",
+      "en": "Revenues from material sold"
+     },
+     "oznacenie": "642",
+     "cisloRiadku": 85
+    },
+    {
+     "text": {
+      "sk": "Zmluvné pokuty, penále a úroky z omeškania",
+      "en": "Contractual fines, penalties, and interest on late payment"
+     },
+     "oznacenie": "644",
+     "cisloRiadku": 86
+    },
+    {
+     "text": {
+      "sk": "Ostatné pokuty, penále a úroky z omeškania",
+      "en": "Other fines, penalties, and interest on late payment"
+     },
+     "oznacenie": "645",
+     "cisloRiadku": 87
+    },
+    {
+     "text": {
+      "sk": "Výnosy z odpísaných pohľadávok",
+      "en": "Revenues from written off receivables"
+     },
+     "oznacenie": "646",
+     "cisloRiadku": 88
+    },
+    {
+     "text": {
+      "sk": "Ostatné výnosy z prevádzkovej činnosti",
+      "en": "Other operating revenues"
+     },
+     "oznacenie": "648",
+     "cisloRiadku": 89
+    },
+    {
+     "text": {
+      "sk": "Zúčtovanie rezerv a opravných položiek z prevádzkovej činnosti a finančnej činnosti a zúčtovanie časového rozlíšenia (r. 091 + r. 096 +r. 099)",
+      "en": "Clearing of provisions and adjusting entries to operating and financial activities, and clearing of accruals and deferrals - total (line 091 + line 091 + line 096 + line 099)"
+     },
+     "oznacenie": "65",
+     "cisloRiadku": 90
+    },
+    {
+     "text": {
+      "sk": "Zúčtovanie rezerv a opravných položiek z prevádzkovej činnosti (r. 092 až r. 095)",
+      "en": "Clearing of provisions and adjusting entries to operating activities - total (lines 092 to 095)"
+     },
+     "cisloRiadku": 91
+    },
+    {
+     "text": {
+      "sk": "Zúčtovanie zákonných rezerv z prevádzkovej činnosti",
+      "en": "Clearing of legal provisions out of operations"
+     },
+     "oznacenie": "652",
+     "cisloRiadku": 92
+    },
+    {
+     "text": {
+      "sk": "Zúčtovanie ostatných rezerv z prevádzkovej činnosti",
+      "en": "Clearing of other provisions out of operations"
+     },
+     "oznacenie": "653",
+     "cisloRiadku": 93
+    },
+    {
+     "text": {
+      "sk": "Zúčtovanie zákonných opravných položiek z prevádzkovej činnosti",
+      "en": "Clearing of legal adjusting entries out of operations"
+     },
+     "oznacenie": "657",
+     "cisloRiadku": 94
+    },
+    {
+     "text": {
+      "sk": "Zúčtovanie ostatných opravných položiek z prevádzkovej činnosti",
+      "en": "Clearing of other adjusting entries out of operations"
+     },
+     "oznacenie": "658",
+     "cisloRiadku": 95
+    },
+    {
+     "text": {
+      "sk": "Zúčtovanie rezerv a opravných položiek z finančnej činnosti (r. 097 + r. 098)",
+      "en": "Clearing of provisions and adjusting entries to financial activities - total (lines 097 to 098)"
+     },
+     "cisloRiadku": 96
+    },
+    {
+     "text": {
+      "sk": "Zúčtovanie rezerv z finančnej činnosti",
+      "en": "Clearing of provisions out of financial activity"
+     },
+     "oznacenie": "654",
+     "cisloRiadku": 97
+    },
+    {
+     "text": {
+      "sk": "Zúčtovanie opravných položiek z finančnej činnosti",
+      "en": "Clearing of adjusting entries out of financial activity"
+     },
+     "oznacenie": "659",
+     "cisloRiadku": 98
+    },
+    {
+     "text": {
+      "sk": "Zúčtovanie komplexných nákladov budúcich období",
+      "en": "Clearing of complex deferred expenses"
+     },
+     "oznacenie": "655",
+     "cisloRiadku": 99
+    },
+    {
+     "text": {
+      "sk": "Finančné výnosy (r. 101 až r. 108)",
+      "en": "Financial revenues - total (lines 101 to 108)"
+     },
+     "oznacenie": "66",
+     "cisloRiadku": 100
+    },
+    {
+     "text": {
+      "sk": "Tržby z predaja cenných papierov a podielov",
+      "en": "Revenues from the sale of securities and shares"
+     },
+     "oznacenie": "661",
+     "cisloRiadku": 101
+    },
+    {
+     "text": {
+      "sk": "Úroky",
+      "en": "Interest income"
+     },
+     "oznacenie": "662",
+     "cisloRiadku": 102
+    },
+    {
+     "text": {
+      "sk": "Kurzové zisky",
+      "en": "Exchange rate gains"
+     },
+     "oznacenie": "663",
+     "cisloRiadku": 103
+    },
+    {
+     "text": {
+      "sk": "Výnosy z precenenia cenných papierov",
+      "en": "Revenue from securities revaluation"
+     },
+     "oznacenie": "664",
+     "cisloRiadku": 104
+    },
+    {
+     "text": {
+      "sk": "Výnosy z dlhodobého finančného majetku",
+      "en": "Revenues from non-current financial assets"
+     },
+     "oznacenie": "665",
+     "cisloRiadku": 105
+    },
+    {
+     "text": {
+      "sk": "Výnosy z krátkodobého finančného majetku",
+      "en": "Revenues from current financial assets"
+     },
+     "oznacenie": "666",
+     "cisloRiadku": 106
+    },
+    {
+     "text": {
+      "sk": "Výnosy z derivátových operácií",
+      "en": "Revenues from derivative transactions"
+     },
+     "oznacenie": "667",
+     "cisloRiadku": 107
+    },
+    {
+     "text": {
+      "sk": "Ostatné finančné výnosy",
+      "en": "Other financial revenues"
+     },
+     "oznacenie": "668",
+     "cisloRiadku": 108
+    },
+    {
+     "text": {
+      "sk": "Mimoriadne výnosy (r. 110 až r. 113)",
+      "en": "Extraordinary revenues - total (lines 110 to 113)"
+     },
+     "oznacenie": "67",
+     "cisloRiadku": 109
+    },
+    {
+     "text": {
+      "sk": "Náhrady škôd",
+      "en": "Compensation of damages"
+     },
+     "oznacenie": "672",
+     "cisloRiadku": 110
+    },
+    {
+     "text": {
+      "sk": "Zúčtovanie rezerv",
+      "en": "Accounting for provisions"
+     },
+     "oznacenie": "674",
+     "cisloRiadku": 111
+    },
+    {
+     "text": {
+      "sk": "Ostatné mimoriadne výnosy",
+      "en": "Other extraordinary revenues"
+     },
+     "oznacenie": "678",
+     "cisloRiadku": 112
+    },
+    {
+     "text": {
+      "sk": "Zúčtovanie opravných položiek",
+      "en": "Clearing of adjusting entries"
+     },
+     "oznacenie": "679",
+     "cisloRiadku": 113
+    },
+    {
+     "text": {
+      "sk": "Výnosy z transferov a rozpočtových príjmov v štátnych rozpočtových organizáciách a príspevkových organizáciách (r. 115 až r. 123)",
+      "en": "Revenues from transfers and budgetary revenues in state-funded and state-subsidized organisations - total (lines 115 to 123)"
+     },
+     "oznacenie": "68",
+     "cisloRiadku": 114
+    },
+    {
+     "text": {
+      "sk": "Výnosy z bežných transferov zo štátneho rozpočtu",
+      "en": "Revenues from current transfers from state budget"
+     },
+     "oznacenie": "681",
+     "cisloRiadku": 115
+    },
+    {
+     "text": {
+      "sk": "Výnosy z kapitálových transferov zo štátneho rozpočtu",
+      "en": "Revenues from capital transfers from state budget"
+     },
+     "oznacenie": "682",
+     "cisloRiadku": 116
+    },
+    {
+     "text": {
+      "sk": "Výnosy z bežných transferov od ostatných subjektov verejnej správy",
+      "en": "Revenues from current transfers from other entities of general government"
+     },
+     "oznacenie": "683",
+     "cisloRiadku": 117
+    },
+    {
+     "text": {
+      "sk": "Výnosy z kapitálových transferov od ostatných subjektov verejnej správy",
+      "en": "Revenues from capital transfers from other entities of general government"
+     },
+     "oznacenie": "684",
+     "cisloRiadku": 118
+    },
+    {
+     "text": {
+      "sk": "Výnosy z bežných transferov od Európskej únie",
+      "en": "Revenues from current transfers from the European Union"
+     },
+     "oznacenie": "685",
+     "cisloRiadku": 119
+    },
+    {
+     "text": {
+      "sk": "Výnosy z kapitálových transferov od Európskej únie",
+      "en": "Revenues from capital transfers from the European Union"
+     },
+     "oznacenie": "686",
+     "cisloRiadku": 120
+    },
+    {
+     "text": {
+      "sk": "Výnosy z bežných transferov od ostatných subjektov mimo verejnej správy",
+      "en": "Revenues from current transfers from other entities outside of general government"
+     },
+     "oznacenie": "687",
+     "cisloRiadku": 121
+    },
+    {
+     "text": {
+      "sk": "Výnosy z kapitálových transferov od ostatných subjektov mimo verejnej správy",
+      "en": "Revenues from capital transfers from other entities outside of general government"
+     },
+     "oznacenie": "688",
+     "cisloRiadku": 122
+    },
+    {
+     "text": {
+      "sk": "Výnosy z odvodu rozpočtových príjmov",
+      "en": "Revenues from budgetary contributions"
+     },
+     "oznacenie": "689",
+     "cisloRiadku": 123
+    },
+    {
+     "text": {
+      "sk": "Výnosy z transferov a rozpočtových príjmov v obciach, vyšších územných celkoch a v rozpočtových organizáciách a príspevkových organizáciách zriadených obcou alebo vyšším územným celkom (r. 125 až r. 133)",
+      "en": "Revenue from transfers and budgetary revenue in municipalities, higher regional units and state-subsidized organisations founded by municipality and higher regional unit - total (lines 125 to 133)"
+     },
+     "oznacenie": "69",
+     "cisloRiadku": 124
+    },
+    {
+     "text": {
+      "sk": "Výnosy z bežných transferov z rozpočtu obce alebo z rozpočtu vyššieho územného celku v rozpočtových organizáciách a príspevkových organizáciách zriadených obcou alebo vyšším územným celkom",
+      "en": "Revenues from current transfers from the budget of municipality or higher regional unit in state-funded and state-subsidized organisations founded by municipality or higher regional unit"
+     },
+     "oznacenie": "691",
+     "cisloRiadku": 125
+    },
+    {
+     "text": {
+      "sk": "Výnosy z kapitálových transferov z rozpočtu obce alebo z rozpočtu vyššieho územného celku v rozpočtových organizáciách a príspevkových organizáciách zriadených obcou alebo vyšším územným celkom",
+      "en": "Revenues from capital transfers from the budget of municipality or higher regional unit in state-funded and state-subsidized organisations founded by municipality or higher regional unit"
+     },
+     "oznacenie": "692",
+     "cisloRiadku": 126
+    },
+    {
+     "text": {
+      "sk": "Výnosy samosprávy z bežných transferov zo štátneho rozpočtu a od iných subjektov verejnej správy",
+      "en": "Revenues of the local government from current transfers from the state budget and from other entities of general government"
+     },
+     "oznacenie": "693",
+     "cisloRiadku": 127
+    },
+    {
+     "text": {
+      "sk": "Výnosy samosprávy z kapitálových transferov zo štátneho rozpočtu a od iných subjektov verejnej správy",
+      "en": "Revenues of the local government from capital transfers from the state budget and from other entities of general government"
+     },
+     "oznacenie": "694",
+     "cisloRiadku": 128
+    },
+    {
+     "text": {
+      "sk": "Výnosy samosprávy z bežných transferov od Európskej únie",
+      "en": "Revenues of the local government from current transfers from the European Union"
+     },
+     "oznacenie": "695",
+     "cisloRiadku": 129
+    },
+    {
+     "text": {
+      "sk": "Výnosy samosprávy z kapitálových transferov od Európskych spoločenstiev",
+      "en": "Revenues of the local government from capital transfers from the European Union"
+     },
+     "oznacenie": "696",
+     "cisloRiadku": 130
+    },
+    {
+     "text": {
+      "sk": "Výnosy samosprávy z bežných transferov od ostatných subjektov mimo verejnej správy",
+      "en": "Revenues of the local government from current transfers from other entities outside of general government"
+     },
+     "oznacenie": "697",
+     "cisloRiadku": 131
+    },
+    {
+     "text": {
+      "sk": "Výnosy samosprávy z kapitálových transferov od ostatných subjektov mimo verejnej správy",
+      "en": "Revenues of the local government from capital transfers from other entities outside of general government"
+     },
+     "oznacenie": "698",
+     "cisloRiadku": 132
+    },
+    {
+     "text": {
+      "sk": "Výnosy samosprávy z odvodu rozpočtových príjmov",
+      "en": "Revenues of the local government from budgetary contributions"
+     },
+     "oznacenie": "699",
+     "cisloRiadku": 133
+    },
+    {
+     "text": {
+      "sk": "Účtová trieda 6 súčet (r. 065 + r. 069 + r. 074 + r. 079 + r. 083 + r. 090 + r. 100 + r. 109 + r. 114 + r. 124)",
+      "en": "Account class 6 - total (line 065 + line 069 + line 074 + line 079 + line 083 + line 090 + line 100 + line 109 + line 114 + line 124)"
+     },
+     "cisloRiadku": 134
+    },
+    {
+     "text": {
+      "sk": "Výsledok hospodárenia pred zdanením (r. 134 mínus r. 064) (+/-)",
+      "en": "Profit (loss) before tax (line 134 - line 064) (+/-)"
+     },
+     "cisloRiadku": 135
+    },
+    {
+     "text": {
+      "sk": "Splatná daň z príjmov",
+      "en": "Income tax - current"
+     },
+     "oznacenie": "591",
+     "cisloRiadku": 136
+    },
+    {
+     "text": {
+      "sk": "Dodatočne platená daň z príjmov",
+      "en": "Supplementary income tax levies"
+     },
+     "oznacenie": "595",
+     "cisloRiadku": 137
+    },
+    {
+     "text": {
+      "sk": "Výsledok hospodárenia po zdanení r. 135 mínus (r. 136, r. 137) (+/-)",
+      "en": "Profit/loss after tax (line 135 - line 136, line 137) (+/-)"
+     },
+     "cisloRiadku": 138
+    }
+   ]
+  }
+ ]
+}

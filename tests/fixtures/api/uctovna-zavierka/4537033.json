@@ -1,0 +1,21 @@
+{
+ "id": 4537033,
+ "datumZostaveniaK": "2019-12-31",
+ "idUJ": 10882,
+ "idUctovnychVykazov": [
+  7346253,
+  7346381,
+  7346407,
+  7346132,
+  7346471
+ ],
+ "konsolidovana": true,
+ "datumPoslednejUpravy": "2020-12-31",
+ "zdrojDat": "SAM",
+ "datumPrilozeniaSpravyAuditora": "2020-12-30",
+ "typ": "Riadna",
+ "obdobieOd": "2019-01",
+ "obdobieDo": "2019-12",
+ "datumPodania": "2020-12-30",
+ "datumZostavenia": "2020-12-30"
+}

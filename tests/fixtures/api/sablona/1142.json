@@ -1,0 +1,737 @@
+{
+ "id": 1142,
+ "tabulky": [
+  {
+   "nazov": {
+    "sk": "Náklady"
+   },
+   "hlavicka": [
+    {
+     "text": {
+      "sk": "Číslo účtu"
+     },
+     "riadok": 1,
+     "stlpec": 1,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 2
+    },
+    {
+     "text": {
+      "sk": "Náklady"
+     },
+     "riadok": 1,
+     "stlpec": 2,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 2
+    },
+    {
+     "text": {
+      "sk": "Číslo riadku"
+     },
+     "riadok": 1,
+     "stlpec": 3,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 2
+    },
+    {
+     "text": {
+      "sk": "Účtovné obdobie"
+     },
+     "riadok": 1,
+     "stlpec": 4,
+     "sirkaStlpca": 3,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "Bezprostredne predchádzajúce účtovné obdobie"
+     },
+     "riadok": 1,
+     "stlpec": 7,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 2
+    },
+    {
+     "text": {
+      "sk": "Nezdaňovaná činnosť"
+     },
+     "riadok": 2,
+     "stlpec": 4,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "Zdaňovaná činnosť"
+     },
+     "riadok": 2,
+     "stlpec": 5,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "Spolu"
+     },
+     "riadok": 2,
+     "stlpec": 6,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "a"
+     },
+     "riadok": 3,
+     "stlpec": 1,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "b"
+     },
+     "riadok": 3,
+     "stlpec": 2,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "c"
+     },
+     "riadok": 3,
+     "stlpec": 3,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "7"
+     },
+     "riadok": 3,
+     "stlpec": 4,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "8"
+     },
+     "riadok": 3,
+     "stlpec": 5,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "9"
+     },
+     "riadok": 3,
+     "stlpec": 6,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "10"
+     },
+     "riadok": 3,
+     "stlpec": 7,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    }
+   ],
+   "riadky": [
+    {
+     "text": {
+      "sk": "Spotreba materiálu"
+     },
+     "oznacenie": "501",
+     "cisloRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "Spotreba energie"
+     },
+     "oznacenie": "502",
+     "cisloRiadku": 2
+    },
+    {
+     "text": {
+      "sk": "Spotreba ostatných neskladovateľných dodávok"
+     },
+     "oznacenie": "503",
+     "cisloRiadku": 3
+    },
+    {
+     "text": {
+      "sk": "Predaný tovar"
+     },
+     "oznacenie": "504",
+     "cisloRiadku": 4
+    },
+    {
+     "text": {
+      "sk": "Opravy a udržiavanie"
+     },
+     "oznacenie": "511",
+     "cisloRiadku": 5
+    },
+    {
+     "text": {
+      "sk": "Cestovné"
+     },
+     "oznacenie": "512",
+     "cisloRiadku": 6
+    },
+    {
+     "text": {
+      "sk": "Náklady na reprezentáciu"
+     },
+     "oznacenie": "513",
+     "cisloRiadku": 7
+    },
+    {
+     "text": {
+      "sk": "Výkony pôšt a telekomunikácií"
+     },
+     "oznacenie": "514",
+     "cisloRiadku": 8
+    },
+    {
+     "text": {
+      "sk": "Poistné"
+     },
+     "oznacenie": "515",
+     "cisloRiadku": 9
+    },
+    {
+     "text": {
+      "sk": "Nájomné"
+     },
+     "oznacenie": "516",
+     "cisloRiadku": 10
+    },
+    {
+     "text": {
+      "sk": "Ostatné služby"
+     },
+     "oznacenie": "518",
+     "cisloRiadku": 11
+    },
+    {
+     "text": {
+      "sk": "Poplatky za poukazovanie dávok"
+     },
+     "oznacenie": "519",
+     "cisloRiadku": 12
+    },
+    {
+     "text": {
+      "sk": "Mzdové náklady"
+     },
+     "oznacenie": "521",
+     "cisloRiadku": 13
+    },
+    {
+     "text": {
+      "sk": "Odmeny členom dozornej rady"
+     },
+     "oznacenie": "523",
+     "cisloRiadku": 14
+    },
+    {
+     "text": {
+      "sk": "Zákonné sociálne poistenie"
+     },
+     "oznacenie": "524",
+     "cisloRiadku": 15
+    },
+    {
+     "text": {
+      "sk": "Ostatné sociálne poistenie"
+     },
+     "oznacenie": "525",
+     "cisloRiadku": 16
+    },
+    {
+     "text": {
+      "sk": "Zákonné sociálne náklady"
+     },
+     "oznacenie": "527",
+     "cisloRiadku": 17
+    },
+    {
+     "text": {
+      "sk": "Ostatné sociálne náklady"
+     },
+     "oznacenie": "528",
+     "cisloRiadku": 18
+    },
+    {
+     "text": {
+      "sk": "Daň z motorových vozidiel"
+     },
+     "oznacenie": "531",
+     "cisloRiadku": 19
+    },
+    {
+     "text": {
+      "sk": "Daň z nehnuteľností"
+     },
+     "oznacenie": "532",
+     "cisloRiadku": 20
+    },
+    {
+     "text": {
+      "sk": "Ostatné dane a poplatky"
+     },
+     "oznacenie": "538",
+     "cisloRiadku": 21
+    },
+    {
+     "text": {
+      "sk": "Zmluvné pokuty a úroky z omeškania"
+     },
+     "oznacenie": "541",
+     "cisloRiadku": 22
+    },
+    {
+     "text": {
+      "sk": "Ostatné pokuty a úroky z omeškania"
+     },
+     "oznacenie": "542",
+     "cisloRiadku": 23
+    },
+    {
+     "text": {
+      "sk": "Odpísanie nevymožiteľnej pohľadávky"
+     },
+     "oznacenie": "543",
+     "cisloRiadku": 24
+    },
+    {
+     "text": {
+      "sk": "Úroky"
+     },
+     "oznacenie": "544",
+     "cisloRiadku": 25
+    },
+    {
+     "text": {
+      "sk": "Kurzové straty"
+     },
+     "oznacenie": "545",
+     "cisloRiadku": 26
+    },
+    {
+     "text": {
+      "sk": "Dary"
+     },
+     "oznacenie": "546",
+     "cisloRiadku": 27
+    },
+    {
+     "text": {
+      "sk": "Manká a škody"
+     },
+     "oznacenie": "548",
+     "cisloRiadku": 28
+    },
+    {
+     "text": {
+      "sk": "Iné ostatné náklady"
+     },
+     "oznacenie": "549",
+     "cisloRiadku": 29
+    },
+    {
+     "text": {
+      "sk": "Odpisy dlhodobého nehmotného majetku a dlhodobého hmotného majetku"
+     },
+     "oznacenie": "551",
+     "cisloRiadku": 30
+    },
+    {
+     "text": {
+      "sk": "Zostatková cena predaného dlhodobého nehmotného majetku a dlhodobého hmotného majetku"
+     },
+     "oznacenie": "552",
+     "cisloRiadku": 31
+    },
+    {
+     "text": {
+      "sk": "Predané cenné papiere"
+     },
+     "oznacenie": "553",
+     "cisloRiadku": 32
+    },
+    {
+     "text": {
+      "sk": "Predaný materiál"
+     },
+     "oznacenie": "554",
+     "cisloRiadku": 33
+    },
+    {
+     "text": {
+      "sk": "Náklady z precenenia cenných papierov"
+     },
+     "oznacenie": "557",
+     "cisloRiadku": 34
+    },
+    {
+     "text": {
+      "sk": "Tvorba a zúčtovanie opravných položiek"
+     },
+     "oznacenie": "559",
+     "cisloRiadku": 35
+    },
+    {
+     "text": {
+      "sk": "Účtová trieda 5 spolu súčet (r. 001 až r. 035)"
+     },
+     "cisloRiadku": 36
+    }
+   ],
+   "pocetStlpcov": 7,
+   "pocetDatovychStlpcov": 4
+  },
+  {
+   "nazov": {
+    "sk": "Výnosy"
+   },
+   "hlavicka": [
+    {
+     "text": {
+      "sk": "Číslo účtu"
+     },
+     "riadok": 1,
+     "stlpec": 1,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 2
+    },
+    {
+     "text": {
+      "sk": "Výnosy"
+     },
+     "riadok": 1,
+     "stlpec": 2,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 2
+    },
+    {
+     "text": {
+      "sk": "Číslo riadku"
+     },
+     "riadok": 1,
+     "stlpec": 3,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 2
+    },
+    {
+     "text": {
+      "sk": "Účtovné obdobie"
+     },
+     "riadok": 1,
+     "stlpec": 4,
+     "sirkaStlpca": 3,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "Bezprostredne predchádzajúce účtovné obdobie"
+     },
+     "riadok": 1,
+     "stlpec": 7,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 2
+    },
+    {
+     "text": {
+      "sk": "Nezdaňovaná činnosť"
+     },
+     "riadok": 2,
+     "stlpec": 4,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "Zdaňovaná činnosť"
+     },
+     "riadok": 2,
+     "stlpec": 5,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "Spolu"
+     },
+     "riadok": 2,
+     "stlpec": 6,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "a"
+     },
+     "riadok": 3,
+     "stlpec": 1,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "b"
+     },
+     "riadok": 3,
+     "stlpec": 2,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "c"
+     },
+     "riadok": 3,
+     "stlpec": 3,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "7"
+     },
+     "riadok": 3,
+     "stlpec": 4,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "8"
+     },
+     "riadok": 3,
+     "stlpec": 5,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "9"
+     },
+     "riadok": 3,
+     "stlpec": 6,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "10"
+     },
+     "riadok": 3,
+     "stlpec": 7,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    }
+   ],
+   "riadky": [
+    {
+     "text": {
+      "sk": "Tržby za vlastné výkony"
+     },
+     "oznacenie": "601",
+     "cisloRiadku": 37
+    },
+    {
+     "text": {
+      "sk": "Tržby z predaja služieb"
+     },
+     "oznacenie": "602",
+     "cisloRiadku": 38
+    },
+    {
+     "text": {
+      "sk": "Tržby za predaný tovar"
+     },
+     "oznacenie": "604",
+     "cisloRiadku": 39
+    },
+    {
+     "text": {
+      "sk": "Iné ostatné tržby"
+     },
+     "oznacenie": "605",
+     "cisloRiadku": 40
+    },
+    {
+     "text": {
+      "sk": "Aktivácia materiálu"
+     },
+     "oznacenie": "621",
+     "cisloRiadku": 41
+    },
+    {
+     "text": {
+      "sk": "Aktivácia vnútroorganizačných služieb"
+     },
+     "oznacenie": "622",
+     "cisloRiadku": 42
+    },
+    {
+     "text": {
+      "sk": "Aktivácia dlhodobého nehmotného majetku"
+     },
+     "oznacenie": "623",
+     "cisloRiadku": 43
+    },
+    {
+     "text": {
+      "sk": "Aktivácia dlhodobého hmotného majetku"
+     },
+     "oznacenie": "624",
+     "cisloRiadku": 44
+    },
+    {
+     "text": {
+      "sk": "Zmluvné pokuty a úroky z omeškania"
+     },
+     "oznacenie": "641",
+     "cisloRiadku": 45
+    },
+    {
+     "text": {
+      "sk": "Ostatné pokuty a úroky z omeškania"
+     },
+     "oznacenie": "642",
+     "cisloRiadku": 46
+    },
+    {
+     "text": {
+      "sk": "Platby za odpísané pohľadávky"
+     },
+     "oznacenie": "643",
+     "cisloRiadku": 47
+    },
+    {
+     "text": {
+      "sk": "Úroky"
+     },
+     "oznacenie": "644",
+     "cisloRiadku": 48
+    },
+    {
+     "text": {
+      "sk": "Kurzové zisky"
+     },
+     "oznacenie": "645",
+     "cisloRiadku": 49
+    },
+    {
+     "text": {
+      "sk": "Iné ostatné výnosy"
+     },
+     "oznacenie": "649",
+     "cisloRiadku": 50
+    },
+    {
+     "text": {
+      "sk": "Tržby z predaja dlhodobého nehmotného majetku a dlhodobého hmotného majetku"
+     },
+     "oznacenie": "651",
+     "cisloRiadku": 51
+    },
+    {
+     "text": {
+      "sk": "Výnosy z dlhodobého finančného majetku"
+     },
+     "oznacenie": "652",
+     "cisloRiadku": 52
+    },
+    {
+     "text": {
+      "sk": "Tržby z predaja cenných papierov"
+     },
+     "oznacenie": "653",
+     "cisloRiadku": 53
+    },
+    {
+     "text": {
+      "sk": "Tržby z predaja materiálu"
+     },
+     "oznacenie": "654",
+     "cisloRiadku": 54
+    },
+    {
+     "text": {
+      "sk": "Výnosy z krátkodobého finančného majetku"
+     },
+     "oznacenie": "655",
+     "cisloRiadku": 55
+    },
+    {
+     "text": {
+      "sk": "Výnosy z precenenia cenných papierov"
+     },
+     "oznacenie": "657",
+     "cisloRiadku": 56
+    },
+    {
+     "text": {
+      "sk": "Výnosy z nájmu majetku"
+     },
+     "oznacenie": "658",
+     "cisloRiadku": 57
+    },
+    {
+     "text": {
+      "sk": "Dotácie na prevádzku"
+     },
+     "oznacenie": "691",
+     "cisloRiadku": 58
+    },
+    {
+     "text": {
+      "sk": "Účtová trieda 6 spolu súčet (r.037 až r. 058)"
+     },
+     "cisloRiadku": 59
+    },
+    {
+     "text": {
+      "sk": "Výsledok hospodárenia pred zdanením (r.059 mínus r. 036)(+/-)"
+     },
+     "cisloRiadku": 60
+    },
+    {
+     "text": {
+      "sk": "Daň z príjmov"
+     },
+     "oznacenie": "591",
+     "cisloRiadku": 61
+    },
+    {
+     "text": {
+      "sk": "Dodatočné odvody dane z príjmov"
+     },
+     "oznacenie": "595",
+     "cisloRiadku": 62
+    },
+    {
+     "text": {
+      "sk": "Výsledok hospodárenia po zdanení (r.060 mínus r. 061 a r. 062) (+/-)"
+     },
+     "cisloRiadku": 63
+    }
+   ],
+   "pocetStlpcov": 7,
+   "pocetDatovychStlpcov": 4
+  }
+ ],
+ "nazov": "Výkaz ziskov a strát Úč SP 2-01",
+ "nariadenieMF": "MF/007222/2020-74",
+ "platneOd": "2020-05-01"
+}

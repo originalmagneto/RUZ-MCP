@@ -1,0 +1,34 @@
+{
+ "prilohy": [
+  {
+   "id": 11546409,
+   "velkostPrilohy": 548010,
+   "jazyk": "SK",
+   "digest": "fd5c22873edea84fcbc326685c35fd6a0bda07e3c01247856300d568915fcc28",
+   "mimeType": "application/pdf",
+   "meno": "PRVA STRANA IUZ_2024_scan.pdf"
+  }
+ ],
+ "id": 9543240,
+ "idUctovnejZavierky": 6350099,
+ "obsah": {
+  "titulnaStrana": {
+   "nazovUctovnejJednotky": "Hlavné mesto Slovenskej republiky Bratislava",
+   "ico": "00603481",
+   "dic": "2020372596",
+   "adresa": {
+    "ulica": "Primaciálne námestie 1",
+    "psc": "81101",
+    "mesto": "Bratislava - mestská časť Staré Mesto"
+   },
+   "typZavierky": "Riadna",
+   "obdobieOd": "2024-01",
+   "obdobieDo": "2024-12",
+   "datumZostavenia": "2025-03-31"
+  }
+ },
+ "pristupnostDat": "Verejné",
+ "datumPoslednejUpravy": "2025-04-01",
+ "zdrojDat": "SAM",
+ "idSablony": 725
+}

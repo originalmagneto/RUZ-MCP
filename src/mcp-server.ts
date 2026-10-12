@@ -3,7 +3,7 @@ import { looseBoolean, looseNumber } from "./scalars.js";
 import { z } from "zod";
 import { writeFileSync } from "node:fs";
 import { RuzClient } from "./ruz-client.js";
-import { assembleYear, buildRowIndex, currentColumn, priorColumn, cellValue } from "./financials.js";
+import { assembleYear, buildRowIndex, currentColumn, priorColumn, cellValue, leadingColumns } from "./financials.js";
 import type { ReportWithTemplate } from "./financials.js";
 import {
   classifyEntityStav, decodeCode, entityCandidate, entityStavNote, groupStatementsByPeriod,
@@ -35,8 +35,20 @@ function json(data: unknown) {
   return { content: [{ type: "text" as const, text: JSON.stringify(data, null, 2) }] };
 }
 
-export function createRuzMcpServer(client = new RuzClient()): McpServer {
-  const server = new McpServer({ name: "ruz-mcp", version: "0.2.0" });
+export interface RuzMcpServerOptions {
+  /**
+   * Whether ruz_download_attachment may write to `savePath`. Only meaningful for
+   * a local (stdio) server: on the remote HTTP server the path would be on the
+   * server's own disk, out of the caller's reach.
+   */
+  allowSavePath?: boolean;
+}
+
+export function createRuzMcpServer(
+  client = new RuzClient(),
+  { allowSavePath = true }: RuzMcpServerOptions = {},
+): McpServer {
+  const server = new McpServer({ name: "ruz-mcp", version: "0.3.0" });
 
   /**
    * Resolve the accounting unit behind an IČO/DIČ (or an explicit entityId).
@@ -257,7 +269,7 @@ export function createRuzMcpServer(client = new RuzClient()): McpServer {
     {
       title: "Plný účtovný výkaz",
       description:
-        "Plný čitateľný výkaz (súvaha / výkaz ziskov a strát): riadky s názvami a hodnotami za bežné a predchádzajúce obdobie. Pri prázdnom obsahu vráti príznak a odkaz na prílohu.",
+        "Plný čitateľný výkaz (súvaha / výkaz ziskov a strát): riadky s názvami a hodnotami za bežné a predchádzajúce obdobie; pri aktívach aj brutto a korekcia, pri výnosoch a nákladoch neziskových a verejných jednotiek aj rozdelenie podľa činnosti. Pri prázdnom obsahu vráti príznak a odkaz na prílohu.",
       inputSchema: { reportId: looseNumber(z.number().int()) },
     },
     async ({ reportId }) => {
@@ -280,6 +292,7 @@ export function createRuzMcpServer(client = new RuzClient()): McpServer {
         const rt = reportTables[ti];
         const cur = currentColumn(t);
         const prior = priorColumn(t);
+        const lead = leadingColumns(t);
         return {
           nazov: t.nazov?.sk,
           riadky: idx.rows.map((r) => ({
@@ -287,6 +300,12 @@ export function createRuzMcpServer(client = new RuzClient()): McpServer {
             nazov: r.label,
             bezne: rt ? cellValue(rt, t, r.position, cur) : null,
             predchadzajuce: rt && prior !== null ? cellValue(rt, t, r.position, prior) : null,
+            ...(lead
+              ? {
+                  [lead[0]]: rt ? cellValue(rt, t, r.position, 0) : null,
+                  [lead[1]]: rt ? cellValue(rt, t, r.position, 1) : null,
+                }
+              : {}),
           })),
         };
       });
@@ -349,10 +368,18 @@ export function createRuzMcpServer(client = new RuzClient()): McpServer {
     "ruz_download_attachment",
     {
       title: "Stiahni prílohu",
-      description: "Stiahne PDF prílohu. Buď vráti base64, alebo ju uloží na disk (savePath).",
+      description: allowSavePath
+        ? "Stiahne PDF prílohu. Buď vráti base64, alebo ju uloží na disk (savePath)."
+        : "Stiahne PDF prílohu ako base64. savePath tento vzdialený server nepodporuje.",
       inputSchema: { attachmentId: looseNumber(z.number().int()), savePath: z.string().optional() },
     },
     async ({ attachmentId, savePath }) => {
+      if (savePath && !allowSavePath) {
+        throw new Error(
+          "savePath nie je na vzdialenom (HTTP) serveri dostupný — súbor by sa uložil na disk servera. " +
+            "Zavolaj nástroj bez savePath a ulož base64 u seba.",
+        );
+      }
       const { base64, contentType } = await client.downloadAttachment(attachmentId);
       const sizeBytes = Buffer.from(base64, "base64").length;
       if (savePath) {

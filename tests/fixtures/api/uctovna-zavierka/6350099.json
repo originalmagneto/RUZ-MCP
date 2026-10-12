@@ -1,0 +1,20 @@
+{
+ "id": 6350099,
+ "idUJ": 10882,
+ "idUctovnychVykazov": [
+  10136068,
+  9543237,
+  9543239,
+  9543238,
+  9543240
+ ],
+ "datumZostaveniaK": "2024-12-31",
+ "datumPrilozeniaSpravyAuditora": "2026-04-17",
+ "typ": "Riadna",
+ "datumPodania": "2025-04-01",
+ "datumZostavenia": "2025-03-31",
+ "obdobieOd": "2024-01",
+ "obdobieDo": "2024-12",
+ "datumPoslednejUpravy": "2026-04-17",
+ "zdrojDat": "SAM"
+}

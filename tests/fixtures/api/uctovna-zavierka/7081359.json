@@ -1,0 +1,19 @@
+{
+ "id": 7081359,
+ "datumZostaveniaK": "2025-12-31",
+ "idUJ": 10882,
+ "idUctovnychVykazov": [
+  10389624,
+  10389625,
+  10389626,
+  10389627
+ ],
+ "konsolidovana": true,
+ "datumPoslednejUpravy": "2026-07-24",
+ "zdrojDat": "SAM",
+ "typ": "Riadna",
+ "obdobieOd": "2025-01",
+ "obdobieDo": "2025-12",
+ "datumPodania": "2026-07-24",
+ "datumZostavenia": "2026-06-20"
+}

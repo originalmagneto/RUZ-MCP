@@ -1,0 +1,18 @@
+{
+ "id": 4682857,
+ "idUJ": 10882,
+ "idUctovnychVykazov": [
+  7520036,
+  7520035,
+  7520034,
+  7520033
+ ],
+ "datumZostaveniaK": "2020-12-31",
+ "typ": "Riadna",
+ "datumPodania": "2021-03-31",
+ "datumZostavenia": "2021-03-31",
+ "obdobieOd": "2020-01",
+ "obdobieDo": "2020-12",
+ "datumPoslednejUpravy": "2021-03-31",
+ "zdrojDat": "SAM"
+}

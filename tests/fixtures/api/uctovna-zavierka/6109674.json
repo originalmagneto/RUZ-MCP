@@ -1,0 +1,21 @@
+{
+ "id": 6109674,
+ "datumZostaveniaK": "2023-12-31",
+ "idUJ": 10882,
+ "idUctovnychVykazov": [
+  9260106,
+  9260107,
+  9260109,
+  9260108,
+  9324273
+ ],
+ "konsolidovana": true,
+ "datumPoslednejUpravy": "2024-12-20",
+ "zdrojDat": "SAM",
+ "datumPrilozeniaSpravyAuditora": "2024-12-20",
+ "typ": "Riadna",
+ "obdobieOd": "2023-01",
+ "obdobieDo": "2023-12",
+ "datumPodania": "2024-08-19",
+ "datumZostavenia": "2024-06-20"
+}

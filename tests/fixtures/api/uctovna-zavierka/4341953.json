@@ -1,0 +1,20 @@
+{
+ "id": 4341953,
+ "idUJ": 10882,
+ "idUctovnychVykazov": [
+  7114329,
+  7095377,
+  7095402,
+  7095263,
+  7095264
+ ],
+ "datumZostaveniaK": "2019-12-31",
+ "datumPrilozeniaSpravyAuditora": "2020-05-21",
+ "typ": "Riadna",
+ "datumPodania": "2020-04-27",
+ "datumZostavenia": "2020-03-30",
+ "obdobieOd": "2019-01",
+ "obdobieDo": "2019-12",
+ "datumPoslednejUpravy": "2020-05-22",
+ "zdrojDat": "SAM"
+}

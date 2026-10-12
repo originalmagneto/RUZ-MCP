@@ -1,0 +1,20 @@
+{
+ "id": 5613025,
+ "datumZostaveniaK": "2022-12-31",
+ "idUJ": 428881,
+ "idUctovnychVykazov": [
+  8658632,
+  8658633,
+  8658634,
+  9189499,
+  8658635
+ ],
+ "datumPoslednejUpravy": "2023-06-27",
+ "zdrojDat": "CKS",
+ "typ": "Riadna",
+ "obdobieOd": "2022-01",
+ "obdobieDo": "2022-12",
+ "datumPodania": "2023-06-27",
+ "datumZostavenia": "2023-02-06",
+ "datumSchvalenia": "2024-06-27"
+}

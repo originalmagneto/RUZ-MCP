@@ -185,7 +185,8 @@ const httpServer = createServer(async (req, res) => {
       return;
     }
 
-    const mcpServer = createRuzMcpServer();
+    // savePath would write to this server's disk, not the caller's.
+    const mcpServer = createRuzMcpServer(undefined, { allowSavePath: false });
     const transport = new StreamableHTTPServerTransport({ sessionIdGenerator: undefined });
     res.on("close", () => {
       transport.close();

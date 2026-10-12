@@ -1,0 +1,20 @@
+{
+ "id": 5216388,
+ "datumZostaveniaK": "2021-12-31",
+ "idUJ": 428881,
+ "idUctovnychVykazov": [
+  8177074,
+  8177073,
+  8177075,
+  8270080,
+  8177076
+ ],
+ "datumPoslednejUpravy": "2022-06-28",
+ "zdrojDat": "CKS",
+ "typ": "Riadna",
+ "obdobieOd": "2021-01",
+ "obdobieDo": "2021-12",
+ "datumPodania": "2022-06-28",
+ "datumZostavenia": "2022-02-07",
+ "datumSchvalenia": "2022-09-27"
+}

@@ -490,10 +490,10 @@ nehamroval upstream RÚZ API.
 | `ruz_financial_profile` | `ico` · `entityId?` · `years?` *(1–15 období, def. 5)* · `consolidated?` | viacročný profil s ukazovateľmi, jeden riadok za účtovné obdobie |
 | `ruz_list_statements` | `ico?` · `entityId?` | zoznam účtovných závierok |
 | `ruz_get_statement` | `statementId` | detail závierky + metadáta výkazov |
-| `ruz_get_report` | `reportId` | plný čitateľný výkaz (súvaha / výsledovka) |
+| `ruz_get_report` | `reportId` | plný čitateľný výkaz (súvaha / výsledovka) vrátane brutto/korekcie a rozdelenia podľa činnosti |
 | `ruz_list_annual_reports` | `ico?` · `entityId?` | zoznam výročných správ |
 | `ruz_list_attachments` | `statementId?` · `reportId?` · `annualReportId?` | zoznam PDF príloh |
-| `ruz_download_attachment` | `attachmentId` · `savePath?` | PDF ako base64, alebo uloží na disk |
+| `ruz_download_attachment` | `attachmentId` · `savePath?` | PDF ako base64, alebo uloží na disk (`savePath` len pri lokálnom stdio) |
 
 **Ukazovatele v `ruz_financial_profile`:** `revenue` (tržby), `profit` (výsledok
 hospodárenia), `equity` (vlastné imanie), `assets` (aktíva), `liabilities` (záväzky),
@@ -501,8 +501,17 @@ hospodárenia), `equity` (vlastné imanie), `assets` (aktíva), `liabilities` (z
 
 - `revenue` = tržby z predaja tovaru + vlastných výrobkov + služieb. Na Úč POD od
   2014 sú to riadky 03 + 04 + 05; na Úč POD 2-01 a Úč MÚJ riadky „tovaru" a
-  „vlastných výrobkov a služieb". Nie je to „Čistý obrat" (r. 01), ten nájdeš cez
-  `ruz_get_report`. Pole `rows` uvádza všetky sčítané riadky.
+  „vlastných výrobkov a služieb"; na Úč NUJ, ROPO a konsolidovaných závierkach
+  verejnej správy „za vlastné výrobky" + „služieb" + „za tovar"; na Úč SP
+  „za vlastné výkony" + „služieb" + „za predaný tovar". Nie je to „Čistý obrat"
+  (r. 01), ten nájdeš cez `ruz_get_report`. Pole `rows` uvádza všetky sčítané riadky.
+- Ostatné ukazovatele berú vždy súčtový riadok: `equity` „Vlastné imanie" (nie
+  „Vlastné imanie a záväzky" = súčet pasív), `assets` „SPOLU MAJETOK" / „MAJETOK
+  SPOLU", `liabilities` „Záväzky" so vzorcom alebo „súčet". Šablóna bez súčtového
+  riadku (napr. záväzky v Úč SP, vlastné zdroje krytia v Úč NUJ 2013) vráti
+  `available: false`, nie podpoložku.
+- Prázdna bunka vo výkaze sa nemení na nulu: ukazovateľ má `available: false`
+  a `note` povie, ktorý riadok je prázdny.
 - **Jeden riadok za obdobie.** RÚZ má za jedno obdobie často viac závierok
   (napr. IFRS + VÚ POD + správa audítora, alebo dve „Riadne" s rôznymi číslami).
   Čísla sa berú zo závierky so štruktúrovanými dátami, pri zhode z najneskôr
@@ -545,6 +554,9 @@ a to potom posuň do `ruz_financial_profile`.
 ```
 
 Bez `savePath` sa PDF vráti ako base64 — pri veľkých prílohách radšej ukladaj na disk.
+`savePath` funguje iba pri lokálnom (stdio) serveri; vzdialený HTTP server ho odmietne,
+lebo by súbor zapísal na svoj vlastný disk. Ak RÚZ namiesto prílohy vráti stránku
+výpadku, nástroj hlási nedostupnosť a nič neuloží.
 
 ---
 

@@ -1,0 +1,38 @@
+{
+ "id": 1617045,
+ "idUctovnychZavierok": [
+  3315104,
+  4316737,
+  3984771,
+  4324316,
+  4720151,
+  5491958,
+  3776558,
+  5884315,
+  6789599,
+  6321153,
+  3776506,
+  5196618,
+  3691163
+ ],
+ "idVyrocnychSprav": [
+  6903713
+ ],
+ "skNace": "94992",
+ "konsolidovana": false,
+ "ulica": "Staré Grunty 205/18",
+ "psc": "84104",
+ "datumPoslednejUpravy": "2026-07-03",
+ "datumZalozenia": "2016-01-29",
+ "velkostOrganizacie": "05",
+ "zdrojDat": "SUSR",
+ "nazovUJ": "Slovensko.Digital",
+ "mesto": "Bratislava - mestská časť Karlova Ves",
+ "okres": "SK0104",
+ "sidlo": "SK0104529397",
+ "druhVlastnictva": "6",
+ "kraj": "SK010",
+ "pravnaForma": "701",
+ "dic": "2120264674",
+ "ico": "50158635"
+}

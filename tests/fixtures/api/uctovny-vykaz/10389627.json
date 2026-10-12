@@ -1,0 +1,35 @@
+{
+ "prilohy": [
+  {
+   "id": 12934567,
+   "mimeType": "application/pdf",
+   "jazyk": "SK",
+   "velkostPrilohy": 321196,
+   "digest": "a5a60d97ce13a5f38254c638a67cf3da4c784cb087ef7c9f089ae36208c4b1d9",
+   "meno": "predná strana.pdf"
+  }
+ ],
+ "id": 10389627,
+ "idUctovnejZavierky": 7081359,
+ "obsah": {
+  "titulnaStrana": {
+   "nazovUctovnejJednotky": "Hlavné mesto Slovenskej republiky Bratislava",
+   "ico": "00603481",
+   "dic": "2020372596",
+   "adresa": {
+    "ulica": "Primaciálne námestie 429/1",
+    "psc": "81101",
+    "mesto": "Bratislava - mestská časť Staré Mesto"
+   },
+   "typZavierky": "Riadna",
+   "obdobieOd": "2025-01",
+   "obdobieDo": "2025-12",
+   "datumZostavenia": "2026-06-20",
+   "konsolidovana": "true"
+  }
+ },
+ "pristupnostDat": "Verejné",
+ "idSablony": 725,
+ "datumPoslednejUpravy": "2026-07-24",
+ "zdrojDat": "SAM"
+}

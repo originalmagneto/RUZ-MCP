@@ -1,0 +1,19 @@
+{
+ "id": 3007875,
+ "idUJ": 10882,
+ "idUctovnychVykazov": [
+  5432691,
+  5432689,
+  5432690,
+  5432692
+ ],
+ "datumZostaveniaK": "2015-12-31",
+ "konsolidovana": true,
+ "typ": "Riadna",
+ "datumPodania": "2016-08-04",
+ "datumZostavenia": "2016-06-20",
+ "obdobieOd": "2015-01",
+ "obdobieDo": "2015-12",
+ "datumPoslednejUpravy": "2016-08-05",
+ "zdrojDat": "SAM"
+}

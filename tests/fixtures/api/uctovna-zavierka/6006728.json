@@ -1,0 +1,20 @@
+{
+ "id": 6006728,
+ "datumZostaveniaK": "2023-12-31",
+ "idUJ": 428881,
+ "idUctovnychVykazov": [
+  9189498,
+  9144745,
+  9144746,
+  9144747,
+  9144748
+ ],
+ "datumPoslednejUpravy": "2024-06-24",
+ "zdrojDat": "CKS",
+ "typ": "Riadna",
+ "obdobieOd": "2023-01",
+ "obdobieDo": "2023-12",
+ "datumPodania": "2024-06-24",
+ "datumZostavenia": "2024-01-31",
+ "datumSchvalenia": "2024-06-27"
+}

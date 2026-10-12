@@ -47,6 +47,23 @@ export function priorColumn(table: TemplateTable): number | null {
   return null;
 }
 
+/**
+ * Names of the two leading data columns of a 4-column table, read from its
+ * header. The current period then sits in column 2 and the prior one in 3:
+ * súvaha aktíva [Brutto, Korekcia, Netto, Netto pred.]; Úč NUJ / ROPO / Kons.
+ * výnosy a náklady [Hlavná, Podnikateľská, Spolu, Spolu pred.]; Úč SP
+ * [Nezdaňovaná, Zdaňovaná, Spolu, Spolu pred.]. These columns used to be
+ * dropped from ruz_get_report without a word.
+ */
+export function leadingColumns(table: TemplateTable): [string, string] | null {
+  if ((table.pocetDatovychStlpcov ?? 1) < 4) return null;
+  const header = (table.hlavicka ?? []).map((h) => h.text?.sk ?? "").join(" | ").toLowerCase();
+  if (header.includes("brutto")) return ["brutto", "korekcia"];
+  if (header.includes("hlavn")) return ["hlavnaCinnost", "podnikatelskaCinnost"];
+  if (header.includes("nezdaňovan")) return ["nezdanovanaCinnost", "zdanovanaCinnost"];
+  return ["stlpec1", "stlpec2"];
+}
+
 /** Read a numeric cell via row-major layout: data[row * dataCols + col]. */
 export function cellValue(
   reportTable: ReportTable,
@@ -72,49 +89,82 @@ interface IndicatorDef {
   key: string;
   label: string;
   table: TableKind;
-  /** One or more label regexes; matched rows are summed. */
+  /**
+   * Label regexes. "sum" adds every matched row (components of one total);
+   * "first" takes the row of the first pattern that matches (alternative
+   * wordings of the same total across templates).
+   */
+  combine: "sum" | "first";
   match: RegExp[];
 }
 
-/** Six DD indicators. Label regexes target statutory Úč POD wording. */
+/**
+ * Six DD indicators, mapped by the statutory row wording of each template
+ * family. Verified against all 245 templates of /api/sablony and against
+ * captured reports: Úč POD (20, 21, 22, 699), Úč MÚJ (687), Úč NUJ (17, 18,
+ * 385, 1180), Úč ROPO SFOV / Kons. UJ VS (1, 2, 684, 690, 696, 727), Úč SP
+ * (29, 30, 1141, 1142), Úč FNM SR (3).
+ */
 const INDICATORS: IndicatorDef[] = [
-  // Tržby = goods + own products + services. Úč POD 2-01 (id 22, to 2013) and
-  // Úč MÚJ (id 687) carry products and services on one row ("vlastných výrobkov
-  // a služieb"); Úč POD from 2014 (id 699) splits them into r.04 "vlastných
-  // výrobkov" and r.05 "služieb". Matching only the combined wording summed
-  // r.03 alone on 699, so a services company reported no revenue at all.
-  // A row matched by two patterns is counted once (see extractIndicators).
+  // Tržby = goods + own products + services, i.e. the components of the
+  // statutory subtotal (ROPO r. 65 "Tržby za vlastné výkony a tovar"):
+  // - Úč POD 2-01 (22) and Úč MÚJ (687): "tovaru" + "vlastných výrobkov a služieb";
+  // - Úč POD from 2014 (699): r. 03 "tovaru" + r. 04 "vlastných výrobkov" + r. 05 "služieb";
+  // - Úč NUJ, ROPO, Kons. UJ VS: "za vlastné výrobky" + "z predaja služieb" + "za (predaný) tovar";
+  // - Úč SP: "za vlastné výkony" + "z predaja služieb" + "za predaný tovar".
+  // The ROPO subtotal "za vlastné výkony a tovar" is not matched (it would
+  // double its components). A row matched by two patterns is counted once.
   {
     key: "revenue",
     label: "Tržby",
     table: "vzas",
+    combine: "sum",
     match: [
       /^Tržby z predaja tovaru/i,
       /^Tržby z predaja vlastných výrobkov/i,
       /^Tržby z predaja služieb/i,
+      /^Tržby za vlastné výrobky/i,
+      /^Tržby za vlastné výkony\s*$/i,
+      /^Tržby za predaný tovar/i,
+      /^Tržby za tovar/i,
     ],
   },
   {
     key: "profit",
     label: "Výsledok hospodárenia za účtovné obdobie po zdanení",
     table: "vzas",
-    match: [/^Výsledok hospodárenia za účtovné obdobie po zdanení/i],
+    combine: "first",
+    match: [
+      /^Výsledok hospodárenia za účtovné obdobie po zdanení/i, // Úč POD, Úč MÚJ
+      /^Výsledok hospodárenia po zdanení/i, // Úč NUJ, ROPO, Kons. UJ VS, Úč SP
+    ],
   },
-  // Assumes the "Vlastné imanie" total row precedes any sub-rows (true for Úč POD/Úč MÚJ);
-  // matchByLabel returns the first match in row order.
-  { key: "equity", label: "Vlastné imanie", table: "suvaha",
-    match: [/^Vlastné imanie\b/i] },
+  // ROPO and Kons. UJ VS put "VLASTNÉ IMANIE A ZÁVÄZKY" (the pasíva total)
+  // before "Vlastné imanie"; matching it reported total pasíva as equity.
+  // Úč NUJ 2013 "VLASTNÉ ZDROJE KRYTIA MAJETKU" is deliberately not mapped.
+  {
+    key: "equity",
+    label: "Vlastné imanie",
+    table: "suvaha",
+    combine: "first",
+    match: [/^Vlastné imanie(?!\s+a\s)/i],
+  },
   {
     key: "assets",
     label: "Aktíva spolu",
     table: "suvaha",
-    match: [/^SPOLU MAJETOK/i],
+    combine: "first",
+    match: [/^SPOLU MAJETOK/i, /^MAJETOK SPOLU/i],
   },
+  // Only the total row ("Záväzky r. …", "Záväzky súčet …", "Záväzky z toho:").
+  // A bare /^Záväzky/ took sub-items such as "Záväzky zo sociálneho fondu"
+  // (Úč NUJ 2013) or "Záväzky z nájmu" (Úč SP), which have no total row.
   {
     key: "liabilities",
     label: "Záväzky",
     table: "suvaha",
-    match: [/^Záväzky\b/i],
+    combine: "first",
+    match: [/^Záväzky(\s+súčet|\s+r\.|\s+z toho|\s*$)/i],
   },
   // "leverage" is derived after extraction (liabilities / assets); see assembleYear.
 ];
@@ -186,27 +236,35 @@ export function extractIndicators(report: Report, template: Template): Indicator
   const reportKinds = new Set(paired.map((p) => p.kind).filter(Boolean));
 
   const out: IndicatorValue[] = [];
+  const seen = new Set<string>();
   for (const def of INDICATORS) {
     if (!reportKinds.has(def.table)) continue; // indicator belongs to a different report
     let sum: number | null = null;
     const rows: number[] = [];
+    const emptyRows: number[] = [];
     if (hasData) {
-      for (const p of paired) {
-        if (p.kind !== def.table || !p.report) continue;
-        const idx = buildRowIndex(p.template);
-        const col = currentColumn(p.template);
-        const used = new Set<number>();
-        for (const re of def.match) {
-          const row = idx.matchByLabel(re);
-          if (!row || used.has(row.position)) continue;
-          used.add(row.position);
-          const v = cellValue(p.report, p.template, row.position, col);
+      const tables = paired.filter((p) => p.kind === def.table && p.report);
+      search: for (const re of def.match) {
+        for (const p of tables) {
+          const row = buildRowIndex(p.template).matchByLabel(re);
+          if (!row) continue;
+          const key = `${p.template.nazov?.sk}|${row.position}`;
+          if (seen.has(key)) continue;
+          seen.add(key);
+          const v = cellValue(p.report!, p.template, row.position, currentColumn(p.template));
           if (v !== null) {
-            sum = (sum ?? 0) + v;
+            // Public-sector filings carry cents; keep the sum on whole cents
+            // instead of 242394569.66000003.
+            sum = Math.round(((sum ?? 0) + v) * 100) / 100;
             rows.push(row.cisloRiadku);
+          } else {
+            emptyRows.push(row.cisloRiadku);
           }
+          if (def.combine === "first") break search;
         }
       }
+      seen.clear();
+      rows.sort((a, b) => a - b);
     }
     out.push({
       key: def.key,
@@ -215,6 +273,13 @@ export function extractIndicators(report: Report, template: Template): Indicator
       cisloRiadku: rows[0] ?? null,
       rows,
       available: hasData && sum !== null,
+      // An empty cell on the form usually means zero, but the register does not
+      // say so; report it instead of inventing a 0.
+      note:
+        hasData && sum === null && emptyRows.length > 0
+          ? `Riadok ${emptyRows.map((r) => `r. ${r}`).join(", ")} je vo výkaze prázdny ` +
+            "(v tlačive to spravidla znamená nulu); hodnota sa nedopĺňa."
+          : undefined,
     });
   }
   return out;

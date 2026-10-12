@@ -1,0 +1,20 @@
+{
+ "id": 5083839,
+ "datumZostaveniaK": "2021-12-31",
+ "idUJ": 10882,
+ "idUctovnychVykazov": [
+  8275403,
+  8015384,
+  8015385,
+  8015383,
+  8015382
+ ],
+ "datumPoslednejUpravy": "2022-10-18",
+ "zdrojDat": "SAM",
+ "datumPrilozeniaSpravyAuditora": "2022-10-18",
+ "typ": "Riadna",
+ "obdobieOd": "2021-01",
+ "obdobieDo": "2021-12",
+ "datumPodania": "2022-03-31",
+ "datumZostavenia": "2022-03-31"
+}

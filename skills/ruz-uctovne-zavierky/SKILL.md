@@ -43,7 +43,8 @@ je iba na čítanie.
    v `ruz_get_report`.
 4. Originál na disk: `ruz_list_attachments` → `ruz_download_attachment`; bez
    `savePath` sa PDF vráti ako base64, čo je pri väčších prílohách zbytočne
-   nákladné.
+   nákladné. `savePath` funguje len pri lokálnom (stdio) serveri; vzdialený
+   server ho odmietne.
 
 ## Pasce
 
@@ -61,7 +62,16 @@ je iba na čítanie.
   over `available` pri konkrétnom kľúči.
 - **`revenue` sú tržby z tovaru + vlastných výrobkov + služieb**, nie čistý
   obrat. Ktoré riadky sa sčítali, povie `rows` (napr. Úč POD od 2014:
-  `[3, 5]`).
+  `[3, 5]`). Platí aj pre neziskovky (Úč NUJ), obce a štátne organizácie
+  (ROPO) a Sociálnu poisťovňu (Úč SP).
+- **Prázdny riadok nie je nula.** Ak je súčtový riadok vo výkaze prázdny,
+  ukazovateľ má `available: false` a `note` to povie; nulu nedopĺňaj sám
+  bez pohľadu do PDF. Šablóna bez súčtového riadku (záväzky v Úč SP, vlastné
+  imanie v Úč NUJ do 2021) vráti `available: false`.
+- **`ruz_get_report` vracia všetky stĺpce**: pri aktívach `brutto` a
+  `korekcia`, pri výnosoch a nákladoch NUJ/ROPO aj `hlavnaCinnost` a
+  `podnikatelskaCinnost` (Úč SP `nezdanovanaCinnost`/`zdanovanaCinnost`);
+  `bezne` je vždy netto, resp. spolu.
 - **Jeden riadok = jedno účtovné obdobie, nie jedna závierka.** Ak je za obdobie
   viac závierok, čísla sú zo `statementId` (najprv závierka so štruktúrovanými
   dátami, potom najneskôr podaná) a ostatné sú v `otherStatements`. Ak `note`

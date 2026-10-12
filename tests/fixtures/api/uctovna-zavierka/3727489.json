@@ -1,0 +1,21 @@
+{
+ "id": 3727489,
+ "datumZostaveniaK": "2017-12-31",
+ "idUJ": 10882,
+ "idUctovnychVykazov": [
+  6328406,
+  6404002,
+  6328415,
+  6328100,
+  6328125
+ ],
+ "konsolidovana": true,
+ "datumPoslednejUpravy": "2018-12-01",
+ "zdrojDat": "SAM",
+ "datumPrilozeniaSpravyAuditora": "2018-11-30",
+ "typ": "Riadna",
+ "obdobieOd": "2017-01",
+ "obdobieDo": "2017-12",
+ "datumPodania": "2018-06-29",
+ "datumZostavenia": "2018-06-20"
+}

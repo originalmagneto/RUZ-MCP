@@ -1,0 +1,964 @@
+{
+ "id": 1141,
+ "nazov": "Súvaha Úč SP 1-01",
+ "platneOd": "2020-05-01",
+ "nariadenieMF": "MF/007222/2020-74",
+ "tabulky": [
+  {
+   "nazov": {
+    "sk": "Aktíva"
+   },
+   "pocetDatovychStlpcov": 4,
+   "pocetStlpcov": 7,
+   "hlavicka": [
+    {
+     "text": {
+      "sk": "STRANA AKTÍV"
+     },
+     "riadok": 1,
+     "stlpec": 1,
+     "sirkaStlpca": 2,
+     "vyskaRiadku": 2
+    },
+    {
+     "text": {
+      "sk": "Číslo riadku"
+     },
+     "riadok": 1,
+     "stlpec": 3,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 2
+    },
+    {
+     "text": {
+      "sk": "Účtovné obdobie"
+     },
+     "riadok": 1,
+     "stlpec": 4,
+     "sirkaStlpca": 3,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "Bezprostrredne predchádzajúce účtovné obdobie"
+     },
+     "riadok": 1,
+     "stlpec": 7,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "Brutto"
+     },
+     "riadok": 2,
+     "stlpec": 4,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "Korekcia"
+     },
+     "riadok": 2,
+     "stlpec": 5,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "Netto"
+     },
+     "riadok": 2,
+     "stlpec": 6,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "Netto"
+     },
+     "riadok": 2,
+     "stlpec": 7,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "a"
+     },
+     "riadok": 3,
+     "stlpec": 1,
+     "sirkaStlpca": 2,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "b"
+     },
+     "riadok": 3,
+     "stlpec": 3,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "1"
+     },
+     "riadok": 3,
+     "stlpec": 4,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "2"
+     },
+     "riadok": 3,
+     "stlpec": 5,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "3"
+     },
+     "riadok": 3,
+     "stlpec": 6,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "4"
+     },
+     "riadok": 3,
+     "stlpec": 7,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    }
+   ],
+   "riadky": [
+    {
+     "text": {
+      "sk": "A. NEOBEŽNÝ MAJETOK súčet (r.002 + r.008 + r.018)"
+     },
+     "cisloRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "Dlhodobý nehmotný majetok súčet (r.003 až r.007)"
+     },
+     "oznacenie": "1.",
+     "cisloRiadku": 2
+    },
+    {
+     "text": {
+      "sk": "Softvér (013 - (073 + 091AÚ)"
+     },
+     "oznacenie": "1.",
+     "cisloRiadku": 3
+    },
+    {
+     "text": {
+      "sk": "Oceniteľné práva (014 - (074 + 091AÚ)"
+     },
+     "oznacenie": "1.",
+     "cisloRiadku": 4
+    },
+    {
+     "text": {
+      "sk": "Iný dlhodobý nehmotný majetok (018 + 019) - (078 + 079 + 091AÚ)"
+     },
+     "oznacenie": "1.",
+     "cisloRiadku": 5
+    },
+    {
+     "text": {
+      "sk": "Obstaranie dlhodobého nehmotného majetku (041 - 093)"
+     },
+     "oznacenie": "1.",
+     "cisloRiadku": 6
+    },
+    {
+     "text": {
+      "sk": "Poskytnuté preddavky na dlhodobý nehmotný majetok (051 - 095AÚ)"
+     },
+     "oznacenie": "1.",
+     "cisloRiadku": 7
+    },
+    {
+     "text": {
+      "sk": "Dlhodobý hmotný majetok súčet (r.009 až r.017)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 8
+    },
+    {
+     "text": {
+      "sk": "Pozemky (031)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 9
+    },
+    {
+     "text": {
+      "sk": "Umelecké diela a zbierky (032)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 10
+    },
+    {
+     "text": {
+      "sk": "Stavby (021 - (081+ 092AÚ)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 11
+    },
+    {
+     "text": {
+      "sk": "Stroje, prístroje a zariadenia (022 - (082 + 092AÚ)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 12
+    },
+    {
+     "text": {
+      "sk": "Dopravné prostriedky (023 - (083 + 092AÚ)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 13
+    },
+    {
+     "text": {
+      "sk": "Dlhodobý drobný hmotný majetok (028 - (088 + 092AÚ)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 14
+    },
+    {
+     "text": {
+      "sk": "Ostatný dlhodobý hmotný majetok (029 - (089 + 092 AÚ)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 15
+    },
+    {
+     "text": {
+      "sk": "Obstaranie dlhodobého hmotného majetku (042 - 094)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 16
+    },
+    {
+     "text": {
+      "sk": "Poskytnuté preddavky na dlhodobý hmotný majetok (052 - 095AÚ)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 17
+    },
+    {
+     "text": {
+      "sk": "Dlhodobý finančný majetok súčet (r.019 až r.024)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 18
+    },
+    {
+     "text": {
+      "sk": "Podielové cenné papiere a vklady v obchodných spoločnostiach v ovládanej osobe (061)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 19
+    },
+    {
+     "text": {
+      "sk": "Podielové cenné papiere a vklady v obchodných spoločnostiach s podstatným vplyvom (062)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 20
+    },
+    {
+     "text": {
+      "sk": "Dlhové cenné papiere držané do splatnosti (063 - 096AÚ)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 21
+    },
+    {
+     "text": {
+      "sk": "Ostatné pôžičky (067 - 096AÚ)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 22
+    },
+    {
+     "text": {
+      "sk": "Ostatný dlhodobý finančný majetok (069 - 096AÚ)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 23
+    },
+    {
+     "text": {
+      "sk": "Obstaranie dlhodobého finančného majetku (043 - 096AÚ)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 24
+    },
+    {
+     "text": {
+      "sk": "B. OBEŽNÝ MAJETOK súčet (r.026 + r.030 + r.035 + r.045 + r. 052)"
+     },
+     "cisloRiadku": 25
+    },
+    {
+     "text": {
+      "sk": "Zásoby súčet (r.027 až r. 029)"
+     },
+     "oznacenie": "1.",
+     "cisloRiadku": 26
+    },
+    {
+     "text": {
+      "sk": "Materiál (112 + 119) - (191)"
+     },
+     "oznacenie": "1.",
+     "cisloRiadku": 27
+    },
+    {
+     "text": {
+      "sk": "Tovar (132 + 139) - (196)"
+     },
+     "oznacenie": "1.",
+     "cisloRiadku": 28
+    },
+    {
+     "text": {
+      "sk": "Poskytnuté preddavky na zásoby (314AÚ) - (391AÚ)"
+     },
+     "oznacenie": "1.",
+     "cisloRiadku": 29
+    },
+    {
+     "text": {
+      "sk": "Dlhodobé pohľadávky súčet (r.031 až r.034)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 30
+    },
+    {
+     "text": {
+      "sk": "Pohľadávky z obchodného styku (311AÚ až 315AÚ okrem r.029) - (391AÚ)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 31
+    },
+    {
+     "text": {
+      "sk": "Pohľadávky na poistnom (316AÚ - 391AÚ)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 32
+    },
+    {
+     "text": {
+      "sk": "Pohľadávky voči zamestnancom (335AÚ - 391AÚ)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 33
+    },
+    {
+     "text": {
+      "sk": "Ostatné dlhodobé pohľadávky (378AÚ + 396AÚ ) - (391AÚ)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 34
+    },
+    {
+     "text": {
+      "sk": "Krátkodobé pohľadávky súčet (r.036 až r.044)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 35
+    },
+    {
+     "text": {
+      "sk": "Pohľadávky z obchodného styku (311AÚ až 315AÚ okrem r.029) - (391AÚ)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 36
+    },
+    {
+     "text": {
+      "sk": "Pohľadávky na poistnom (316AÚ - 391AÚ)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 37
+    },
+    {
+     "text": {
+      "sk": "Pohľadávky voči zamestnancom (335AÚ - 391AÚ)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 38
+    },
+    {
+     "text": {
+      "sk": "Zúčtovanie so Sociálnou poisťovňou a zdravotnými poisťovňami (336 - 391AÚ)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 39
+    },
+    {
+     "text": {
+      "sk": "Pohľadávky voči združeniu (358 - 391AÚ)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 40
+    },
+    {
+     "text": {
+      "sk": "Daňové pohľadávky (341 + 342 + 343 + 345)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 41
+    },
+    {
+     "text": {
+      "sk": "Dotácie a ostatné zúčtovanie so štátnym rozpočtom (346)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 42
+    },
+    {
+     "text": {
+      "sk": "Iné pohľadávky (373 AÚ + 378AÚ) - (391AÚ)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 43
+    },
+    {
+     "text": {
+      "sk": "Spojovací účet pri združení (396AÚ - 391AÚ)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 44
+    },
+    {
+     "text": {
+      "sk": "Krátkodobý finančný majetok súčet (r.046 až r.051)"
+     },
+     "oznacenie": "4.",
+     "cisloRiadku": 45
+    },
+    {
+     "text": {
+      "sk": "Pokladnica (211)"
+     },
+     "oznacenie": "4.",
+     "cisloRiadku": 46
+    },
+    {
+     "text": {
+      "sk": "Ceniny (213)"
+     },
+     "oznacenie": "4.",
+     "cisloRiadku": 47
+    },
+    {
+     "text": {
+      "sk": "Bankové účty (221 + 261)"
+     },
+     "oznacenie": "4.",
+     "cisloRiadku": 48
+    },
+    {
+     "text": {
+      "sk": "Dlhové cenné papiere na obchodovanie (251)"
+     },
+     "oznacenie": "4.",
+     "cisloRiadku": 49
+    },
+    {
+     "text": {
+      "sk": "Dlhové cenné papiere na predaj (253)"
+     },
+     "oznacenie": "4.",
+     "cisloRiadku": 50
+    },
+    {
+     "text": {
+      "sk": "Obstaranie krátkodobého finančného majetku (259)"
+     },
+     "oznacenie": "4.",
+     "cisloRiadku": 51
+    },
+    {
+     "text": {
+      "sk": "Prechodné účty aktív súčet (r.053 + r.054)"
+     },
+     "oznacenie": "5.",
+     "cisloRiadku": 52
+    },
+    {
+     "text": {
+      "sk": "Náklady budúcich období (381)"
+     },
+     "oznacenie": "5.",
+     "cisloRiadku": 53
+    },
+    {
+     "text": {
+      "sk": "Príjmy budúcich období (385)"
+     },
+     "oznacenie": "5.",
+     "cisloRiadku": 54
+    },
+    {
+     "text": {
+      "sk": "MAJETOK spolu súčet (r. 001 + r. 025)"
+     },
+     "cisloRiadku": 55
+    }
+   ]
+  },
+  {
+   "nazov": {
+    "sk": "Pasíva"
+   },
+   "pocetDatovychStlpcov": 2,
+   "pocetStlpcov": 5,
+   "hlavicka": [
+    {
+     "text": {
+      "sk": "STRANA PASÍV"
+     },
+     "riadok": 1,
+     "stlpec": 1,
+     "sirkaStlpca": 2,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "Číslo riadku"
+     },
+     "riadok": 1,
+     "stlpec": 3,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "Účtovné obdobie"
+     },
+     "riadok": 1,
+     "stlpec": 4,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "Bezprostredne predchádzajúce účtovné obdobie"
+     },
+     "riadok": 1,
+     "stlpec": 5,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "a"
+     },
+     "riadok": 2,
+     "stlpec": 1,
+     "sirkaStlpca": 2,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "b"
+     },
+     "riadok": 2,
+     "stlpec": 3,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "5"
+     },
+     "riadok": 2,
+     "stlpec": 4,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "6"
+     },
+     "riadok": 2,
+     "stlpec": 5,
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1
+    }
+   ],
+   "riadky": [
+    {
+     "text": {
+      "sk": "A. Vlastné zdroje krytia majetku súčet (r. 057 + r. 062 + r. 073)"
+     },
+     "cisloRiadku": 56
+    },
+    {
+     "text": {
+      "sk": "Fondy Sociálnej poisťovne súčet (r. 058 až r.061)"
+     },
+     "oznacenie": "1.",
+     "cisloRiadku": 57
+    },
+    {
+     "text": {
+      "sk": "Fond dlhodobého majetku (901)"
+     },
+     "oznacenie": "1.",
+     "cisloRiadku": 58
+    },
+    {
+     "text": {
+      "sk": "Fond prevádzkových prostriedkov (902)"
+     },
+     "oznacenie": "1.",
+     "cisloRiadku": 59
+    },
+    {
+     "text": {
+      "sk": "Oceňovacie rozdiely z precenenia majetku a záväzkov (905)"
+     },
+     "oznacenie": "1.",
+     "cisloRiadku": 60
+    },
+    {
+     "text": {
+      "sk": "Správny fond (+/- 914)"
+     },
+     "oznacenie": "1.",
+     "cisloRiadku": 61
+    },
+    {
+     "text": {
+      "sk": "Osobitné fondy Sociálnej poisťovne súčet (r.063 až r.072)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 62
+    },
+    {
+     "text": {
+      "sk": "Účet tvorby fondov (921)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 63
+    },
+    {
+     "text": {
+      "sk": "Osobitný fond (920)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 64
+    },
+    {
+     "text": {
+      "sk": "Základný fond nemocenského poistenia (+/- 922)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 65
+    },
+    {
+     "text": {
+      "sk": "Základný fond starobného poistenia (+/- 923)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 66
+    },
+    {
+     "text": {
+      "sk": "Základný fond invalidného poistenia (+/- 924)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 67
+    },
+    {
+     "text": {
+      "sk": "Základný fond garančného poistenia (+/- 925)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 68
+    },
+    {
+     "text": {
+      "sk": "Základný fond poistenia v nezamestnanosti (+/- 926)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 69
+    },
+    {
+     "text": {
+      "sk": "Základný fond úrazového poistenia (927)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 70
+    },
+    {
+     "text": {
+      "sk": "Základný fond príspevkov na starobné dôchodkové sporenie (928)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 71
+    },
+    {
+     "text": {
+      "sk": "Rezervný fond solidarity (929)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 72
+    },
+    {
+     "text": {
+      "sk": "Výsledok hospodárenia súčet (r. 074 + r. 075)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 73
+    },
+    {
+     "text": {
+      "sk": "Výsledok hospodárenia za účtovné obdobie r. 055 (stĺpec 3 Netto) - (r. 057 + r. 062 + r. 075 + r. 076)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 74
+    },
+    {
+     "text": {
+      "sk": "Nerozdelený zisk, neuhradená strata minulých rokov (+/- 932)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 75
+    },
+    {
+     "text": {
+      "sk": "B. Cudzie zdroje súčet (r.077 + r.078 + r.085 + r.099 + r.103)"
+     },
+     "cisloRiadku": 76
+    },
+    {
+     "text": {
+      "sk": "Rezervy (941)"
+     },
+     "oznacenie": "1.",
+     "cisloRiadku": 77
+    },
+    {
+     "text": {
+      "sk": "Dlhodobé záväzky súčet (r.079 až r.084)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 78
+    },
+    {
+     "text": {
+      "sk": "Návratná finančná výpomoc (952AÚ)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 79
+    },
+    {
+     "text": {
+      "sk": "Záväzky z nájmu (954AÚ)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 80
+    },
+    {
+     "text": {
+      "sk": "Dlhodobé prijaté preddavky (955)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 81
+    },
+    {
+     "text": {
+      "sk": "Sociálny fond (956)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 82
+    },
+    {
+     "text": {
+      "sk": "Dlhodobé zmenky na úhradu (958)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 83
+    },
+    {
+     "text": {
+      "sk": "Ostatné dlhodobé záväzky (959AÚ + 373AÚ)"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 84
+    },
+    {
+     "text": {
+      "sk": "Krátkodobé záväzky súčet (r.086 až r.098)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 85
+    },
+    {
+     "text": {
+      "sk": "Záväzky z obchodného styku (321 až 325 okrem r. 088)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 86
+    },
+    {
+     "text": {
+      "sk": "Nevyfakturované dodávky (329)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 87
+    },
+    {
+     "text": {
+      "sk": "Krátkodobé rezervy (323)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 88
+    },
+    {
+     "text": {
+      "sk": "Záväzky z poistných vzťahov (326)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 89
+    },
+    {
+     "text": {
+      "sk": "Záväzky voči dôchodkovej správcovskej spoločnosti (328)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 90
+    },
+    {
+     "text": {
+      "sk": "Záväzky voči zamestnancom (331+ 333)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 91
+    },
+    {
+     "text": {
+      "sk": "Zúčtovanie s inštitúciami sociálneho poistenia a zdravotného poistenia (336)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 92
+    },
+    {
+     "text": {
+      "sk": "Daňové záväzky (341+ 342 + 343 + 345)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 93
+    },
+    {
+     "text": {
+      "sk": "Dotácie a ostatné zúčtovanie so štátnym rozpočtom (346)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 94
+    },
+    {
+     "text": {
+      "sk": "Záväzky z upísaných nesplatených cenných papierov a vkladov (367)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 95
+    },
+    {
+     "text": {
+      "sk": "Záväzky voči združeniu (368)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 96
+    },
+    {
+     "text": {
+      "sk": "Spojovací účet pri združení (396)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 97
+    },
+    {
+     "text": {
+      "sk": "Iné záväzky (379 + 373AÚ + 952AÚ + 954AÚ + 959AÚ)"
+     },
+     "oznacenie": "3.",
+     "cisloRiadku": 98
+    },
+    {
+     "text": {
+      "sk": "Bankové výpomoci a pôžičky súčet (r.100 až r.102)"
+     },
+     "oznacenie": "4.",
+     "cisloRiadku": 99
+    },
+    {
+     "text": {
+      "sk": "Dlhodobé bankové úvery (951AÚ)"
+     },
+     "oznacenie": "4.",
+     "cisloRiadku": 100
+    },
+    {
+     "text": {
+      "sk": "Bežné bankové úvery (231 + 232 + 951AÚ)"
+     },
+     "oznacenie": "4.",
+     "cisloRiadku": 101
+    },
+    {
+     "text": {
+      "sk": "Iné krátkodobé finančné výpomoci (249)"
+     },
+     "oznacenie": "4.",
+     "cisloRiadku": 102
+    },
+    {
+     "text": {
+      "sk": "Prechodné účty pasív súčet (r.104 + r.105)"
+     },
+     "oznacenie": "5.",
+     "cisloRiadku": 103
+    },
+    {
+     "text": {
+      "sk": "Výdavky budúcich období (383)"
+     },
+     "oznacenie": "5.",
+     "cisloRiadku": 104
+    },
+    {
+     "text": {
+      "sk": "Výnosy budúcich období (384)"
+     },
+     "oznacenie": "5.",
+     "cisloRiadku": 105
+    },
+    {
+     "text": {
+      "sk": "PASÍVA spolu súčet (r. 056 + r. 076)"
+     },
+     "cisloRiadku": 106
+    }
+   ]
+  }
+ ]
+}
