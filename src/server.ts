@@ -1,3 +1,4 @@
+import { bindLocalStdioIdentity } from "./local-stdio.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { createRuzMcpServer } from "./mcp-server.js";
 
@@ -5,6 +6,7 @@ async function main() {
   const server = createRuzMcpServer();
   const transport = new StdioServerTransport();
   await server.connect(transport);
+  bindLocalStdioIdentity(transport);
 }
 
 main().catch((err) => {
