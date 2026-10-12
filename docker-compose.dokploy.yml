@@ -3,9 +3,16 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        SOURCE_REVISION: "${SOURCE_REVISION:-unknown}"
     image: ruz-mcp:latest
     restart: unless-stopped
     environment:
+      SOURCE_REVISION: "${SOURCE_REVISION:-unknown}"
+      SKALLARS_AUTH_ISSUER: "${SKALLARS_AUTH_ISSUER:-}"
+      SKALLARS_AUTH_RESOURCE: "${SKALLARS_AUTH_RESOURCE:-}"
+      SKALLARS_AUTH_SECRET: "${SKALLARS_AUTH_SECRET:-}"
+      SKALLARS_AUTH_ALLOWED_ORIGINS: "${SKALLARS_AUTH_ALLOWED_ORIGINS:-}"
       PORT: "${PORT:-3000}"
       MCP_AUTH_MODE: "${MCP_AUTH_MODE:-authless}"
       MCP_BEARER_TOKEN: "${MCP_BEARER_TOKEN:-}"

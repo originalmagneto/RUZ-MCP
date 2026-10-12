@@ -1,3 +1,5 @@
+import { pathToFileURL } from "node:url";
+import { createSharedAuth, loadSharedAuthConfig, runWithIdentity } from "./skallars-auth.js";
 import { createServer, type IncomingMessage, type ServerResponse } from "node:http";
 import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
 import { createRuzMcpServer } from "./mcp-server.js";
@@ -5,6 +7,9 @@ import { createOAuthHttp } from "./oauth-http.js";
 import { loadRuzOAuthConfig } from "./oauth-config.js";
 import { parseTrustedProxyCidrs, resolveClientAddress } from "./trusted-proxy.js";
 
+export function createHttpServer(serverFactory: typeof createRuzMcpServer = createRuzMcpServer) {
+const sharedConfig = loadSharedAuthConfig(process.env);
+const shared = sharedConfig ? createSharedAuth(sharedConfig) : undefined;
 const PORT = Number(process.env.PORT ?? 8790);
 
 /**
@@ -15,7 +20,8 @@ const PORT = Number(process.env.PORT ?? 8790);
  * to Claude Code / Codex.
  */
 const RAW_AUTH_MODE = process.env.MCP_AUTH_MODE?.trim().toLowerCase();
-const AUTH_MODE = RAW_AUTH_MODE === "oauth" ? "oauth" : RAW_AUTH_MODE === "bearer" ? "bearer" : "authless";
+if (RAW_AUTH_MODE && !["oauth", "shared-oauth", "bearer", "authless"].includes(RAW_AUTH_MODE)) throw new Error("Invalid MCP_AUTH_MODE");
+const AUTH_MODE = shared ? "shared-oauth" : RAW_AUTH_MODE === "oauth" ? "oauth" : RAW_AUTH_MODE === "bearer" ? "bearer" : "authless";
 const BEARER_TOKEN = process.env.MCP_BEARER_TOKEN;
 
 /** Public base URL, used to build the RFC 9728 resource identifier. */
@@ -57,7 +63,7 @@ function rateLimited(req: IncomingMessage): boolean {
 }
 
 // Drop expired buckets so the map cannot grow without bound.
-setInterval(() => {
+const rateInterval = setInterval(() => {
   const now = Date.now();
   for (const [key, entry] of hits) if (now >= entry.resetAt) hits.delete(key);
 }, RATE_WINDOW_MS).unref();
@@ -75,8 +81,10 @@ function resourceUrl(req: IncomingMessage): string {
   return `${proto}://${req.headers.host ?? `localhost:${PORT}`}/mcp`;
 }
 
-function cors(res: ServerResponse) {
-  res.setHeader("access-control-allow-origin", "*");
+function cors(req: IncomingMessage, res: ServerResponse) {
+  if (shared) {
+    if (req.headers.origin) { res.setHeader("access-control-allow-origin", req.headers.origin); res.setHeader("vary", "Origin"); }
+  } else res.setHeader("access-control-allow-origin", "*");
   res.setHeader("access-control-allow-methods", "GET, POST, DELETE, OPTIONS");
   res.setHeader(
     "access-control-allow-headers",
@@ -127,7 +135,13 @@ const oauth = oauthConfig
 
 // --- Server ------------------------------------------------------------------
 const httpServer = createServer(async (req, res) => {
-  cors(res);
+  const path = (req.url ?? "/").split("?")[0];
+  const health = ["/health", "/healthz"].includes(path);
+  if (shared && !(health && ["127.0.0.1", "::1", "::ffff:127.0.0.1"].includes(req.socket.remoteAddress ?? "")) && !shared.checkRequest(req)) { sendJson(res, 403, {error: "forbidden"}); return; }
+  if (!shared || !health) cors(req, res);
+  if (shared && req.method === "GET" && path === "/.well-known/oauth-authorization-server") {
+    res.writeHead(302, {location: `${sharedConfig!.issuer}/.well-known/oauth-authorization-server`}).end(); return;
+  }
 
   if (req.method === "OPTIONS") {
     res.writeHead(204);
@@ -135,15 +149,13 @@ const httpServer = createServer(async (req, res) => {
     return;
   }
 
-  const path = (req.url ?? "/").split("?")[0];
-
   if (oauth) {
     const url = new URL(req.url ?? "/", `https://${req.headers.host ?? "localhost"}`);
     if (await oauth.handle(req, res, url)) return;
   }
 
-  if (req.method === "GET" && path === "/healthz") {
-    sendJson(res, 200, { status: "ok", service: "ruz-mcp", auth: AUTH_MODE, ...(oauth ? { oauthReady: oauth.ready() } : {}) });
+  if (req.method === "GET" && health) {
+    sendJson(res, 200, { status: "ok", service: "ruz-mcp", auth: AUTH_MODE, revision: process.env.SOURCE_REVISION ?? "unknown", ...(sharedConfig ? {sharedReady: true, resource: sharedConfig.resource} : {}), ...(oauth ? { oauthReady: oauth.ready() } : {}) });
     return;
   }
 
@@ -154,6 +166,7 @@ const httpServer = createServer(async (req, res) => {
     (path === "/.well-known/oauth-protected-resource" ||
       path === "/.well-known/oauth-protected-resource/mcp")
   ) {
+    if (shared) { sendJson(res, 200, shared.metadata()); return; }
     sendJson(res, 200, {
       resource: resourceUrl(req),
       authorization_servers: AUTHORIZATION_SERVER ? [AUTHORIZATION_SERVER] : [],
@@ -174,26 +187,32 @@ const httpServer = createServer(async (req, res) => {
       return;
     }
 
-    if (!isAuthorized(req)) {
+    const identity = shared ? await shared.authenticate(req) : undefined;
+    if (shared ? !identity : !isAuthorized(req)) {
       const metadata = `${PUBLIC_URL || `https://${req.headers.host}`}/.well-known/oauth-protected-resource`;
       sendJson(
         res,
         401,
         { jsonrpc: "2.0", error: { code: -32001, message: "Unauthorized" }, id: null },
-        { "www-authenticate": `Bearer realm="mcp", resource_metadata="${metadata}"` }
+        { "www-authenticate": shared ? shared.challenge : `Bearer realm="mcp", resource_metadata="${metadata}"` }
       );
       return;
     }
 
     // savePath would write to this server's disk, not the caller's.
-    const mcpServer = createRuzMcpServer(undefined, { allowSavePath: false });
+    const handle = async () => {
+    const body = shared ? await readSharedBody(req) : undefined;
+    const mcpServer = serverFactory(undefined, { allowSavePath: false });
     const transport = new StreamableHTTPServerTransport({ sessionIdGenerator: undefined });
     res.on("close", () => {
       transport.close();
       mcpServer.close();
     });
     await mcpServer.connect(transport);
-    await transport.handleRequest(req, res);
+    await transport.handleRequest(req, res, body);
+    };
+    try { if (identity) await runWithIdentity(identity, handle); else await handle(); }
+    catch (error) { if (!res.headersSent) sendJson(res, error instanceof Error && error.message === "body_limit" ? 413 : 500, {error: "request_failed"}); else if (!res.writableEnded) res.end(); }
     return;
   }
 
@@ -202,8 +221,31 @@ const httpServer = createServer(async (req, res) => {
 
 if (oauth) httpServer.once("close", oauth.close);
 
-httpServer.listen(PORT, () => {
-  console.error(
-    `ruz-mcp HTTP listening on :${PORT} (/mcp, /healthz) [auth=${AUTH_MODE}, rateLimit=${RATE_LIMIT}/${RATE_WINDOW_MS}ms]`
-  );
-});
+httpServer.once("close", () => clearInterval(rateInterval));
+return httpServer;
+}
+
+async function readSharedBody(req: IncomingMessage): Promise<unknown> {
+  return new Promise((resolve, reject) => {
+    const chunks: Buffer[] = [];
+    let size = 0, exceeded = false;
+    req.on("data", (chunk: Buffer) => {
+      if (exceeded) return;
+      size += chunk.length;
+      if (size > 1024 * 1024) { exceeded = true; chunks.length = 0; reject(new Error("body_limit")); return; }
+      chunks.push(chunk);
+    });
+    req.on("end", () => {
+      if (exceeded) return;
+      try { const raw = Buffer.concat(chunks).toString("utf8"); resolve(raw ? JSON.parse(raw) : undefined); }
+      catch (error) { reject(error); }
+    });
+    req.on("error", reject);
+    req.on("aborted", () => reject(new Error("request_aborted")));
+  });
+}
+
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  try { const server = createHttpServer(); server.listen(Number(process.env.PORT ?? 8790), () => console.error("ruz-mcp HTTP listening")); }
+  catch { console.error("RUZ HTTP startup failed: check authentication configuration"); process.exit(1); }
+}

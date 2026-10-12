@@ -6,7 +6,7 @@
 
 [![MCP](https://img.shields.io/badge/MCP-2025--06--18-0ea5e9?style=flat-square)](https://modelcontextprotocol.io)
 [![Transport](https://img.shields.io/badge/transport-stdio%20%7C%20Streamable%20HTTP-6366f1?style=flat-square)](https://modelcontextprotocol.io/specification/2025-06-18/basic/transports)
-[![Node](https://img.shields.io/badge/node-%E2%89%A522-22c55e?style=flat-square)](https://nodejs.org)
+[![Node](https://img.shields.io/badge/node-%E2%89%A524-22c55e?style=flat-square)](https://nodejs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178c6?style=flat-square)](https://www.typescriptlang.org)
 [![License](https://img.shields.io/badge/license-MIT-64748b?style=flat-square)](LICENSE)
 
@@ -130,7 +130,7 @@ flowchart TD
 
 ### Požiadavky
 
-- **Node.js ≥ 22** — over `node --version`
+- **Node.js ≥ 24** — over `node --version`
 - **git**
 
 ### 1. Stiahni a zbuilduj
@@ -411,7 +411,7 @@ url = "https://tvoja-domena.sk/mcp"
 
 ## Autentifikácia
 
-Server má tri režimy. Ktorý beží, hlási `/healthz` v poli `auth`.
+Server podporuje štyri režimy vrátane voliteľného `shared-oauth` opísaného nižšie. Ktorý beží, hlási `/healthz` v poli `auth`.
 
 | | `authless` *(default)* | `bearer` | `oauth` |
 |---|---|---|---|
@@ -688,7 +688,7 @@ npm run start:http   # Streamable HTTP na :8790
 ### Kompatibilita s MCP
 
 Server hovorí protokol **2025-06-18** cez Streamable HTTP v stateless režime
-(bez `Mcp-Session-Id`), postavený na `@modelcontextprotocol/sdk` 1.30.
+(bez `Mcp-Session-Id`), postavený na `@modelcontextprotocol/sdk` 1.32.
 Revízia **2026-07-28** zavádza bezstavové jadro bez `initialize` handshaku a nové
 `server/discover`; klienti zatiaľ negociujú spätne kompatibilne, migrácia je
 samostatná úloha.
@@ -703,3 +703,32 @@ financií SR. Tento projekt nie je s MF SR nijako spojený.
 ## Licencia
 
 [MIT](LICENSE)
+
+## Zdieľané OAuth pre remote HTTP
+
+Voliteľný režim `MCP_AUTH_MODE=shared-oauth` používa externý autorizačný server.
+Nastav všetky tri hodnoty: `SKALLARS_AUTH_ISSUER` (kanonický HTTPS origin bez
+koncovej lomky), `SKALLARS_AUTH_RESOURCE` (presná HTTPS URL s cestou `/mcp`) a
+`SKALLARS_AUTH_SECRET` (samostatné tajomstvo resource servera, minimálne 32 znakov).
+`SKALLARS_AUTH_ALLOWED_ORIGINS` je voliteľný zoznam presných originov oddelených
+čiarkou. Host musí zodpovedať resource URL; Origin musí byť resource origin alebo
+položka allowlistu. Kontroly prebehnú pred CORS a preflight.
+
+Protected-resource metadata sú na oboch `/.well-known/oauth-protected-resource`
+a `/.well-known/oauth-protected-resource/mcp`. Discovery autorizačného servera
+presmeruje na issuer. Lokálny OAuth provider ani DCR sa v shared režime nevytvoria,
+aj keď zostanú legacy base URL premenné nastavené. Neúplná konfigurácia, zlé URL
+alebo neznámy režim zastavia HTTP štart. Stdio zdieľané HTTP premenné ignoruje a
+vykonáva SDK callbacky pod lokálnou identitou.
+
+Každá MCP požiadavka overuje aktuálny token introspekciou bez pozitívnej cache.
+Overuje issuer, audience, subjekt, tenant, `mcp:tools` a expiráciu. Timeout je 5 s
+a introspection odpoveď má limit 64 KiB. Identita pochádza iba z overeného tokenu,
+cez AsyncLocalStorage. Shared HTTP telo má limit najviac 1 MiB; existujúci prísnejší
+100 KiB Express limit zostáva zachovaný, ak ho server používa.
+
+`/healthz` v tomto režime hlási `sharedReady` ako platnosť konfigurácie, nie
+sieťovú dostupnosť issueru. `SOURCE_REVISION` sa nastaví ako build argument aj
+runtime environment; image obsahuje OCI revision label. Compose zachováva pôvodný
+predvolený auth režim, doménu a volumes. Skutočné tajomstvá patria iba do
+prevádzkového nastavenia, nikdy do Git. Zmena kódu sama nepotvrdzuje deploy.
