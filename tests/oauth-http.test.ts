@@ -126,7 +126,13 @@ describe("consent page", () => {
     const loginPage = await fetch(authorizeUrl(clientId));
     // The login form only ever posts back to this origin.
     expect(loginPage.headers.get("content-security-policy")).toContain("form-action 'self';");
-    const ticket = /name="ticket" value="([^"]+)"/.exec(await loginPage.text())?.[1] ?? "";
+    const html = await loginPage.text();
+    expect(html).toContain('/assets/auth.css');
+    expect(html).toContain('data-reveal="password"');
+    expect(loginPage.headers.get("content-security-policy")).toContain("script-src 'self'");
+    expect(loginPage.headers.get("content-security-policy")).not.toContain("unsafe-inline");
+    expect((await fetch(`${base}/assets/auth.css`)).status).toBe(200);
+    const ticket = /name="ticket" value="([^"]+)"/.exec(html)?.[1] ?? "";
     expect(ticket).not.toBe("");
     const login = await fetch(`${base}/oauth/login`, {
       method: "POST",
@@ -138,6 +144,10 @@ describe("consent page", () => {
     const cookie = login.headers.get("set-cookie") ?? "";
     const consentPage = await fetch(`${base}${login.headers.get("location")}`, { headers: { cookie } });
     expect(consentPage.status).toBe(200);
+    const consentHtml = await consentPage.text();
+    expect(consentHtml).toContain('/assets/auth.css');
+    expect(consentHtml).toMatch(/name="nonce" value="[^"]+"/);
+    expect(consentHtml).toContain('value="deny"');
     // The consent form's 303 lands on the client's redirect URI, and browsers enforce form-action
     // across that redirect — a bare 'self' silently swallows the approval.
     expect(consentPage.headers.get("content-security-policy")).toContain("form-action 'self' https://claude.ai;");
@@ -169,4 +179,26 @@ describe("authorization request", () => {
     expect((await fetch(authorizeUrl(clientId, { code_challenge_method: "plain" }))).status).toBe(400);
     expect((await fetch(authorizeUrl(clientId, { redirect_uri: "https://attacker.example/cb" }))).status).toBe(400);
   });
+});
+
+ it("reissues a one-time login ticket after a bad password and completes the retry", async () => {
+  const clientId = (await (await register({ redirect_uris: [REDIRECT_URI] })).json()).client_id;
+  const original = /name="ticket" value="([^"]+)"/.exec(await (await fetch(authorizeUrl(clientId))).text())?.[1] ?? "";
+  expect(original).not.toBe("");
+  const postLogin = (ticket: string, password: string) => fetch(`${base}/oauth/login`, {
+    method: "POST", redirect: "manual", headers: { "content-type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams({ ticket, password }),
+  });
+  const failed = await postLogin(original, "wrong-password");
+  expect(failed.status).toBe(401);
+  const errorHtml = await failed.text();
+  expect(errorHtml).toContain('role="alert"');
+  expect(errorHtml).not.toMatch(/name="password"[^>]*value=/);
+  const retry = /name="ticket" value="([^"]+)"/.exec(errorHtml)?.[1] ?? "";
+  expect(retry).not.toBe("");
+  expect(retry).not.toBe(original);
+  expect((await postLogin(original, PASSWORD)).status).toBe(400);
+  const login = await postLogin(retry, PASSWORD);
+  expect(login.status).toBe(303);
+  expect(login.headers.get("location")).toContain(`client_id=${clientId}`);
 });
