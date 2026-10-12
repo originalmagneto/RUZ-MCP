@@ -14,7 +14,7 @@
     "test:mcp-live": "vitest run tests/mcp.live.test.ts --reporter=verbose"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
+    "@modelcontextprotocol/sdk": "^1.32.1",
     "zod": "^4.3.6"
   },
   "devDependencies": {
