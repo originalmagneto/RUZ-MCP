@@ -1,0 +1,19 @@
+{
+ "id": 6476704,
+ "datumZostaveniaK": "2024-12-31",
+ "idUJ": 388477,
+ "idUctovnychVykazov": [
+  9693868,
+  9693867,
+  9693869
+ ],
+ "datumPoslednejUpravy": "2025-06-25",
+ "zdrojDat": "FRSR",
+ "obdobieOd": "2024-01",
+ "obdobieDo": "2024-12",
+ "datumPodania": "2025-06-24",
+ "datumZostavenia": "2025-02-05",
+ "datumSchvalenia": "2025-06-16",
+ "datumPrilozeniaSpravyAuditora": "2025-06-24",
+ "typ": "Riadna"
+}

@@ -1,0 +1,19 @@
+{
+ "id": 6055265,
+ "datumZostaveniaK": "2023-12-31",
+ "idUJ": 96001,
+ "idUctovnychVykazov": [
+  9385654,
+  9194034,
+  9385653
+ ],
+ "datumPoslednejUpravy": "2025-02-26",
+ "zdrojDat": "FRSR",
+ "datumPrilozeniaSpravyAuditora": "2025-02-26",
+ "typ": "Riadna",
+ "obdobieOd": "2023-01",
+ "obdobieDo": "2023-12",
+ "datumPodania": "2024-06-27",
+ "datumZostavenia": "2024-03-13",
+ "datumSchvalenia": "2024-09-16"
+}

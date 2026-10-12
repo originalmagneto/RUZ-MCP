@@ -1,0 +1,1082 @@
+{
+ "id": 5183,
+ "tabulky": [
+  {
+   "nazov": {
+    "sk": "I.: Tab. č. 1"
+   },
+   "pocetDatovychStlpcov": 2,
+   "hlavicka": [
+    {
+     "text": {
+      "sk": "Označenie"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 1,
+     "stlpec": 1
+    },
+    {
+     "text": {
+      "sk": "Názov položky"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 1,
+     "stlpec": 2
+    },
+    {
+     "text": {
+      "sk": "Číslo riadku"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 1,
+     "stlpec": 3
+    },
+    {
+     "text": {
+      "sk": "Bežné účtovné obdobie"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 1,
+     "stlpec": 4
+    },
+    {
+     "text": {
+      "sk": "Bezprostredne predchádzajúce účtovné obdobie"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 1,
+     "stlpec": 5
+    },
+    {
+     "text": {
+      "sk": "a"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 2,
+     "stlpec": 1
+    },
+    {
+     "text": {
+      "sk": "b"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 2,
+     "stlpec": 2
+    },
+    {
+     "text": {
+      "sk": "c"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 2,
+     "stlpec": 3
+    },
+    {
+     "text": {
+      "sk": "1"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 2,
+     "stlpec": 4
+    },
+    {
+     "text": {
+      "sk": "2"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 2,
+     "stlpec": 5
+    }
+   ],
+   "pocetStlpcov": 5,
+   "riadky": [
+    {
+     "text": {
+      "sk": "SPOLU MAJETOK (r. 02 + r. 09)"
+     },
+     "cisloRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "Neobežný majetok (r. 03 + r.04 + r. 05 + r. 07 + r. 08)"
+     },
+     "oznacenie": "A.",
+     "cisloRiadku": 2
+    },
+    {
+     "text": {
+      "sk": "Dlhodobý nehmotný majetok"
+     },
+     "oznacenie": "A. I.",
+     "cisloRiadku": 3
+    },
+    {
+     "text": {
+      "sk": "Dlhodobý hmotný majetok"
+     },
+     "oznacenie": "A. II.",
+     "cisloRiadku": 4
+    },
+    {
+     "text": {
+      "sk": "Dlhodobý finančný majetok, z toho:"
+     },
+     "oznacenie": "A. III.",
+     "cisloRiadku": 5
+    },
+    {
+     "text": {
+      "sk": "pohľadávky z obchodného styku"
+     },
+     "oznacenie": "A. III.1",
+     "cisloRiadku": 6
+    },
+    {
+     "text": {
+      "sk": "Ostatný majetok"
+     },
+     "oznacenie": "A. IV.",
+     "cisloRiadku": 7
+    },
+    {
+     "text": {
+      "sk": "Odložená daňová pohľadávka"
+     },
+     "oznacenie": "A. V.",
+     "cisloRiadku": 8
+    },
+    {
+     "text": {
+      "sk": "Obežný majetok (r. 10 + r. 11 + r. 14)"
+     },
+     "oznacenie": "B.",
+     "cisloRiadku": 9
+    },
+    {
+     "text": {
+      "sk": "Zásoby"
+     },
+     "oznacenie": "B. I.",
+     "cisloRiadku": 10
+    },
+    {
+     "text": {
+      "sk": "Krátkodobý finančný majetok, z toho:"
+     },
+     "oznacenie": "B. II.",
+     "cisloRiadku": 11
+    },
+    {
+     "text": {
+      "sk": "pohľadávky z obchodného styku"
+     },
+     "oznacenie": "B. II. 1",
+     "cisloRiadku": 12
+    },
+    {
+     "text": {
+      "sk": "peniaze a peňažné ekvivalenty"
+     },
+     "oznacenie": "B. II. 2",
+     "cisloRiadku": 13
+    },
+    {
+     "text": {
+      "sk": "Ostatný majetok, z toho:"
+     },
+     "oznacenie": "B. III.",
+     "cisloRiadku": 14
+    },
+    {
+     "text": {
+      "sk": "majetok klasifikovaný ako držaný na predaj"
+     },
+     "oznacenie": "B. III. 1",
+     "cisloRiadku": 15
+    },
+    {
+     "text": {
+      "sk": "SPOLU VLASTNÉ IMANIE A ZÁVÄZKY(r. 17 + r. 26)"
+     },
+     "cisloRiadku": 16
+    },
+    {
+     "text": {
+      "sk": "Vlastné imanie (r. 18 + r. 19 + r. 20 + r. 21 + r. 24 + r. 25)"
+     },
+     "oznacenie": "C.",
+     "cisloRiadku": 17
+    },
+    {
+     "text": {
+      "sk": "Základné imanie"
+     },
+     "oznacenie": "C. I.",
+     "cisloRiadku": 18
+    },
+    {
+     "text": {
+      "sk": "Kapitálové fondy"
+     },
+     "oznacenie": "C. II.",
+     "cisloRiadku": 19
+    },
+    {
+     "text": {
+      "sk": "Rezervné fondy a ostatné fondy tvorené zo zisku"
+     },
+     "oznacenie": "C. III.",
+     "cisloRiadku": 20
+    },
+    {
+     "text": {
+      "sk": "Výsledok hospodárenia minulých rokov (r. 22 + r. 23)"
+     },
+     "oznacenie": "C. IV.",
+     "cisloRiadku": 21
+    },
+    {
+     "text": {
+      "sk": "Nerozdelený zisk minulých rokov"
+     },
+     "oznacenie": "C. IV. 1",
+     "cisloRiadku": 22
+    },
+    {
+     "text": {
+      "sk": "Neuhradená strata minulých rokov"
+     },
+     "oznacenie": "C. IV. 2",
+     "cisloRiadku": 23
+    },
+    {
+     "text": {
+      "sk": "Výsledok hospodárenia za účtovné obdobie po zdanení (+/-)"
+     },
+     "oznacenie": "C. V.",
+     "cisloRiadku": 24
+    },
+    {
+     "text": {
+      "sk": "Ostatné zložky vlastného imania"
+     },
+     "oznacenie": "C. VI.",
+     "cisloRiadku": 25
+    },
+    {
+     "text": {
+      "sk": "Záväzky (r. 27 + r. 31 + r. 32)"
+     },
+     "oznacenie": "D.",
+     "cisloRiadku": 26
+    },
+    {
+     "text": {
+      "sk": "Dlhodobé záväzky, z toho:"
+     },
+     "oznacenie": "D. I.",
+     "cisloRiadku": 27
+    },
+    {
+     "text": {
+      "sk": "záväzky z obchodného styku"
+     },
+     "oznacenie": "D. I. 1",
+     "cisloRiadku": 28
+    },
+    {
+     "text": {
+      "sk": "úvery a pôžičky"
+     },
+     "oznacenie": "D. I. 2",
+     "cisloRiadku": 29
+    },
+    {
+     "text": {
+      "sk": "rezervy"
+     },
+     "oznacenie": "D. I. 3",
+     "cisloRiadku": 30
+    },
+    {
+     "text": {
+      "sk": "Odložený daňový záväzok"
+     },
+     "oznacenie": "D. II.",
+     "cisloRiadku": 31
+    },
+    {
+     "text": {
+      "sk": "Krátkodobé záväzky, z toho:"
+     },
+     "oznacenie": "D. III.",
+     "cisloRiadku": 32
+    },
+    {
+     "text": {
+      "sk": "záväzky z obchodného styku"
+     },
+     "oznacenie": "D. III. 1",
+     "cisloRiadku": 33
+    },
+    {
+     "text": {
+      "sk": "úvery a pôžičky"
+     },
+     "oznacenie": "D. III. 2",
+     "cisloRiadku": 34
+    },
+    {
+     "text": {
+      "sk": "rezervy"
+     },
+     "oznacenie": "D. III. 3",
+     "cisloRiadku": 35
+    },
+    {
+     "text": {
+      "sk": "záväzky spojené s majetkom klasifikovaným ako držaný na predaj"
+     },
+     "oznacenie": "D. III. 4",
+     "cisloRiadku": 36
+    }
+   ]
+  },
+  {
+   "nazov": {
+    "sk": "I.: Tab. č. 2"
+   },
+   "pocetDatovychStlpcov": 2,
+   "hlavicka": [
+    {
+     "text": {
+      "sk": "Pohľadávky po lehote splatnosti"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 1,
+     "stlpec": 1
+    },
+    {
+     "text": {
+      "sk": "Číslo riadku"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 1,
+     "stlpec": 2
+    },
+    {
+     "text": {
+      "sk": "Bežné účtovné obdobie"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 1,
+     "stlpec": 3
+    },
+    {
+     "text": {
+      "sk": "Bezprostredne predchádzajúce účtovné obdobie"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 1,
+     "stlpec": 4
+    },
+    {
+     "text": {
+      "sk": "a"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 2,
+     "stlpec": 1
+    },
+    {
+     "text": {
+      "sk": "b"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 2,
+     "stlpec": 2
+    },
+    {
+     "text": {
+      "sk": "1"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 2,
+     "stlpec": 3
+    },
+    {
+     "text": {
+      "sk": "2"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 2,
+     "stlpec": 4
+    }
+   ],
+   "pocetStlpcov": 4,
+   "riadky": [
+    {
+     "text": {
+      "sk": "Pohľadávky po lehote splatnosti z pokračujúcej činnosti celkom, z toho:"
+     },
+     "cisloRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "- do 90 dní"
+     },
+     "cisloRiadku": 2
+    },
+    {
+     "text": {
+      "sk": "- od 91 dní do 120 dní"
+     },
+     "cisloRiadku": 3
+    },
+    {
+     "text": {
+      "sk": "- od 121 dní do 150 dní"
+     },
+     "cisloRiadku": 4
+    },
+    {
+     "text": {
+      "sk": "- od 151 dní do 180 dní"
+     },
+     "cisloRiadku": 5
+    },
+    {
+     "text": {
+      "sk": "- od 181 dní do 360 dní"
+     },
+     "cisloRiadku": 6
+    },
+    {
+     "text": {
+      "sk": "- od 361 dní a viac"
+     },
+     "cisloRiadku": 7
+    }
+   ]
+  },
+  {
+   "nazov": {
+    "sk": "I.: Tab. č. 3"
+   },
+   "pocetDatovychStlpcov": 2,
+   "hlavicka": [
+    {
+     "text": {
+      "sk": "Záväzky po lehote splatnosti"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 1,
+     "stlpec": 1
+    },
+    {
+     "text": {
+      "sk": "Číslo riadku"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 1,
+     "stlpec": 2
+    },
+    {
+     "text": {
+      "sk": "Bežné účtovné obdobie"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 1,
+     "stlpec": 3
+    },
+    {
+     "text": {
+      "sk": "Bezprostredne predchádzajúce účtovné obdobie"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 1,
+     "stlpec": 4
+    },
+    {
+     "text": {
+      "sk": "a"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 2,
+     "stlpec": 1
+    },
+    {
+     "text": {
+      "sk": "b"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 2,
+     "stlpec": 2
+    },
+    {
+     "text": {
+      "sk": "1"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 2,
+     "stlpec": 3
+    },
+    {
+     "text": {
+      "sk": "2"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 2,
+     "stlpec": 4
+    }
+   ],
+   "pocetStlpcov": 4,
+   "riadky": [
+    {
+     "text": {
+      "sk": "Záväzky po lehote splatnosti z pokračujúcej činnosti celkom, z toho:"
+     },
+     "cisloRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "- do 90 dní"
+     },
+     "cisloRiadku": 2
+    },
+    {
+     "text": {
+      "sk": "- od 91 dní do 120 dní"
+     },
+     "cisloRiadku": 3
+    },
+    {
+     "text": {
+      "sk": "- od 121 dní do 150 dní"
+     },
+     "cisloRiadku": 4
+    },
+    {
+     "text": {
+      "sk": "- od 151 dní do 180 dní"
+     },
+     "cisloRiadku": 5
+    },
+    {
+     "text": {
+      "sk": "- od 181 dní do 360 dní"
+     },
+     "cisloRiadku": 6
+    },
+    {
+     "text": {
+      "sk": "- od 361 dní a viac"
+     },
+     "cisloRiadku": 7
+    }
+   ]
+  },
+  {
+   "nazov": {
+    "sk": "II.: Tab. č. 1"
+   },
+   "pocetDatovychStlpcov": 2,
+   "hlavicka": [
+    {
+     "text": {
+      "sk": "Názov položky"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 1,
+     "stlpec": 1
+    },
+    {
+     "text": {
+      "sk": "Číslo riadku"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 1,
+     "stlpec": 2
+    },
+    {
+     "text": {
+      "sk": "Bežné účtovné obdobie"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 1,
+     "stlpec": 3
+    },
+    {
+     "text": {
+      "sk": "Bezprostredne predchádzajúce účtovné obdobie"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 1,
+     "stlpec": 4
+    },
+    {
+     "text": {
+      "sk": "a"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 2,
+     "stlpec": 1
+    },
+    {
+     "text": {
+      "sk": "b"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 2,
+     "stlpec": 2
+    },
+    {
+     "text": {
+      "sk": "1"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 2,
+     "stlpec": 3
+    },
+    {
+     "text": {
+      "sk": "2"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 2,
+     "stlpec": 4
+    }
+   ],
+   "pocetStlpcov": 4,
+   "riadky": [
+    {
+     "text": {
+      "sk": "Výnosy z prevádzkovej činnosti celkom (r. 02 + r. 06)"
+     },
+     "cisloRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "Tržby celkom, z toho:"
+     },
+     "cisloRiadku": 2
+    },
+    {
+     "text": {
+      "sk": "tržby z predaja tovaru"
+     },
+     "cisloRiadku": 3
+    },
+    {
+     "text": {
+      "sk": "tržby z predaja vlastných výrobkov"
+     },
+     "cisloRiadku": 4
+    },
+    {
+     "text": {
+      "sk": "tržby z poskytnutých služieb a zákazkovej výroby"
+     },
+     "cisloRiadku": 5
+    },
+    {
+     "text": {
+      "sk": "Ostatné prevádzkové výnosy celkom, z toho:"
+     },
+     "cisloRiadku": 6
+    },
+    {
+     "text": {
+      "sk": "výnosy z predaja dlhodobého majetku"
+     },
+     "cisloRiadku": 7
+    },
+    {
+     "text": {
+      "sk": "výnosy z predaja materiálu"
+     },
+     "cisloRiadku": 8
+    },
+    {
+     "text": {
+      "sk": "Náklady na prevádzkovú činnosť celkom (r. 10 až r. 16)"
+     },
+     "cisloRiadku": 9
+    },
+    {
+     "text": {
+      "sk": "Náklady vynaložené na obstaranie predaného tovaru"
+     },
+     "cisloRiadku": 10
+    },
+    {
+     "text": {
+      "sk": "Spotreba materiálu a energie"
+     },
+     "cisloRiadku": 11
+    },
+    {
+     "text": {
+      "sk": "Osobné náklady"
+     },
+     "cisloRiadku": 12
+    },
+    {
+     "text": {
+      "sk": "Náklady na službu"
+     },
+     "cisloRiadku": 13
+    },
+    {
+     "text": {
+      "sk": "Odpisy dlhodobého nehmotného majetku a dlhodobého hmotného majetku"
+     },
+     "cisloRiadku": 14
+    },
+    {
+     "text": {
+      "sk": "Rezervy a straty zo znehodnotenia dlhodobého nehmotného majetku a dlhodobého hmotného majetku"
+     },
+     "cisloRiadku": 15
+    },
+    {
+     "text": {
+      "sk": "Ostatné prevádzkové náklady, z toho:"
+     },
+     "cisloRiadku": 16
+    },
+    {
+     "text": {
+      "sk": "náklady na predaj dlhodobého majetku"
+     },
+     "cisloRiadku": 17
+    },
+    {
+     "text": {
+      "sk": "náklady na predaj materiálu"
+     },
+     "cisloRiadku": 18
+    },
+    {
+     "text": {
+      "sk": "tvorba a zúčtovanie opravných položiek k pohľadávkam"
+     },
+     "cisloRiadku": 19
+    },
+    {
+     "text": {
+      "sk": "Výsledok hospodárenia z prevádzkovej činnosti pred zdanením (+/-), (r. 01 - r. 09)"
+     },
+     "cisloRiadku": 20
+    },
+    {
+     "text": {
+      "sk": "Finančné výnosy, z toho:"
+     },
+     "cisloRiadku": 21
+    },
+    {
+     "text": {
+      "sk": "výnosové úroky"
+     },
+     "cisloRiadku": 22
+    },
+    {
+     "text": {
+      "sk": "kurzové výnosy"
+     },
+     "cisloRiadku": 23
+    },
+    {
+     "text": {
+      "sk": "Finančné náklady, z toho:"
+     },
+     "cisloRiadku": 24
+    },
+    {
+     "text": {
+      "sk": "nákladové úroky"
+     },
+     "cisloRiadku": 25
+    },
+    {
+     "text": {
+      "sk": "kurzové náklady"
+     },
+     "cisloRiadku": 26
+    },
+    {
+     "text": {
+      "sk": "tvorba a zúčtovanie opravných položiek k pôžičkám"
+     },
+     "cisloRiadku": 27
+    },
+    {
+     "text": {
+      "sk": "Výsledok hospodárenia z pokračujúcich činností pred zdanením (+/-), (r. 20 + r. 21 - r. 24)"
+     },
+     "cisloRiadku": 28
+    },
+    {
+     "text": {
+      "sk": "Daň z príjmov"
+     },
+     "cisloRiadku": 29
+    },
+    {
+     "text": {
+      "sk": "Výsledok hospodárenia z pokračujúcich činností po zdanení (+/-), (r. 28 - r. 29)"
+     },
+     "cisloRiadku": 30
+    },
+    {
+     "text": {
+      "sk": "Výsledok hospodárenia z ukončených činností pred zdanením (+/-)"
+     },
+     "cisloRiadku": 31
+    },
+    {
+     "text": {
+      "sk": "Daň z príjmov"
+     },
+     "cisloRiadku": 32
+    },
+    {
+     "text": {
+      "sk": "Výsledok hospodárenia z ukončených činností po zdanení (+/-), (r. 31 - r. 32)"
+     },
+     "cisloRiadku": 33
+    },
+    {
+     "text": {
+      "sk": "Výsledok hospodárenia za účtovné obdobie po zdanení (+/-), (r. 30 + r. 33)"
+     },
+     "cisloRiadku": 34
+    },
+    {
+     "text": {
+      "sk": "Ostatné súčasti komplexného výsledku"
+     },
+     "cisloRiadku": 35
+    },
+    {
+     "text": {
+      "sk": "Daň z príjmov"
+     },
+     "cisloRiadku": 36
+    },
+    {
+     "text": {
+      "sk": "Celkový komplexný výsledok za účtovné obdobie po zdanení (+/-), (r. 34 + r. 35 - r. 36)"
+     },
+     "cisloRiadku": 37
+    }
+   ]
+  },
+  {
+   "nazov": {
+    "sk": "II.: Tab. č. 2"
+   },
+   "pocetDatovychStlpcov": 2,
+   "hlavicka": [
+    {
+     "text": {
+      "sk": "Daň z príjmov"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 1,
+     "stlpec": 1
+    },
+    {
+     "text": {
+      "sk": "Číslo riadku"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 1,
+     "stlpec": 2
+    },
+    {
+     "text": {
+      "sk": "Bežné účtovné obdobie"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 1,
+     "stlpec": 3
+    },
+    {
+     "text": {
+      "sk": "Bezprostredne predchádzajúce účtovné obdobie"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 1,
+     "stlpec": 4
+    },
+    {
+     "text": {
+      "sk": "a"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 2,
+     "stlpec": 1
+    },
+    {
+     "text": {
+      "sk": "b"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 2,
+     "stlpec": 2
+    },
+    {
+     "text": {
+      "sk": "1"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 2,
+     "stlpec": 3
+    },
+    {
+     "text": {
+      "sk": "2"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 2,
+     "stlpec": 4
+    }
+   ],
+   "pocetStlpcov": 4,
+   "riadky": [
+    {
+     "text": {
+      "sk": "Daň z príjmov celkom (r. 02 a r. 04)"
+     },
+     "cisloRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "Daň z príjmov splatná celkom, z toho:"
+     },
+     "cisloRiadku": 2
+    },
+    {
+     "text": {
+      "sk": "osobitný odvod z podnikania v regulovaných odvetviach"
+     },
+     "cisloRiadku": 3
+    },
+    {
+     "text": {
+      "sk": "Daň z príjmov odložená celkom"
+     },
+     "cisloRiadku": 4
+    }
+   ]
+  },
+  {
+   "nazov": {
+    "sk": "III.: Tab. č. 1"
+   },
+   "pocetDatovychStlpcov": 2,
+   "hlavicka": [
+    {
+     "text": {
+      "sk": "Číslo riadku"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 1,
+     "stlpec": 1
+    },
+    {
+     "text": {
+      "sk": "Názov položky"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 1,
+     "stlpec": 2
+    },
+    {
+     "text": {
+      "sk": "Bežné účtovné obdobie"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 1,
+     "stlpec": 3
+    },
+    {
+     "text": {
+      "sk": "Bezprostredne predchádzajúce účtovné obdobie"
+     },
+     "sirkaStlpca": 1,
+     "vyskaRiadku": 1,
+     "riadok": 1,
+     "stlpec": 4
+    }
+   ],
+   "pocetStlpcov": 4,
+   "riadky": [
+    {
+     "text": {
+      "sk": "Priemerný prepočítaný stav zamestnancov"
+     },
+     "oznacenie": "1.",
+     "cisloRiadku": 1
+    },
+    {
+     "text": {
+      "sk": "Stav zamestnancov ku dňu, ku ktorému sa zostavuje účtovná závierka"
+     },
+     "oznacenie": "2.",
+     "cisloRiadku": 2
+    }
+   ]
+  }
+ ],
+ "nazov": "Výkaz vybraných údajov VÚ POD 1-01",
+ "platneOd": "2023-01-01",
+ "nariadenieMF": "2023"
+}

@@ -1,0 +1,19 @@
+{
+ "id": 2922413,
+ "datumZostaveniaK": "2015-12-31",
+ "idUJ": 96001,
+ "idUctovnychVykazov": [
+  5324698,
+  5324697,
+  5452013
+ ],
+ "datumPoslednejUpravy": "2016-10-27",
+ "zdrojDat": "FRSR",
+ "datumPrilozeniaSpravyAuditora": "2016-06-20",
+ "typ": "Riadna",
+ "obdobieOd": "2015-01",
+ "obdobieDo": "2015-12",
+ "datumPodania": "2016-06-20",
+ "datumZostavenia": "2016-04-21",
+ "datumSchvalenia": "2016-10-26"
+}

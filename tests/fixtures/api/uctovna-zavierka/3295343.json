@@ -1,0 +1,18 @@
+{
+ "id": 3295343,
+ "datumZostaveniaK": "2016-12-31",
+ "idUJ": 96001,
+ "idUctovnychVykazov": [
+  5788738,
+  5803396
+ ],
+ "datumPoslednejUpravy": "2017-06-16",
+ "zdrojDat": "FRSR",
+ "datumPrilozeniaSpravyAuditora": "2017-06-16",
+ "typ": "Riadna",
+ "obdobieOd": "2016-01",
+ "obdobieDo": "2016-12",
+ "datumPodania": "2017-06-05",
+ "datumZostavenia": "2017-03-16",
+ "datumSchvalenia": "2017-05-12"
+}

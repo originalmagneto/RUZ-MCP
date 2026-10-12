@@ -1,0 +1,40 @@
+{
+ "prilohy": [
+  {
+   "id": 12037576,
+   "meno": "POD_OS_2021863811_IR_2024_4460894_5889642.pdf",
+   "velkostPrilohy": 131701,
+   "pocetStran": 1,
+   "jazyk": "SLK",
+   "mimeType": "application/pdf",
+   "digest": "04976cfc743f8ca14460e196542e828586c921efdb0f41850a16d5d270d58d0a"
+  }
+ ],
+ "id": 9830308,
+ "idUctovnejZavierky": 6530333,
+ "obsah": {
+  "titulnaStrana": {
+   "nazovUctovnejJednotky": "Alza.sk s. r. o.",
+   "ico": "36562939",
+   "dic": "2021863811",
+   "adresa": {
+    "ulica": "Karadžičova",
+    "cislo": "8",
+    "psc": "82108",
+    "mesto": "Bratislava - mestská časť Ružinov"
+   },
+   "typZavierky": "Riadna",
+   "obdobieOd": "2024-01",
+   "obdobieDo": "2024-12",
+   "predchadzajuceObdobieOd": "2023-01",
+   "predchadzajuceObdobieDo": "2023-12",
+   "datumSchvalenia": "2025-06-30",
+   "datumZostavenia": "2025-06-19"
+  }
+ },
+ "pristupnostDat": "Verejné",
+ "idSablony": 1171,
+ "kodDanovehoUradu": "900",
+ "datumPoslednejUpravy": "2025-11-05",
+ "zdrojDat": "FRSR"
+}

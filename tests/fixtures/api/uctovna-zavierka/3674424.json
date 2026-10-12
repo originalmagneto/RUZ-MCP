@@ -1,0 +1,19 @@
+{
+ "id": 3674424,
+ "datumZostaveniaK": "2017-12-31",
+ "idUJ": 280766,
+ "idUctovnychVykazov": [
+  6394609,
+  6260971,
+  6272267
+ ],
+ "datumPoslednejUpravy": "2018-10-08",
+ "zdrojDat": "FRSR",
+ "datumPrilozeniaSpravyAuditora": "2018-06-11",
+ "typ": "Riadna",
+ "obdobieOd": "2017-01",
+ "obdobieDo": "2017-12",
+ "datumPodania": "2018-06-11",
+ "datumZostavenia": "2018-04-12",
+ "datumSchvalenia": "2018-06-23"
+}

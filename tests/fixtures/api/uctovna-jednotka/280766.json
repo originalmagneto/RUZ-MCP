@@ -1,0 +1,43 @@
+{
+ "id": 280766,
+ "idUctovnychZavierok": [
+  5237557,
+  6530333,
+  4804755,
+  2895623,
+  7015943,
+  2184945,
+  4371248,
+  3674424,
+  2576521,
+  6074714,
+  4053957,
+  3329528,
+  5666456
+ ],
+ "idVyrocnychSprav": [
+  6052271,
+  6502186,
+  7010408,
+  5650545,
+  3677465,
+  5283731
+ ],
+ "konsolidovana": false,
+ "skNace": "47910",
+ "ico": "36562939",
+ "dic": "2021863811",
+ "nazovUJ": "Alza.sk s. r. o.",
+ "mesto": "Bratislava - mestská časť Ružinov",
+ "ulica": "Karadžičova 8",
+ "psc": "82108",
+ "datumPoslednejUpravy": "2026-07-03",
+ "datumZalozenia": "2004-08-12",
+ "pravnaForma": "112",
+ "velkostOrganizacie": "25",
+ "druhVlastnictva": "7",
+ "kraj": "SK010",
+ "okres": "SK0102",
+ "sidlo": "SK0102529320",
+ "zdrojDat": "SUSR"
+}

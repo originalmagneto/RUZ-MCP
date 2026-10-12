@@ -1,0 +1,18 @@
+{
+ "id": 3736903,
+ "datumZostaveniaK": "2017-12-31",
+ "idUJ": 96001,
+ "idUctovnychVykazov": [
+  7263834,
+  6338602
+ ],
+ "datumPoslednejUpravy": "2020-10-23",
+ "zdrojDat": "FRSR",
+ "datumPrilozeniaSpravyAuditora": "2020-10-23",
+ "typ": "Riadna",
+ "obdobieOd": "2017-01",
+ "obdobieDo": "2017-12",
+ "datumPodania": "2018-06-30",
+ "datumZostavenia": "2018-04-11",
+ "datumSchvalenia": "2018-04-16"
+}

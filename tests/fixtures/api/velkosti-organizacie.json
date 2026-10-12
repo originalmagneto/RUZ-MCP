@@ -1,0 +1,165 @@
+{
+ "klasifikacie": [
+  {
+   "nazov": {
+    "sk": "nezistený",
+    "en": "unknown"
+   },
+   "kod": "00"
+  },
+  {
+   "nazov": {
+    "sk": "0 zamestnancov",
+    "en": "0 employees"
+   },
+   "kod": "01"
+  },
+  {
+   "nazov": {
+    "sk": "1 zamestnanec",
+    "en": "1 employees"
+   },
+   "kod": "02"
+  },
+  {
+   "nazov": {
+    "sk": "2 zamestnanci",
+    "en": "2 employees"
+   },
+   "kod": "03"
+  },
+  {
+   "nazov": {
+    "sk": "3-4 zamestnanci",
+    "en": "3-4 employees"
+   },
+   "kod": "04"
+  },
+  {
+   "nazov": {
+    "sk": "5-9 zamestnancov",
+    "en": "5-9 employees"
+   },
+   "kod": "05"
+  },
+  {
+   "nazov": {
+    "sk": "10-19 zamestnancov",
+    "en": "10-19 employees"
+   },
+   "kod": "06"
+  },
+  {
+   "nazov": {
+    "sk": "20-24 zamestnancov",
+    "en": "20-24 employees"
+   },
+   "kod": "07"
+  },
+  {
+   "nazov": {
+    "sk": "25-49 zamestnancov",
+    "en": "25-49 employees"
+   },
+   "kod": "11"
+  },
+  {
+   "nazov": {
+    "sk": "50-99 zamestnancov",
+    "en": "50-99 employees"
+   },
+   "kod": "12"
+  },
+  {
+   "nazov": {
+    "sk": "100-149 zamestnancov",
+    "en": "100-149 employees"
+   },
+   "kod": "21"
+  },
+  {
+   "nazov": {
+    "sk": "150-199 zamestnancov",
+    "en": "150-199 employees"
+   },
+   "kod": "22"
+  },
+  {
+   "nazov": {
+    "sk": "200-249 zamestnancov",
+    "en": "200-249 employees"
+   },
+   "kod": "23"
+  },
+  {
+   "nazov": {
+    "sk": "250-499 zamestnancov",
+    "en": "250-499 employees"
+   },
+   "kod": "24"
+  },
+  {
+   "nazov": {
+    "sk": "500-999 zamestnancov",
+    "en": "500-999 employees"
+   },
+   "kod": "25"
+  },
+  {
+   "nazov": {
+    "sk": "1000-1999 zamestnancov",
+    "en": "1000-1999 employees"
+   },
+   "kod": "31"
+  },
+  {
+   "nazov": {
+    "sk": "2000-2999 zamestnancov",
+    "en": "2000-2999 employees"
+   },
+   "kod": "32"
+  },
+  {
+   "nazov": {
+    "sk": "3000-3999 zamestnancov",
+    "en": "3000-3999 employees"
+   },
+   "kod": "33"
+  },
+  {
+   "nazov": {
+    "sk": "4000-4999 zamestnancov",
+    "en": "4000-4999 employees"
+   },
+   "kod": "34"
+  },
+  {
+   "nazov": {
+    "sk": "5000-9999 zamestnancov",
+    "en": "5000-9999 employees"
+   },
+   "kod": "35"
+  },
+  {
+   "nazov": {
+    "sk": "10000-19999 zamestnancov",
+    "en": "10000-19999 employees"
+   },
+   "kod": "36"
+  },
+  {
+   "nazov": {
+    "sk": "20000-29999 zamestnancov",
+    "en": "20000-29999 employees"
+   },
+   "kod": "37"
+  },
+  {
+   "nazov": {
+    "sk": "30000+ zamestnancov",
+    "en": "30000+ employees"
+   },
+   "kod": "38"
+  }
+ ]
+}

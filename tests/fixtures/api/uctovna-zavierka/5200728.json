@@ -1,0 +1,18 @@
+{
+ "id": 5200728,
+ "datumZostaveniaK": "2021-12-31",
+ "idUJ": 388477,
+ "idUctovnychVykazov": [
+  8159757,
+  8159756,
+  8159758
+ ],
+ "datumPoslednejUpravy": "2022-06-24",
+ "zdrojDat": "FRSR",
+ "datumPrilozeniaSpravyAuditora": "2022-06-24",
+ "typ": "Riadna",
+ "obdobieOd": "2021-01",
+ "obdobieDo": "2021-12",
+ "datumPodania": "2022-06-24",
+ "datumZostavenia": "2022-01-31"
+}

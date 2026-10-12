@@ -1,6 +1,9 @@
 import type {
-  Entity, EntityIdsResponse, Statement, Report, Template, AnnualReport,
+  Entity, EntityIdsResponse, Statement, Report, Template, AnnualReport, CodelistResponse,
 } from "./types.js";
+
+const ID_PAGE_SIZE = 100;
+const MAX_ID_PAGES = 10;
 
 /**
  * RÚZ serves its outage page as HTML with **HTTP 200**, so res.ok says nothing.
@@ -49,6 +52,7 @@ export class RuzClient {
   private fetchImpl: typeof fetch;
   private timeoutMs: number;
   private templateCache = new Map<number, Template>();
+  private codelistCache = new Map<string, CodelistResponse>();
 
   constructor(opts: RuzClientOptions = {}) {
     this.base = opts.baseUrl ?? DEFAULT_BASE;
@@ -72,18 +76,43 @@ export class RuzClient {
     }
   }
 
-  async findEntityIdsByIco(ico: string): Promise<number[]> {
-    const r = await this.getJson<EntityIdsResponse>(
-      `/uctovne-jednotky?ico=${encodeURIComponent(ico)}&zmenene-od=2000-01-01&pokracovat-za-id=0&max-zaznamov=20`,
-    );
-    return r.id ?? [];
+  findEntityIdsByIco(ico: string): Promise<number[]> {
+    return this.findEntityIds(`ico=${encodeURIComponent(ico)}`);
   }
 
-  async findEntityIdsByDic(dic: string): Promise<number[]> {
-    const r = await this.getJson<EntityIdsResponse>(
-      `/uctovne-jednotky?dic=${encodeURIComponent(dic)}&zmenene-od=2000-01-01&pokracovat-za-id=0&max-zaznamov=20`,
+  findEntityIdsByDic(dic: string): Promise<number[]> {
+    return this.findEntityIds(`dic=${encodeURIComponent(dic)}`);
+  }
+
+  /**
+   * Every id for an IČO/DIČ filter. The list is paged by id; `existujeDalsieId`
+   * says another page follows (continue after the last id received). Ignoring
+   * it silently truncated the list at the page size.
+   */
+  private async findEntityIds(filter: string): Promise<number[]> {
+    const ids: number[] = [];
+    let after = 0;
+    for (let page = 0; page < MAX_ID_PAGES; page++) {
+      const r = await this.getJson<EntityIdsResponse>(
+        `/uctovne-jednotky?${filter}&zmenene-od=2000-01-01&pokracovat-za-id=${after}&max-zaznamov=${ID_PAGE_SIZE}`,
+      );
+      const batch = r.id ?? [];
+      ids.push(...batch);
+      if (!r.existujeDalsieId || batch.length === 0) return ids;
+      after = batch[batch.length - 1];
+    }
+    throw new Error(
+      `RÚZ API vrátilo pre ${filter} viac ako ${MAX_ID_PAGES * ID_PAGE_SIZE} účtovných jednotiek; zoznam je neúplný.`,
     );
-    return r.id ?? [];
+  }
+
+  /** Codelist (`velkosti-organizacie`, `pravne-formy`), fetched once per client. */
+  async getCodelist(name: "velkosti-organizacie" | "pravne-formy"): Promise<CodelistResponse> {
+    const cached = this.codelistCache.get(name);
+    if (cached) return cached;
+    const c = await this.getJson<CodelistResponse>(`/${name}`);
+    this.codelistCache.set(name, c);
+    return c;
   }
 
   getEntity(id: number): Promise<Entity> {

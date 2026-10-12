@@ -1,0 +1,19 @@
+{
+ "id": 5237557,
+ "datumZostaveniaK": "2021-12-31",
+ "idUJ": 280766,
+ "idUctovnychVykazov": [
+  8200158,
+  8294767,
+  8250945
+ ],
+ "datumPoslednejUpravy": "2022-12-08",
+ "zdrojDat": "FRSR",
+ "datumPrilozeniaSpravyAuditora": "2022-07-07",
+ "typ": "Riadna",
+ "obdobieOd": "2021-01",
+ "obdobieDo": "2021-12",
+ "datumPodania": "2022-06-30",
+ "datumZostavenia": "2022-06-16",
+ "datumSchvalenia": "2022-06-29"
+}

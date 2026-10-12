@@ -1,0 +1,19 @@
+{
+ "id": 6530333,
+ "datumZostaveniaK": "2024-12-31",
+ "idUJ": 280766,
+ "idUctovnychVykazov": [
+  9752732,
+  9752733,
+  9830308
+ ],
+ "datumPoslednejUpravy": "2025-11-05",
+ "zdrojDat": "FRSR",
+ "obdobieOd": "2024-01",
+ "obdobieDo": "2024-12",
+ "datumPodania": "2025-06-30",
+ "datumZostavenia": "2025-06-19",
+ "datumSchvalenia": "2025-06-30",
+ "datumPrilozeniaSpravyAuditora": "2025-07-04",
+ "typ": "Riadna"
+}

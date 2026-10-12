@@ -7,7 +7,7 @@ export interface EntityIdsResponse {
 
 export interface Entity {
   id: number;
-  stav?: string;                 // present (e.g. "NEVEREJNÁ") only on restricted records
+  stav?: string;                 // "ZMAZANÉ" (deleted) or "Neverejná" (§ 23 ods. 8 z. 431/2002); absent on live records
   nazovUJ?: string;
   ico?: string;
   dic?: string;
@@ -15,6 +15,7 @@ export interface Entity {
   pravnaForma?: string;
   velkostOrganizacie?: string;
   datumZalozenia?: string;
+  datumZrusenia?: string;
   ulica?: string;
   mesto?: string;
   psc?: string;
@@ -39,6 +40,10 @@ export interface Statement {
   datumPodania?: string;
   datumSchvalenia?: string;
   zdrojDat?: string;
+}
+
+export interface CodelistResponse {
+  klasifikacie?: Array<{ kod: string; nazov?: { sk?: string; en?: string } }>;
 }
 
 export interface Attachment {
@@ -102,17 +107,35 @@ export interface IndicatorValue {
   key: string;                   // e.g. "revenue"
   label: string;                 // human label
   value: number | null;
-  cisloRiadku: number | null;    // statutory row number the value came from
+  cisloRiadku: number | null;    // first statutory row the value came from
+  rows?: number[];               // every statutory row summed into the value
   available: boolean;
+}
+
+/** Another statement filed for the same period as the one a year was built from. */
+export interface OtherStatement {
+  statementId: number;
+  typ?: string;
+  datumPodania?: string;
+  datumSchvalenia?: string;
+  structuredDataAvailable: boolean;
+  templateNames: string[];
 }
 
 export interface YearFinancials {
   year: number;
   periodOd?: string;
   periodDo?: string;
+  statementId?: number;          // statement the indicators were read from
+  typ?: string;
+  datumPodania?: string;
+  datumSchvalenia?: string;
   consolidated: boolean;
-  templateName?: string;
+  templateName?: string;         // template of the report the indicators came from
+  templateNames?: string[];      // templates of every report in the statement
   structuredDataAvailable: boolean;
   attachmentHint?: string;       // set when structured data is unavailable
+  otherStatements?: OtherStatement[]; // further statements filed for the same period
+  note?: string;
   indicators: IndicatorValue[];
 }

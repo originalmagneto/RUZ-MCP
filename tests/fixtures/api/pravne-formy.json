@@ -1,0 +1,816 @@
+{
+ "klasifikacie": [
+  {
+   "nazov": {
+    "sk": "Zatiaľ neurčené",
+    "en": "Not ascertained yet"
+   },
+   "kod": "000"
+  },
+  {
+   "nazov": {
+    "sk": "FO v RDIS",
+    "en": "NP in tax-roll"
+   },
+   "kod": "100"
+  },
+  {
+   "nazov": {
+    "sk": "Živnostník",
+    "en": "Entrepreneur"
+   },
+   "kod": "101"
+  },
+  {
+   "nazov": {
+    "sk": "Živnostník v OR",
+    "en": "Entrepreneur in BR"
+   },
+   "kod": "102"
+  },
+  {
+   "nazov": {
+    "sk": "SHR roľník",
+    "en": "Private farmer"
+   },
+   "kod": "103"
+  },
+  {
+   "nazov": {
+    "sk": "SHR roľník v OR",
+    "en": "Private farmer in BR"
+   },
+   "kod": "104"
+  },
+  {
+   "nazov": {
+    "sk": "FO-slob.povolanie",
+    "en": "Freelance occupation"
+   },
+   "kod": "105"
+  },
+  {
+   "nazov": {
+    "sk": "FO-slob.povolanie v OR",
+    "en": "Freelance occup.in BR"
+   },
+   "kod": "106"
+  },
+  {
+   "nazov": {
+    "sk": "Živ. a SHR roľník",
+    "en": "Entrepreneur,priv.farm."
+   },
+   "kod": "107"
+  },
+  {
+   "nazov": {
+    "sk": "Živ. a SHR roľník v OR",
+    "en": "Entrepr,priv.farm.in BR"
+   },
+   "kod": "108"
+  },
+  {
+   "nazov": {
+    "sk": "Živ.a sl.povolanie",
+    "en": "Entrep,freelance ocup."
+   },
+   "kod": "109"
+  },
+  {
+   "nazov": {
+    "sk": "Živ.a sl.povolanie v OR",
+    "en": "Entrep,free.ocup.in BR"
+   },
+   "kod": "110"
+  },
+  {
+   "nazov": {
+    "sk": "Ver. obch. spol.",
+    "en": "Public commercial comp."
+   },
+   "kod": "111"
+  },
+  {
+   "nazov": {
+    "sk": "Spol. s r. o.",
+    "en": "Limited liability comp."
+   },
+   "kod": "112"
+  },
+  {
+   "nazov": {
+    "sk": "Kom. spol.",
+    "en": "Société commandite"
+   },
+   "kod": "113"
+  },
+  {
+   "nazov": {
+    "sk": "Spol. kom. na akcie",
+    "en": "Shares société command."
+   },
+   "kod": "114"
+  },
+  {
+   "nazov": {
+    "sk": "Spoločný podnik",
+    "en": "Joint venture"
+   },
+   "kod": "115"
+  },
+  {
+   "nazov": {
+    "sk": "Záujmové združenie",
+    "en": "Interest association"
+   },
+   "kod": "116"
+  },
+  {
+   "nazov": {
+    "sk": "Nadácia",
+    "en": "Foundation"
+   },
+   "kod": "117"
+  },
+  {
+   "nazov": {
+    "sk": "Neinvestičný fond",
+    "en": "Non-investment fund"
+   },
+   "kod": "118"
+  },
+  {
+   "nazov": {
+    "sk": "Nezisková organizácia",
+    "en": "Not profit.organization"
+   },
+   "kod": "119"
+  },
+  {
+   "nazov": {
+    "sk": "Akc. spol.",
+    "en": "Joint stock company"
+   },
+   "kod": "121"
+  },
+  {
+   "nazov": {
+    "sk": "Európ.zoskup.hosp.záujm.",
+    "en": "Europ.Econ.Interest Gr."
+   },
+   "kod": "122"
+  },
+  {
+   "nazov": {
+    "sk": "Európska spoločnosť",
+    "en": "European company"
+   },
+   "kod": "123"
+  },
+  {
+   "nazov": {
+    "sk": "Európske družstvo",
+    "en": "Europ.Cooperative Soc."
+   },
+   "kod": "124"
+  },
+  {
+   "nazov": {
+    "sk": "Svojpomoc.poľn.družstvo",
+    "en": "Self-aided agric.coop."
+   },
+   "kod": "131"
+  },
+  {
+   "nazov": {
+    "sk": "Poľnohospodár.družstvo",
+    "en": "Agricult.cooperative"
+   },
+   "kod": "201"
+  },
+  {
+   "nazov": {
+    "sk": "Družstvo",
+    "en": "Cooperative"
+   },
+   "kod": "205"
+  },
+  {
+   "nazov": {
+    "sk": "Družstevný podnik poľ.",
+    "en": "Coop.agric.enterprise"
+   },
+   "kod": "211"
+  },
+  {
+   "nazov": {
+    "sk": "Družstvo výrobné",
+    "en": "Producer cooperative"
+   },
+   "kod": "231"
+  },
+  {
+   "nazov": {
+    "sk": "Družstvo spotrebné",
+    "en": "Consumer cooperative"
+   },
+   "kod": "232"
+  },
+  {
+   "nazov": {
+    "sk": "Družstvo bytové",
+    "en": "Housing cooperative"
+   },
+   "kod": "233"
+  },
+  {
+   "nazov": {
+    "sk": "Družstvo iné",
+    "en": "Oth.kind of cooperative"
+   },
+   "kod": "234"
+  },
+  {
+   "nazov": {
+    "sk": "Družstevný podnik",
+    "en": "Cooperative enterprise"
+   },
+   "kod": "241"
+  },
+  {
+   "nazov": {
+    "sk": "Spoločný podnik",
+    "en": "Joint venture"
+   },
+   "kod": "242"
+  },
+  {
+   "nazov": {
+    "sk": "Záujmová org.družstiev",
+    "en": "Spec-int.org.of cooper."
+   },
+   "kod": "251"
+  },
+  {
+   "nazov": {
+    "sk": "Spoločná záuj.org.druž.",
+    "en": "Joint spec-int.of coop."
+   },
+   "kod": "261"
+  },
+  {
+   "nazov": {
+    "sk": "Spoločenstvo vlastníkov bytov",
+    "en": "Associaton of flat owners"
+   },
+   "kod": "271"
+  },
+  {
+   "nazov": {
+    "sk": "Štátny podnik",
+    "en": "State enterprise"
+   },
+   "kod": "301"
+  },
+  {
+   "nazov": {
+    "sk": "NBS",
+    "en": "Nation.Bank of Slovakia"
+   },
+   "kod": "311"
+  },
+  {
+   "nazov": {
+    "sk": "Banka-štát.peňaž.ústav",
+    "en": "Bank-state monet.inst."
+   },
+   "kod": "312"
+  },
+  {
+   "nazov": {
+    "sk": "Rozpočtová organizácia",
+    "en": "Budgetary organization"
+   },
+   "kod": "321"
+  },
+  {
+   "nazov": {
+    "sk": "Príspevková organizácia",
+    "en": "Org.based on contrib."
+   },
+   "kod": "331"
+  },
+  {
+   "nazov": {
+    "sk": "Org.zložka prísp.org.",
+    "en": "Unit of st-aided org."
+   },
+   "kod": "332"
+  },
+  {
+   "nazov": {
+    "sk": "Štát.hosp.org.riad.okr.",
+    "en": "St.org.manag.by office"
+   },
+   "kod": "341"
+  },
+  {
+   "nazov": {
+    "sk": "Obecný podnik",
+    "en": "Municipal enterprise"
+   },
+   "kod": "343"
+  },
+  {
+   "nazov": {
+    "sk": "Železnice SR",
+    "en": "Railways of the SR"
+   },
+   "kod": "351"
+  },
+  {
+   "nazov": {
+    "sk": "Fondy",
+    "en": "Funds"
+   },
+   "kod": "381"
+  },
+  {
+   "nazov": {
+    "sk": "Verejnopráv.inštitúcia",
+    "en": "Public legal institut."
+   },
+   "kod": "382"
+  },
+  {
+   "nazov": {
+    "sk": "Iná org.verejnej správy",
+    "en": "Other org.of publ.admin."
+   },
+   "kod": "383"
+  },
+  {
+   "nazov": {
+    "sk": "Združ.medzinár.obchodu",
+    "en": "Associat.of ext.trade"
+   },
+   "kod": "401"
+  },
+  {
+   "nazov": {
+    "sk": "Podnik so zahr.maj.úč.",
+    "en": "Ent.with foreig.capital"
+   },
+   "kod": "411"
+  },
+  {
+   "nazov": {
+    "sk": "Zahranič.osoba,právnická",
+    "en": "Foreign pers.,legal unit"
+   },
+   "kod": "421"
+  },
+  {
+   "nazov": {
+    "sk": "Zahranič.osoba,fyzická",
+    "en": "Foreign physical person"
+   },
+   "kod": "422"
+  },
+  {
+   "nazov": {
+    "sk": "Banka - a. s.",
+    "en": "Bank-joint stock comp."
+   },
+   "kod": "431"
+  },
+  {
+   "nazov": {
+    "sk": "Sporiteľna",
+    "en": "Savings bank"
+   },
+   "kod": "432"
+  },
+  {
+   "nazov": {
+    "sk": "Sociál.,zdrav.poisťovňa",
+    "en": "Nation.Insurance-Comp."
+   },
+   "kod": "433"
+  },
+  {
+   "nazov": {
+    "sk": "Doplnková dôchod.poisť.",
+    "en": "Complem.pension funding"
+   },
+   "kod": "434"
+  },
+  {
+   "nazov": {
+    "sk": "Poisťovňa - š. p.",
+    "en": "Insur.company-st.enter."
+   },
+   "kod": "435"
+  },
+  {
+   "nazov": {
+    "sk": "Poisťovna - a. s.",
+    "en": "Insur.comp-j.stock com."
+   },
+   "kod": "436"
+  },
+  {
+   "nazov": {
+    "sk": "PZO",
+    "en": "Foreign trade organiz."
+   },
+   "kod": "441"
+  },
+  {
+   "nazov": {
+    "sk": "Účelová zahr.-obch.org.",
+    "en": "Spec.org.of ext.trade"
+   },
+   "kod": "442"
+  },
+  {
+   "nazov": {
+    "sk": "Komoditná burza",
+    "en": "Commodity Exchange"
+   },
+   "kod": "445"
+  },
+  {
+   "nazov": {
+    "sk": "Odštepný závod v OR",
+    "en": "Subsid.establish.in BR"
+   },
+   "kod": "501"
+  },
+  {
+   "nazov": {
+    "sk": "Pobočka štát.peňaž.úst.",
+    "en": "Branch of st.monet.ins."
+   },
+   "kod": "511"
+  },
+  {
+   "nazov": {
+    "sk": "Pobočka sporiteľne",
+    "en": "Branch of savings bank"
+   },
+   "kod": "513"
+  },
+  {
+   "nazov": {
+    "sk": "Oblast. závod poisťovne",
+    "en": "Region.establ.of ins.c."
+   },
+   "kod": "514"
+  },
+  {
+   "nazov": {
+    "sk": "Samost. prevádzkareň OÚ",
+    "en": "Bussiness of munic.off."
+   },
+   "kod": "521"
+  },
+  {
+   "nazov": {
+    "sk": "Obl.org.jednotka ČSD",
+    "en": "Reg.org.unit of CSR"
+   },
+   "kod": "531"
+  },
+  {
+   "nazov": {
+    "sk": "Účelová org. jedn. ČSD",
+    "en": "Spec.org.unit of CSR"
+   },
+   "kod": "532"
+  },
+  {
+   "nazov": {
+    "sk": "Špec.org.jednotka ČSD",
+    "en": "Specialized unit of CSR"
+   },
+   "kod": "533"
+  },
+  {
+   "nazov": {
+    "sk": "Jedn.štát.žel.tech.inš.",
+    "en": "St.railway-technic.unit"
+   },
+   "kod": "534"
+  },
+  {
+   "nazov": {
+    "sk": "Jed.zboru ochrany žel.",
+    "en": "Armed corps of railway"
+   },
+   "kod": "535"
+  },
+  {
+   "nazov": {
+    "sk": "Jednot.žel.správ.úradu",
+    "en": "Railway admininis.ofice"
+   },
+   "kod": "536"
+  },
+  {
+   "nazov": {
+    "sk": "Vysoká škola",
+    "en": "Instit.of tertiary educ."
+   },
+   "kod": "601"
+  },
+  {
+   "nazov": {
+    "sk": "Fakulta vysokej školy",
+    "en": "Faculty"
+   },
+   "kod": "602"
+  },
+  {
+   "nazov": {
+    "sk": "Iné prac.vysokej školy",
+    "en": "Oth.workpl.of tert.educ."
+   },
+   "kod": "603"
+  },
+  {
+   "nazov": {
+    "sk": "Stredná škola",
+    "en": "Secondary school"
+   },
+   "kod": "611"
+  },
+  {
+   "nazov": {
+    "sk": "Základná škola",
+    "en": "Primary school"
+   },
+   "kod": "621"
+  },
+  {
+   "nazov": {
+    "sk": "Združenie (zväz,spolok)",
+    "en": "Association"
+   },
+   "kod": "701"
+  },
+  {
+   "nazov": {
+    "sk": "Poisťovací spolok",
+    "en": "Insurance union"
+   },
+   "kod": "702"
+  },
+  {
+   "nazov": {
+    "sk": "Podnik alebo hosp.zar.",
+    "en": "Enterprise of associat."
+   },
+   "kod": "705"
+  },
+  {
+   "nazov": {
+    "sk": "Politická strana,hnutie",
+    "en": "Political party"
+   },
+   "kod": "711"
+  },
+  {
+   "nazov": {
+    "sk": "Podnik alebo hosp.zar.",
+    "en": "Enterprise of pol.party"
+   },
+   "kod": "715"
+  },
+  {
+   "nazov": {
+    "sk": "Cirkevná organizácia",
+    "en": "Ecclesiastical organiz."
+   },
+   "kod": "721"
+  },
+  {
+   "nazov": {
+    "sk": "Org.jednotka združenia",
+    "en": "Organiz.unit of assoc."
+   },
+   "kod": "731"
+  },
+  {
+   "nazov": {
+    "sk": "Org.jedn.pol.strany,hn.",
+    "en": "Org.unit of polit.party"
+   },
+   "kod": "732"
+  },
+  {
+   "nazov": {
+    "sk": "Profesná komora",
+    "en": "Professional chamber"
+   },
+   "kod": "741"
+  },
+  {
+   "nazov": {
+    "sk": "Komora okrem profesných",
+    "en": "Chamber except profes."
+   },
+   "kod": "745"
+  },
+  {
+   "nazov": {
+    "sk": "Záujm. združ. práv.osôb",
+    "en": "Asociat.of legal person"
+   },
+   "kod": "751"
+  },
+  {
+   "nazov": {
+    "sk": "Záujmové združ.fyz.osôb",
+    "en": "Asociat.of physic.person"
+   },
+   "kod": "752"
+  },
+  {
+   "nazov": {
+    "sk": "Obec, mesto (o.,m.úrad)",
+    "en": "Municipality"
+   },
+   "kod": "801"
+  },
+  {
+   "nazov": {
+    "sk": "Krajský úrad",
+    "en": "Regional governm.office"
+   },
+   "kod": "802"
+  },
+  {
+   "nazov": {
+    "sk": "Samosprávny kraj",
+    "en": "Office of local governm."
+   },
+   "kod": "803"
+  },
+  {
+   "nazov": {
+    "sk": "Európ.zoskup.územ.spol.",
+    "en": "Europ.group.of ter.coop."
+   },
+   "kod": "804"
+  },
+  {
+   "nazov": {
+    "sk": "Zastup.org.iných štátov",
+    "en": "Diplomatic corps"
+   },
+   "kod": "901"
+  },
+  {
+   "nazov": {
+    "sk": "Zahr.kul.,inf.strediská",
+    "en": "Foreign centre"
+   },
+   "kod": "911"
+  },
+  {
+   "nazov": {
+    "sk": "Medzinár. org. a združ.",
+    "en": "International organiz."
+   },
+   "kod": "921"
+  },
+  {
+   "nazov": {
+    "sk": "Zastúp.zahr.práv.osoby",
+    "en": "Repres.of foreig.leg.u."
+   },
+   "kod": "931"
+  },
+  {
+   "nazov": {
+    "sk": "Miestna jednotka",
+    "en": "Local unit"
+   },
+   "kod": "951"
+  },
+  {
+   "nazov": {
+    "sk": "Nešpecifikovaná forma",
+    "en": "Not specified legal type"
+   },
+   "kod": "995"
+  },
+  {
+   "nazov": {
+    "sk": "Nezisk.org.poskyt.všeob.prosp.služby",
+    "en": "Non-profit org.provid.community serv."
+   },
+   "kod": "120"
+  },
+  {
+   "nazov": {
+    "sk": "Jednoduchá spol. na akcie",
+    "en": "Simple joint stock comp."
+   },
+   "kod": "125"
+  },
+  {
+   "nazov": {
+    "sk": "Ver. výskum. inšt.",
+    "en": "Publ. research inst."
+   },
+   "kod": "333"
+  },
+  {
+   "nazov": {
+    "sk": "Samostatne podnikajúca FO",
+    "en": "Self employed physical person"
+   },
+   "kod": "001"
+  },
+  {
+   "nazov": {
+    "sk": "Organizačná zložka podniku",
+    "en": "Organizational unit of the enterprise"
+   },
+   "kod": "002"
+  },
+  {
+   "nazov": {
+    "sk": "Iná právnicka osoba",
+    "en": "Another legal unit"
+   },
+   "kod": "003"
+  },
+  {
+   "nazov": {
+    "sk": "Zahraničná osoba",
+    "en": "Foreign person"
+   },
+   "kod": "004"
+  },
+  {
+   "nazov": {
+    "sk": "Podnik zahr. osoby, org. zložka",
+    "en": "Enterprise of foreign person"
+   },
+   "kod": "005"
+  },
+  {
+   "nazov": {
+    "sk": "Rozpočtové a príspevkové organizácie",
+    "en": "Budgetary and contributory organizations"
+   },
+   "kod": "006"
+  },
+  {
+   "nazov": {
+    "sk": "Národný výbor",
+    "en": "Governmental office - municipality level"
+   },
+   "kod": "007"
+  },
+  {
+   "nazov": {
+    "sk": "Obecný úrad",
+    "en": "Municipality"
+   },
+   "kod": "008"
+  },
+  {
+   "nazov": {
+    "sk": "Štátny podnik v oddieli Pšn",
+    "en": "State enterprise from the section Psn"
+   },
+   "kod": "009"
+  },
+  {
+   "nazov": {
+    "sk": "Poľovnícka organizácia",
+    "en": "Hunting organization"
+   },
+   "kod": "141"
+  },
+  {
+   "nazov": {
+    "sk": "Pozemkové spoločenstvo",
+    "en": "Land community"
+   },
+   "kod": "272"
+  },
+  {
+   "nazov": {
+    "sk": "Združ. účast. pozemkových úprav",
+    "en": "Assoc. of particip. in land readjust."
+   },
+   "kod": "273"
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "id": 4371248,
+ "datumZostaveniaK": "2019-12-31",
+ "idUJ": 280766,
+ "idUctovnychVykazov": [
+  7246048,
+  7133601,
+  7133600
+ ],
+ "datumPoslednejUpravy": "2020-10-01",
+ "zdrojDat": "FRSR",
+ "datumPrilozeniaSpravyAuditora": "2020-06-08",
+ "typ": "Riadna",
+ "obdobieOd": "2019-01",
+ "obdobieDo": "2019-12",
+ "datumPodania": "2020-06-08",
+ "datumZostavenia": "2020-05-04",
+ "datumSchvalenia": "2020-09-30"
+}
