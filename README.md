@@ -486,8 +486,8 @@ nehamroval upstream RÚZ API.
 
 | Nástroj | Parametre | Vracia |
 |---|---|---|
-| `ruz_find_entity` | `ico?` · `dic?` | účtovnú jednotku vrátane `entityId` |
-| `ruz_financial_profile` | `ico` · `years?` *(1–15, def. 5)* · `consolidated?` | viacročný profil s ukazovateľmi |
+| `ruz_find_entity` | `ico?` · `dic?` | všetky záznamy pre IČO/DIČ vrátane `entityId` a zmazaných či neverejných |
+| `ruz_financial_profile` | `ico` · `entityId?` · `years?` *(1–15 období, def. 5)* · `consolidated?` | viacročný profil s ukazovateľmi, jeden riadok za účtovné obdobie |
 | `ruz_list_statements` | `ico?` · `entityId?` | zoznam účtovných závierok |
 | `ruz_get_statement` | `statementId` | detail závierky + metadáta výkazov |
 | `ruz_get_report` | `reportId` | plný čitateľný výkaz (súvaha / výsledovka) |
@@ -498,6 +498,24 @@ nehamroval upstream RÚZ API.
 **Ukazovatele v `ruz_financial_profile`:** `revenue` (tržby), `profit` (výsledok
 hospodárenia), `equity` (vlastné imanie), `assets` (aktíva), `liabilities` (záväzky),
 `leverage` (zadlženosť = záväzky / aktíva).
+
+- `revenue` = tržby z predaja tovaru + vlastných výrobkov + služieb. Na Úč POD od
+  2014 sú to riadky 03 + 04 + 05; na Úč POD 2-01 a Úč MÚJ riadky „tovaru" a
+  „vlastných výrobkov a služieb". Nie je to „Čistý obrat" (r. 01), ten nájdeš cez
+  `ruz_get_report`. Pole `rows` uvádza všetky sčítané riadky.
+- **Jeden riadok za obdobie.** RÚZ má za jedno obdobie často viac závierok
+  (napr. IFRS + VÚ POD + správa audítora, alebo dve „Riadne" s rôznymi číslami).
+  Čísla sa berú zo závierky so štruktúrovanými dátami, pri zhode z najneskôr
+  podanej; jej id je v `statementId`, ostatné v `otherStatements` a `note` to
+  vysvetlí. `years` je počet období, nie závierok.
+- `templateName` je šablóna výkazu, z ktorého sú čísla (pri závierkach 2009–2013,
+  kde sú súvaha a výsledovka samostatné výkazy, obe spojené „ + “);
+  `templateNames` sú šablóny všetkých výkazov závierky.
+- `entity.velkost` a `entity.pravnaForma` sú preložené cez číselníky RÚZ
+  (`velkostKod: "25"` = „500-999 zamestnancov"); kódy sú vo `velkostKod`
+  a `pravnaFormaKod`.
+- Ak je pod IČO viac živých jednotiek (typicky fyzické osoby), profil vráti
+  `ambiguous: true` a `candidates`; zopakuj volanie s `entityId`.
 
 ---
 
@@ -511,8 +529,10 @@ hospodárenia), `equity` (vlastné imanie), `assets` (aktíva), `liabilities` (z
 
 | Rok | Tržby | VH | Vlastné imanie | Aktíva | Záväzky | Zadlženosť |
 |---|---|---|---|---|---|---|
-| 2025 | 560 556 309 | 5 404 153 | 9 944 895 | 126 626 420 | 116 610 558 | 0,92 |
-| 2024 | 489 984 554 | 4 460 127 | 4 540 742 | 98 039 110 | 93 435 662 | 0,95 |
+| 2025 | 617 457 271 | 5 404 153 | 9 944 895 | 126 626 420 | 116 610 558 | 0,92 |
+| 2024 | 539 442 883 | 4 460 127 | 4 540 742 | 98 039 110 | 93 435 662 | 0,95 |
+
+Tržby = r. 03 tovar + r. 05 služby (r. 04 vlastné výrobky Alza nevykazuje).
 
 **Reťazenie s ORSR** — RÚZ API hľadá len podľa IČO/DIČ. Ak máš len názov firmy,
 najprv si nechaj dohľadať IČO (napr. cez ORSR MCP alebo [orsr.sk](https://www.orsr.sk))
@@ -586,8 +606,9 @@ pre vypnutie. Pri viacerých používateľoch za jednou NAT IP zdieľajú jeden 
 <summary><b>Profil vracia <code>structuredDataAvailable: false</code></b></summary>
 
 RÚZ pre danú závierku nezverejňuje štruktúrovaný obsah. `attachmentHint` povie,
-o ktorý prípad ide — IFRS závierka, správa audítora, alebo **Výkaz vybraných
-údajov (VÚ POD)**. Použi `ruz_list_attachments` + `ruz_download_attachment`
+o ktorý prípad ide — IFRS závierka, správa audítora, **Výkaz vybraných
+údajov (VÚ POD)**, alebo výkazy v neverejnej časti RÚZ. Ak nemá dáta žiadny rok,
+povie to aj `note` celého profilu. Použi `ruz_list_attachments` + `ruz_download_attachment`
 a čítaj PDF.
 
 Pri VÚ POD to nie je len chýbajúci obsah: šablóna síce deklaruje šesť tabuliek,
@@ -600,7 +621,8 @@ niesla — vyžadovalo by to mapu čísel riadkov pre každú verziu šablóny.
 <details>
 <summary><b>Profil trvá dlho</b></summary>
 
-Profil za `N` rokov znamená `N` sérií volaní na RÚZ API. Pri veľkých firmách to sú
+Profil za `N` období znamená `N` sérií volaní na RÚZ API (pri viacerých
+závierkach za obdobie viac). Pri veľkých firmách to sú
 sekundy. Zníž `years`, ak potrebuješ rýchlu odpoveď.
 
 </details>
@@ -628,6 +650,7 @@ npm run start:http   # Streamable HTTP na :8790
 | `src/mcp-server.ts` | definície 8 nástrojov |
 | `src/ruz-client.ts` | HTTP klient pre RÚZ API + cache šablón |
 | `src/financials.ts` | extrakcia ukazovateľov z výkazov podľa šablóny |
+| `src/profile.ts` | stav jednotky, zoskupenie závierok podľa obdobia, číselníky |
 
 ---
 
@@ -642,7 +665,11 @@ npm run start:http   # Streamable HTTP na :8790
   s **HTTP 200**, takže sa nedá rozpoznať podľa stavového kódu. Klient ju
   rozpozná podľa tela a vráti `RuzUnavailableError` („register je momentálne
   nedostupný"), nie chybu parsera.
-- **Neverejné jednotky** vrátia len `stav`.
+- **Zmazané a neverejné záznamy** — RÚZ pozná `stav: "ZMAZANÉ"` (záznam
+  zmazaný, bez údajov) a `stav: "Neverejná"` (jednotka v neverejnej časti,
+  § 23 ods. 8 zákona č. 431/2002 Z. z.). Zmazané záznamy sa pri výbere jednotky
+  preskakujú; stav sa vráti len vtedy, keď pod IČO nie je žiadna živá jednotka.
+  Výkazy s `pristupnostDat: "Neverejné"` nemajú ani čísla, ani PDF.
 - **Vyhľadávanie len podľa IČO/DIČ** — nie podľa názvu. RÚZ API to inak nevie.
 - **Rate limiting je in-memory** — pri viacerých replikách má každá vlastný počítadlo.
 
