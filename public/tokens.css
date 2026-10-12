@@ -1,0 +1,36 @@
+:root {
+  --color-violet-500: #5E00FF;
+  --color-violet-300: #BAB8FF;
+  --color-violet-900: #210059;
+  --color-ink-950: #09060E;
+  --color-ink-900: #14101E;
+  --color-ink-850: #1E1930;
+  --color-pink-300: #F5B5BB;
+  --color-mint-300: #38F8B8;
+  --color-slate-300: #ADB2C2;
+  --color-lavender-50: #F0F0FF;
+  --color-white: #FFFFFF;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 80px;
+  --radius-none: 0px;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-full: 9999px;
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 32px;
+  --text-4xl: 48px;
+  --text-5xl: 64px;
+  --text-6xl: 112px;
+}
