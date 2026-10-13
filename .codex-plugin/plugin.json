@@ -1,0 +1,24 @@
+{
+  "name": "ruz",
+  "version": "0.3.0",
+  "description": "Register účtovných závierok ako MCP server so skillom, ktorý agentovi povie, kedy po ňom siahnuť",
+  "author": {
+    "name": "originalmagneto"
+  },
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "RÚZ – Register účtovných závierok",
+    "shortDescription": "Finančné ukazovatele firiem",
+    "longDescription": "Register účtovných závierok ako MCP server so skillom, ktorý agentovi povie, kedy po ňom siahnuť",
+    "developerName": "originalmagneto",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Research"
+    ],
+    "defaultPrompt": [
+      "Priprav finančný profil firmy z účtovných závierok."
+    ]
+  }
+}
