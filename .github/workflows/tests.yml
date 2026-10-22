@@ -1,0 +1,23 @@
+name: tests
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Build pinned Bookworm test image
+        run: docker build --target build -t ruz-build:test .
+      - name: Offline typecheck, unit and HTTP/MCP integration tests, build
+        run: docker run --rm --network none ruz-build:test sh -euc 'npm run typecheck; npm test; npm run build'
+      - name: Build production image
+        run: docker build --build-arg SOURCE_REVISION="$GITHUB_SHA" -t ruz-mcp:test .
+      - name: Offline production image smoke
+        run: |
+          docker run --rm --network none \
+            --mount type=bind,source="$PWD/scripts/container-smoke.mjs",target=/app/container-smoke.mjs,readonly \
+            ruz-mcp:test node container-smoke.mjs

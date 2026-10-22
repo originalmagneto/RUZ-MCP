@@ -6,7 +6,7 @@
 
 [![MCP](https://img.shields.io/badge/MCP-2025--06--18-0ea5e9?style=flat-square)](https://modelcontextprotocol.io)
 [![Transport](https://img.shields.io/badge/transport-stdio%20%7C%20Streamable%20HTTP-6366f1?style=flat-square)](https://modelcontextprotocol.io/specification/2025-06-18/basic/transports)
-[![Node](https://img.shields.io/badge/node-%E2%89%A524-22c55e?style=flat-square)](https://nodejs.org)
+[![Node](https://img.shields.io/badge/node-24.22.1-22c55e?style=flat-square)](https://nodejs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178c6?style=flat-square)](https://www.typescriptlang.org)
 [![License](https://img.shields.io/badge/license-MIT-64748b?style=flat-square)](LICENSE)
 
@@ -130,7 +130,7 @@ flowchart TD
 
 ### Požiadavky
 
-- **Node.js ≥ 24** — over `node --version`
+- **Node.js 24.22.1+ (vetva 24)** — over `node --version`
 - **git**
 
 ### 1. Stiahni a zbuilduj
